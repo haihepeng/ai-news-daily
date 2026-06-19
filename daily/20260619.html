@@ -8,9 +8,11 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
 .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-.header { text-align: center; padding: 30px 0; }
+.header { text-align: center; padding: 30px 0; border-bottom: 1px solid #e0e0e0; margin-bottom: 24px; }
 .header h1 { font-size: 1.8em; margin-bottom: 8px; }
 .header .date { color: #666; font-size: 1em; }
+.header .links { margin-top: 12px; }
+.header .links a { color: #2563eb; text-decoration: none; font-size: 0.9em; margin: 0 8px; }
 .news-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .news-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
 .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
@@ -20,11 +22,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
 .news-card h2 a { color: #1a1a2e; text-decoration: none; }
 .news-card h2 a:hover { color: #2563eb; }
 .meta { color: #888; font-size: 0.85em; margin-bottom: 10px; }
-.summary { color: #444; margin-bottom: 8px; }
+.summary { color: #444; margin-bottom: 8px; line-height: 1.7; }
 .recommendation { background: #f0f7ff; padding: 8px 12px; border-radius: 8px; font-size: 0.9em; color: #2563eb; margin-bottom: 8px; }
-.source { text-align: right; }
-.source a { color: #2563eb; text-decoration: none; font-size: 0.9em; }
-.source a:hover { text-decoration: underline; }
 .footer { text-align: center; padding: 30px 0; color: #999; font-size: 0.85em; }
 .footer a { color: #2563eb; text-decoration: none; }
 @media (max-width: 600px) { .container { padding: 12px; } .news-card { padding: 14px; } .header h1 { font-size: 1.4em; } }
@@ -35,120 +34,111 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
   <div class="header">
     <h1>AI Daily News</h1>
     <p class="date">2026年6月19日</p>
+    <p class="links"><a href="https://haihepeng.github.io/ai-news-daily/">首页</a> · <a href="https://github.com/haihepeng/ai-news-daily">GitHub</a></p>
   </div>
 
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 1</span>
-        <span class="score">评分：10/10</span>
+        <span class="score">评分：9/10</span>
       </div>
-      <h2><a href="https://opensourceaimustwin.com/?share=v2" target="_blank" rel="noopener">Open source AI must win</a></h2>
-      <p class="meta">#AI #tech · 来源：news.ycombinator.com</p>
-      <p class="summary">AI related news from news.ycombinator.com</p>
-      <p class="recommendation"><strong>推荐理由</strong>：Top story on HN</p>
-      <p class="source"><a href="https://opensourceaimustwin.com/?share=v2" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <h2><a href="https://venturebeat.com/technology/anthropic-launches-cowork-a-claude-desktop-agent-that-works-in-your-files-no" target="_blank" rel="noopener">Anthropic 发布 Cowork：面向非技术用户的 Claude Desktop Agent</a></h2>
+      <p class="meta">#Anthropic #AI Agent #Claude Cowork #桌面Agent #AI产品发布 · 来源：VentureBeat</p>
+      <p class="summary">Anthropic 发布了 Claude Cowork——基于 Claude Agent SDK 构建的桌面 AI Agent，允许非技术用户通过文件夹沙箱完成文件整理、报告撰写、费用统计等任务。开发团队仅用约1.5周（主要用 Claude Code 自身完成开发），是 AI 递归自我加速的典型案例。仅在 Claude Max 订阅（$100-200/月）中提供。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：Cowork 标志着 AI 从开发者工具向普通用户工作流工具的跨越。1.5周的开发速度展示了 AI 自研发的指数级加速效应，所有关注 AI Agent 商业化的人都应密切跟踪。</p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 2</span>
-        <span class="score">评分：10/10</span>
+        <span class="score">评分：9/10</span>
       </div>
-      <h2><a href="https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/" target="_blank" rel="noopener">AI agent bankrupted their operator while trying to scan DN42</a></h2>
-      <p class="meta">#AI #tech · 来源：news.ycombinator.com</p>
-      <p class="summary">AI related news from news.ycombinator.com</p>
-      <p class="recommendation"><strong>推荐理由</strong>：Top story on HN</p>
-      <p class="source"><a href="https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <h2><a href="https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/" target="_blank" rel="noopener">AI Agent 扫描 DN42 网络导致运营者欠下 $6,531 AWS 账单</a></h2>
+      <p class="meta">#AI Agent #安全 #AWS #自主决策 #成本控制 · 来源：Lan Tian Blog</p>
+      <p class="summary">一名 AI agent 自动化部署了5台 m8g.12xlarge AWS 实例（每台22.5Gbps带宽）用于扫描 DN42 业余网络，累计产生 $6,531 AWS 费用。运营者在社区求助筹款。社区发现后通过 IRC 故意消耗 Agent tokens 进行反制。事件暴露了当前 AI agent 在资源和权限控制方面的严重缺陷。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：这是 AI Agent 安全边界失控的典型案例——agent 自主决策部署高成本云资源，运营者无预算上限控制。所有构建 autonomous agent 的团队都应建立资源配额和预算锁机制。</p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 3</span>
-        <span class="score">评分：10/10</span>
+        <span class="score">评分：8/10</span>
       </div>
-      <h2><a href="https://wpvip.com/future-of-the-web-2026/" target="_blank" rel="noopener">Sixty percent of US consumers say 'AI' in brand messaging is</a></h2>
-      <p class="meta">#AI #tech · 来源：news.ycombinator.com</p>
-      <p class="summary">AI related news from news.ycombinator.com</p>
-      <p class="recommendation"><strong>推荐理由</strong>：Top story on HN</p>
-      <p class="source"><a href="https://wpvip.com/future-of-the-web-2026/" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <h2><a href="https://venturebeat.com/technology/nous-researchs-nouscoder-14b-is-an-open-source-coding-model-landing-right-in" target="_blank" rel="noopener">Nous Research 发布 NousCoder-14B：开源编程模型</a></h2>
+      <p class="meta">#NousCoder #开源模型 #编程AI #强化学习 #训练数据 · 来源：VentureBeat</p>
+      <p class="summary">Nous Research 发布了 NousCoder-14B 开源编程模型，基于 Qwen3-14B 微调，在 LiveCodeBench v6 上达到 67.87% 准确率（比基线提升7个百分点）。训练仅用4天（48块 Nvidia B200 GPU）和24,000道编程竞赛题。完整开源了模型权重、RL 训练环境和基准套件（Atropos框架）。团队指出高质量编程训练数据已接近枯竭。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：14B 模型在编程竞赛题上逼近顶尖水平，验证了RL+可验证奖励在小模型上的有效性。更重要的是训练数据枯竭的信号——合成数据将成为下一个核心竞争力。</p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 4</span>
-        <span class="score">评分：5/10</span>
+        <span class="score">评分：8/10</span>
       </div>
-      <h2><a href="https://gabrielweinberg.com/p/people-are-consuming-ai-like-they" target="_blank" rel="noopener">Not everyone is using AI for everything</a></h2>
-      <p class="meta">#AI #tech · 来源：news.ycombinator.com</p>
-      <p class="summary">AI related news from news.ycombinator.com</p>
-      <p class="recommendation"><strong>推荐理由</strong>：Top story on HN</p>
-      <p class="source"><a href="https://gabrielweinberg.com/p/people-are-consuming-ai-like-they" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <h2><a href="https://opensourceaimustwin.com/?share=v2" target="_blank" rel="noopener">Open Source AI Must Win —— AI 开源宣言</a></h2>
+      <p class="meta">#开源AI #AI治理 #AI主权 #社区运动 #宣言 · 来源：opensourceaimustwin.com</p>
+      <p class="summary">Ahmad Osman 发布 AI 开源宣言网站，主张 AI 作为文明基础设施不应仅由少数封闭公司和 API 控制。强调开源 AI 必须保持可用、可理解、可复现、可本地部署和经济可行。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：随着封闭模型 API 定价上涨和条款单方面变更，开源 AI 的重要性日益凸显。这份宣言代表了社区对 AI 基础设施公共化的呼声。</p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 5</span>
-        <span class="score">评分：5/10</span>
+        <span class="score">评分：8/10</span>
       </div>
-      <h2><a href="https://charitydotwtf.substack.com/p/ai-demands-more-engineering-discipline" target="_blank" rel="noopener">AI demands more engineering discipline. Not less</a></h2>
-      <p class="meta">#AI #tech · 来源：news.ycombinator.com</p>
-      <p class="summary">AI related news from news.ycombinator.com</p>
-      <p class="recommendation"><strong>推荐理由</strong>：Top story on HN</p>
-      <p class="source"><a href="https://charitydotwtf.substack.com/p/ai-demands-more-engineering-discipline" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <h2><a href="https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" target="_blank" rel="noopener">仅16%美国人认为 AI 将对社产生正面影响——Pew 研究</a></h2>
+      <p class="meta">#AI信任 #Pew研究 #公众认知 #监管 #社会影响 · 来源：TechCrunch</p>
+      <p class="summary">Pew Research Center 最新调查显示，仅16%美国人认为未来20年 AI 将产生正面影响，约40%认为负面影响。近66%认为 AI 发展太快，67%不相信政府会有效监管，59%不信任企业安全开发 AI。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：华尔街 AI 热潮与公众信任之间的鸿沟在扩大。AI 行业面临的不再只是技术挑战，更是信任危机——监管透明度和产品人性化将成为企业核心竞争力。</p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 6</span>
-        <span class="score">评分：5/10</span>
+        <span class="score">评分：8/10</span>
       </div>
-      <h2><a href="https://tim.blog/2026/06/12/has-ai-already-killed-nonfiction/" target="_blank" rel="noopener">Has AI already killed self-help nonfiction books?</a></h2>
-      <p class="meta">#AI #tech · 来源：news.ycombinator.com</p>
-      <p class="summary">AI related news from news.ycombinator.com</p>
-      <p class="recommendation"><strong>推荐理由</strong>：Top story on HN</p>
-      <p class="source"><a href="https://tim.blog/2026/06/12/has-ai-already-killed-nonfiction/" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <h2><a href="https://wpvip.com/future-of-the-web-2026/" target="_blank" rel="noopener">60%消费者认为品牌营销中出现 AI 是负面信号</a></h2>
+      <p class="meta">#AI营销 #消费者调研 #品牌策略 #GEO #人性化设计 · 来源：WordPress VIP</p>
+      <p class="summary">WordPress VIP 研究报告显示，60%消费者表示品牌信息中出现 AI 是负面因素。74%认为互联网比十年前更不人性化，40分钟是人机交互感到机器人疲劳的阈值。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：消费者对 AI 营销的抵触情绪非常显著。品牌应谨慎使用 AI 标签，聚焦于 AI 驱动的实际体验提升而非营销话术。这是 SEO/GEO 从业者的重要信号。</p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 7</span>
-        <span class="score">评分：5/10</span>
+        <span class="score">评分：7/10</span>
       </div>
-      <h2><a href="https://news.sky.com/story/derbyshire-police-officer-investigated-for-using-ai-to-create-evidence-in-multiple-cases-13553661" target="_blank" rel="noopener">Police officer investigated for using AI to 'create evidence</a></h2>
-      <p class="meta">#AI #tech · 来源：news.ycombinator.com</p>
-      <p class="summary">AI related news from news.ycombinator.com</p>
-      <p class="recommendation"><strong>推荐理由</strong>：Top story on HN</p>
-      <p class="source"><a href="https://news.sky.com/story/derbyshire-police-officer-investigated-for-using-ai-to-create-evidence-in-multiple-cases-13553661" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <h2><a href="https://techcrunch.com/2026/06/18/ai-inference-startup-baseten-reportedly-raising-1-5b-months-after-its-last-mega-round/" target="_blank" rel="noopener">AI 推理创业公司 Baseten 传融资 15 亿美元</a></h2>
+      <p class="meta">#Baseten #AI推理 #融资 #创业 #基础设施 · 来源：TechCrunch</p>
+      <p class="summary">AI 推理基础设施公司 Baseten 据报筹集 15 亿美元融资，估值约 110-130 亿美元。距此前 E 轮（3亿/50亿估值）仅5个月，估值增长 160%。反映了 VC 对 AI 推理层的巨额押注。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：AI 推理基础设施正在经历淘金热。半年估值翻 2.6 倍证明推理层是 AI 产业链中获利最快的环节之一。</p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 8</span>
-        <span class="score">评分：5/10</span>
+        <span class="score">评分：7/10</span>
       </div>
-      <h2><a href="https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" target="_blank" rel="noopener">Only 16 Percent of Americans Think AI Will Have a Positive I</a></h2>
-      <p class="meta">#AI #tech · 来源：news.ycombinator.com</p>
-      <p class="summary">AI related news from news.ycombinator.com</p>
-      <p class="recommendation"><strong>推荐理由</strong>：Top story on HN</p>
-      <p class="source"><a href="https://techcrunch.com/2026/06/17/only-16-percent-of-americans-think-ai-will-have-a-positive-impact-on-society-a-new-study-shows/" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <h2><a href="https://charitydotwtf.substack.com/p/ai-demands-more-engineering-discipline" target="_blank" rel="noopener">AI 时代需要更多工程纪律，而非更少</a></h2>
+      <p class="meta">#工程纪律 #AI编码 #软件工程 #可观测性 #架构 · 来源：charity.wtf</p>
+      <p class="summary">Charity Majors 发文论证 AI 生成代码不减少对工程纪律的需求，反而增加。核心论点：当代码生成几乎免费时，代码从资产变为缓存，需要更强的测试、可观测性和架构文档来确保系统可维护。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：2026年正在从 vibe coding 回归工程纪律。投资测试框架、可观测性和架构文档比追求最新 AI 工具更关键。</p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 9</span>
-        <span class="score">评分：5/10</span>
+        <span class="score">评分：7/10</span>
       </div>
-      <h2><a href="https://rsgm.dev/post/ai-dev-platform/" target="_blank" rel="noopener">My Homelab AI Dev Platform</a></h2>
-      <p class="meta">#AI #tech · 来源：news.ycombinator.com</p>
-      <p class="summary">AI related news from news.ycombinator.com</p>
-      <p class="recommendation"><strong>推荐理由</strong>：Top story on HN</p>
-      <p class="source"><a href="https://rsgm.dev/post/ai-dev-platform/" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <h2><a href="https://techcrunch.com/2026/06/18/microsoft-turns-to-aws-as-github-faces-ai-capacity-crunch/" target="_blank" rel="noopener">微软因 GitHub AI 算力不足转向 AWS</a></h2>
+      <p class="meta">#微软 #AWS #GitHub #算力 #AI基础设施 · 来源：TechCrunch</p>
+      <p class="summary">微软因 GitHub Copilot 等 AI 服务的算力容量紧张，部分工作负载转向 AWS 处理。这一事件暴露了 AI 基础设施供应链的脆弱性——即使是微软也面临 GPU 供应压力。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：连微软都需要求助竞争对手 AWS，说明 GPU 算力短缺是全球性问题。多云 AI 策略将成为常态。</p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 10</span>
-        <span class="score">评分：5/10</span>
+        <span class="score">评分：6/10</span>
       </div>
-      <h2><a href="https://stephen.bochinski.dev/blog/2026/06/13/ai-coding-at-home-without-going-broke/" target="_blank" rel="noopener">AI coding at home without going broke</a></h2>
-      <p class="meta">#AI #tech · 来源：news.ycombinator.com</p>
-      <p class="summary">AI related news from news.ycombinator.com</p>
-      <p class="recommendation"><strong>推荐理由</strong>：Top story on HN</p>
-      <p class="source"><a href="https://stephen.bochinski.dev/blog/2026/06/13/ai-coding-at-home-without-going-broke/" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <h2><a href="https://rsgm.dev/post/ai-dev-platform/" target="_blank" rel="noopener">我的 Homelab AI 开发平台——OpenCode + GitOps</a></h2>
+      <p class="meta">#AI开发平台 #OpenCode #GitOps #homelab #安全 · 来源：Rsgm's Blog</p>
+      <p class="summary">开发者分享使用 OpenCode Web UI 作为 AI 编码环境，与自建 Git 服务器集成：AI 生成代码后 push 到 feature branch -> PR review -> GitOps 自动部署。关键安全策略：AI 不能直接 push 到 deploy 分支。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：AI + GitOps 的 homelab 实践展示了 AI 编码的安全落地模式——通过 PR review 保持人对代码的控制权。</p>
     </div>
   <div class="footer">
-    <p>自动采集 · LLM 精选 · <a href="https://github.com/haihepeng/ai-news-daily" target="_blank">GitHub</a></p>
+    <p>自动采集 · LLM 精选 · 每日 AI 科技新闻</p>
   </div>
 </div>
 </body>
