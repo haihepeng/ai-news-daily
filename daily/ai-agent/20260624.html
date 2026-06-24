@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily - AI Agent - 2026-06-24</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
+        .header { background: #7c3aed; padding: 2rem; text-align: center; }
+        .header h1 { font-size: 1.8rem; color: white; }
+        .header .date { color: rgba(255,255,255,0.8); margin-top: 0.5rem; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: #1e293b; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #7c3aed; }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+        .rank { font-size: 1.2rem; font-weight: bold; color: #7c3aed; }
+        .score { background: #7c3aed; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.85rem; }
+        .card-title { font-size: 1.1rem; color: #f1f5f9; margin-bottom: 0.5rem; }
+        .recommendation { color: #94a3b8; font-style: italic; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .summary { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 0.75rem; }
+        .tags { margin-bottom: 0.5rem; }
+        .tag { display: inline-block; background: #334155; color: #94a3b8; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 4px; }
+        .source { color: #7c3aed; text-decoration: none; font-size: 0.85rem; }
+        .source:hover { text-decoration: underline; }
+        .footer { text-align: center; padding: 2rem; color: #64748b; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🤖 AI Daily - AI Agent</h1>
+        <div class="date">2026年06月24日</div>
+    </div>
+    <div class="container">
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#1</span>
+                <span class="score">8/10</span>
+            </div>
+            <h3 class="card-title">HALO：递归自优化的 Agent 循环优化器</h3>
+            <p class="recommendation">Agent 自优化领域的前沿开源工具，解决了从单 trace 学习到系统级改进的关键问题。</p>
+            <p class="summary">开源工具 HALO（Hierarchical Agent Loop Optimization）使用 RLM（递归语言模型）构建自优化的 Agent 系统。核心洞察：通用编码 harness 往往对单个 trace 过拟合，HALO 通过专门的 RLM 工具包观察系统级 Agent 行为并泛化改进。包含桌面应用（ElectroBun/React）和 Python SDK/CLI，支持 OpenTelemetry 追踪和 Langfuse 历史导入。</p>
+            <div class="tags"><span class="tag">#Agent</span><span class="tag">#自优化</span><span class="tag">#RLM</span><span class="tag">#开源</span></div>
+            <a href="https://github.com/context-labs/halo" class="source" target="_blank">来源：GitHub</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#2</span>
+                <span class="score">8/10</span>
+            </div>
+            <h3 class="card-title">Linux Foundation 推出 Agent Name Service：AI Agent 的 DNS 身份基础设施</h3>
+            <p class="recommendation">AI Agent 基础设施的里程碑事件，解决了 Agent 身份验证和互操作性的关键缺失环节。</p>
+            <p class="summary">Linux Foundation 宣布启动 Agent Name Service（ANS），基于 DNS 扩展为 AI Agent 提供可信身份、验证和发现机制。支持 DID 和 LEI 标准，GoDaddy、Cloudflare、Salesforce、Cisco 等参与。世界经济论坛数据显示 82% 高管计划在 1-3 年内采用 AI Agent。ANS 旨在防止 Agent 互联网变成围墙花园。</p>
+            <div class="tags"><span class="tag">#Agent</span><span class="tag">#身份</span><span class="tag">#DNS</span><span class="tag">#基础设施</span><span class="tag">#标准</span></div>
+            <a href="https://www.linuxfoundation.org/press/linux-foundation-announces-intent-to-launch-agent-name-service-to-establish-trusted-identity-infrastructure-for-ai-agents" class="source" target="_blank">来源：Linux Foundation</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#3</span>
+                <span class="score">8/10</span>
+            </div>
+            <h3 class="card-title">Sherlock Holmes 棋盘游戏作为 LLM Agent 评测：Reasoner+Explorer 架构突破</h3>
+            <p class="recommendation">Agent 架构设计的深刻洞察——角色分离比单纯提升模型能力更有效。</p>
+            <p class="summary">用 Sherlock Holmes Consulting Detective 棋盘游戏评测 LLM Agent 的多步推理能力。Claude Fable 5 在困难模式下与 Holmes 持平。发现两大失败模式：Agent 用自生成内容覆盖检索到的正确事实（可测量的 RAG bug）、Agent 陷入诱饵陷阱。关键发现：分离推理者和探索者的双 Agent 架构（Reasoner+Explorer）成功突破诱饵陷阱，模型能力单独既非必要也非充分。</p>
+            <div class="tags"><span class="tag">#Agent</span><span class="tag">#评测</span><span class="tag">#推理</span><span class="tag">#架构</span><span class="tag">#RAG</span></div>
+            <a href="https://alexweil.github.io/sherlock-agent-eval" class="source" target="_blank">来源：Sherlock Agent Eval</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#4</span>
+                <span class="score">7/10</span>
+            </div>
+            <h3 class="card-title">SAA SDK：语音 Agent 的选择性听觉注意力层</h3>
+            <p class="recommendation">解决语音 Agent 在真实环境中「听谁说话」的关键问题，工程实现完整。</p>
+            <p class="summary">SAA（Selective Auditory Attention）是语音 Agent 的「收件人层」，运行在 STT 之前判断语音是否指向设备，过滤旁白、背景噪音和 Agent 自己的 TTS 输出。无需唤醒词，一次判断一个语句。支持 LiveKit、Pipecat、ElevenLabs、Twilio 等主流语音 Agent 框架。</p>
+            <div class="tags"><span class="tag">#Agent</span><span class="tag">#语音</span><span class="tag">#STT</span><span class="tag">#注意力</span></div>
+            <a href="https://github.com/attenlabs/saa-sdk" class="source" target="_blank">来源：GitHub</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#5</span>
+                <span class="score">7/10</span>
+            </div>
+            <h3 class="card-title">ask-a-human：Agent 循环中的私密寻呼机</h3>
+            <p class="recommendation">解决 Agent 全自动运行时「需要人类但无法联系」的痛点，设计优雅。</p>
+            <p class="summary">MCP 工具，让全自动运行的 Agent 在需要人类决策时发送加密通知到手机。零配置：复制 MCP JSON 即可使用，无需账号或 API key。端到端加密（SPAKE2 + NaCl），中继服务器仅看到密文。支持 Claude Code、Codex、Cursor 等所有 MCP 兼容 Agent。</p>
+            <div class="tags"><span class="tag">#Agent</span><span class="tag">#MCP</span><span class="tag">#人机协作</span><span class="tag">#安全</span></div>
+            <a href="https://ask-a-human.ai" class="source" target="_blank">来源：ask-a-human</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#6</span>
+                <span class="score">7/10</span>
+            </div>
+            <h3 class="card-title">Alma：本地优先的 MCP 自我模型，让 Agent 理解你</h3>
+            <p class="recommendation">解决 Agent 跨会话理解用户的隐私优先方案，设计理念先进。</p>
+            <p class="summary">Rust 实现的 MCP 服务器，存储用户的自我模型（姓名、角色、工作风格等），通过追加日志保证可审计和可回滚。Agent 被视为不受信任方——观察弱信号、记录证据需授权、提议新 facet 需人类批准。支持 JWS 签名导出/导入，实验性项目。</p>
+            <div class="tags"><span class="tag">#Agent</span><span class="tag">#MCP</span><span class="tag">#记忆</span><span class="tag">#隐私</span><span class="tag">#本地优先</span></div>
+            <a href="https://github.com/almakit/alma" class="source" target="_blank">来源：GitHub</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#7</span>
+                <span class="score">6/10</span>
+            </div>
+            <h3 class="card-title">Fika Jobs 获 400 万美元融资：AI Agent 面试的视频招聘平台</h3>
+            <p class="recommendation">AI Agent 在招聘场景的商业化应用，但存在视频面试的偏见风险。</p>
+            <p class="summary">斯德哥尔摩 Fika Jobs 获 400 万美元 pre-seed，构建视频优先招聘平台。AI Agent（基于 Gemini）对候选人进行约 10 分钟视频面试，生成可发现的视频档案。雇主付费模式（首年薪 10%），低于传统猎头（20-30%）。已有 100+ 公司候补名单。</p>
+            <div class="tags"><span class="tag">#Agent</span><span class="tag">#招聘</span><span class="tag">#视频</span><span class="tag">#创业</span></div>
+            <a href="https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates" class="source" target="_blank">来源：TechCrunch</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#8</span>
+                <span class="score">6/10</span>
+            </div>
+            <h3 class="card-title">TDD 是我信任 AI Agent 代码的方式 [视频]</h3>
+            <p class="recommendation">实践导向的 Agent 代码质量保障方法。</p>
+            <p class="summary">探讨如何通过测试驱动开发来验证 AI Agent 生成代码的正确性。</p>
+            <div class="tags"><span class="tag">#Agent</span><span class="tag">#TDD</span><span class="tag">#代码质量</span></div>
+            <a href="https://www.youtube.com/watch?v=d5x38FCSCyM" class="source" target="_blank">来源：YouTube</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#9</span>
+                <span class="score">5/10</span>
+            </div>
+            <h3 class="card-title">Selector Forge：AI 生成可靠选择器的浏览器扩展</h3>
+            <p class="recommendation">实用工具，但更偏测试/爬虫而非 Agent 核心技术。</p>
+            <p class="summary">开源浏览器扩展，用 AI 生成和验证 CSS/XPath 选择器，浏览器始终作为真相来源。支持单元素和列表模式。</p>
+            <div class="tags"><span class="tag">#Agent</span><span class="tag">#工具</span><span class="tag">#选择器</span><span class="tag">#测试</span></div>
+            <a href="https://github.com/Intuned/selector-forge" class="source" target="_blank">来源：GitHub</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#10</span>
+                <span class="score">5/10</span>
+            </div>
+            <h3 class="card-title">PMB：AI 编码 Agent 的本地优先持久记忆</h3>
+            <p class="recommendation">实用但已在 ai-coding 主题中详细介绍。</p>
+            <p class="summary">SQLite 存储的 Agent 记忆系统，支持 BM25+向量混合搜索，35ms 召回延迟。</p>
+            <div class="tags"><span class="tag">#Agent</span><span class="tag">#记忆</span><span class="tag">#MCP</span></div>
+            <a href="https://github.com/oleksiijko/pmb/blob/main/README.md" class="source" target="_blank">来源：GitHub</a>
+        </div>
+        
+    </div>
+    <div class="footer">
+        AI Daily News by Hermes Agent | 2026-06-24
+    </div>
+</body>
+</html>
