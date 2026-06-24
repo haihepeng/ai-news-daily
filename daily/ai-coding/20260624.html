@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily - AI Coding - 2026-06-24</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
+        .header { background: #059669; padding: 2rem; text-align: center; }
+        .header h1 { font-size: 1.8rem; color: white; }
+        .header .date { color: rgba(255,255,255,0.8); margin-top: 0.5rem; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: #1e293b; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; border-left: 4px solid #059669; }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+        .rank { font-size: 1.2rem; font-weight: bold; color: #059669; }
+        .score { background: #059669; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.85rem; }
+        .card-title { font-size: 1.1rem; color: #f1f5f9; margin-bottom: 0.5rem; }
+        .recommendation { color: #94a3b8; font-style: italic; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .summary { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 0.75rem; }
+        .tags { margin-bottom: 0.5rem; }
+        .tag { display: inline-block; background: #334155; color: #94a3b8; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 4px; }
+        .source { color: #059669; text-decoration: none; font-size: 0.85rem; }
+        .source:hover { text-decoration: underline; }
+        .footer { text-align: center; padding: 2rem; color: #64748b; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🤖 AI Daily - AI Coding</h1>
+        <div class="date">2026年06月24日</div>
+    </div>
+    <div class="container">
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#1</span>
+                <span class="score">8/10</span>
+            </div>
+            <h3 class="card-title">AI 生成代码的安全陷阱：从「能跑」到「安全」的框架思路</h3>
+            <p class="recommendation">AI 编码安全领域最有实践价值的文章，提出的「安全默认值」框架可直接应用于团队开发。</p>
+            <p class="summary">Stack Overflow 博客深度分析 AI 生成后端代码的安全隐患——无请求体限制、通配符 CORS、SSRF 漏洞、原型污染等。作者提出 DaloyJS 框架，采用「拒绝启动」策略：危险配置直接崩溃而非静默运行。核心理念是让「偷懒的做法」恰好也是「安全的做法」，零运行时依赖，内置 SSRF 防护和 JWT 验证保护。</p>
+            <div class="tags"><span class="tag">#AI编码</span><span class="tag">#安全</span><span class="tag">#框架</span><span class="tag">#默认安全</span></div>
+            <a href="https://stackoverflow.blog/2026/06/23/your-ai-shipped-a-backend-that-boots-that-is-the-whole-problem" class="source" target="_blank">来源：Stack Overflow Blog</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#2</span>
+                <span class="score">8/10</span>
+            </div>
+            <h3 class="card-title">PMB：AI 编码 Agent 的本地优先持久记忆系统</h3>
+            <p class="recommendation">解决 AI 编码 Agent 的上下文丢失痛点，技术实现扎实，直接可用。</p>
+            <p class="summary">PMB 为 MCP 兼容的 AI 编码 Agent 提供离线持久记忆，所有数据存储在单个 SQLite 文件中，无云端依赖。支持 BM25 + 向量 + 实体图的混合搜索，warm 召回延迟 35ms。提供 29 个 MCP 工具，支持 Claude Code、Cursor、Codex 等。自动记忆捕获和多语言支持（50+ 语言），完全本地运行。</p>
+            <div class="tags"><span class="tag">#AI编码</span><span class="tag">#记忆</span><span class="tag">#MCP</span><span class="tag">#本地优先</span></div>
+            <a href="https://github.com/oleksiijko/pmb/blob/main/README.md" class="source" target="_blank">来源：GitHub</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#3</span>
+                <span class="score">8/10</span>
+            </div>
+            <h3 class="card-title">AI 编码的 8 个陷阱：工程团队必知的反模式</h3>
+            <p class="recommendation">AI 编码最佳实践的系统性总结，每个陷阱都配有具体防御策略。</p>
+            <p class="summary">系统梳理 AI 编码助手带来的新型失败模式：自动化偏见（过度信任 AI 输出）、幻觉依赖（AI 编造的包名被攻击者注册）、验证空测试（覆盖率高但验证弱）、在高验证成本领域使用 AI、范围蔓延、Mock 数据泄漏到生产、上下文腐烂、逐 Prompt 架构退化。核心观点：AI 代码的最大风险不是烂代码，而是「看起来可信的代码」。</p>
+            <div class="tags"><span class="tag">#AI编码</span><span class="tag">#最佳实践</span><span class="tag">#反模式</span><span class="tag">#工程</span></div>
+            <a href="https://jsdevspace.substack.com/p/the-8-ai-coding-traps-every-engineering" class="source" target="_blank">来源：JS Dev Space</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#4</span>
+                <span class="score">7/10</span>
+            </div>
+            <h3 class="card-title">Aharness：用有限状态机强制执行 Codex Agent 工作流</h3>
+            <p class="recommendation">解决 Agent 工作流中「流程漂移」问题的创新方案，适合需要严格流程控制的团队。</p>
+            <p class="summary">Aharness 为 Codex Agent 长时间运行的工作流提供运行时强制执行，用 TypeScript FSM 替代「请遵循流程」的口头约束。核心改进：流程编码为不可跳过的状态、审批是真正的网关、证据经过类型验证和保存、有显式修复路径和重试限制。附带 Codeflow 工作流包，支持 recipe-driven 开发。</p>
+            <div class="tags"><span class="tag">#AI编码</span><span class="tag">#Agent</span><span class="tag">#工作流</span><span class="tag">#FSM</span><span class="tag">#Codex</span></div>
+            <a href="https://github.com/Alfredvc/aharness" class="source" target="_blank">来源：GitHub</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#5</span>
+                <span class="score">7/10</span>
+            </div>
+            <h3 class="card-title">Selector Forge：AI 驱动的可靠选择器生成浏览器扩展</h3>
+            <p class="recommendation">解决 E2E 测试和爬虫中选择器不稳定问题的实用工具，设计思路值得借鉴。</p>
+            <p class="summary">开源浏览器扩展（Chrome/Firefox），使用 AI 生成和验证 CSS/XPath 选择器。核心原则是「浏览器始终是真相来源」——AI 提议和排序选择器，但扩展始终在真实 DOM 上验证。支持单元素和列表两种模式，基于 WXT + React 构建。</p>
+            <div class="tags"><span class="tag">#AI工具</span><span class="tag">#浏览器扩展</span><span class="tag">#测试</span><span class="tag">#选择器</span></div>
+            <a href="https://github.com/Intuned/selector-forge" class="source" target="_blank">来源：GitHub</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#6</span>
+                <span class="score">7/10</span>
+            </div>
+            <h3 class="card-title">Ponytrail：AI 编码 Agent 编辑的本地审计轨迹</h3>
+            <p class="recommendation">为 AI 编码 Agent 的操作提供可追溯性和可回滚性，实用性强。</p>
+            <p class="summary">CLI 工具，记录 AI 编码 Agent 为什么修改了文件，以本地历史树形式展示变更，支持从快照回滚。维护 .pony-trail/ 目录中的状态，支持查看快照历史（含 action、summary、checks、result、rollback 信息）。附带 Agent skill 安装功能。</p>
+            <div class="tags"><span class="tag">#AI编码</span><span class="tag">#审计</span><span class="tag">#版本控制</span><span class="tag">#开发工具</span></div>
+            <a href="https://github.com/0xroylee/ponytrail" class="source" target="_blank">来源：GitHub</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#7</span>
+                <span class="score">7/10</span>
+            </div>
+            <h3 class="card-title">GitHub Copilot 自动化：40 个自动化如何让领导力升级</h3>
+            <p class="recommendation">MCP 自动化在实际领导工作中的应用案例，有具体 prompt 示例可参考。</p>
+            <p class="summary">GitHub DevRel 高级总监分享使用约 40 个 Copilot 自动化管理工作负荷的经验。自动化作为「有固定任务的 Agent」运行，处理会议准备、每日摘要、代码审查跟踪、过时工作发现等。核心价值是一致性，特别适合神经多样性专业人士。关键区分：自动化处理「脚手架」工作，释放人类做连接和战略思考。</p>
+            <div class="tags"><span class="tag">#GitHub Copilot</span><span class="tag">#自动化</span><span class="tag">#MCP</span><span class="tag">#领导力</span></div>
+            <a href="https://github.blog/developer-skills/github/i-automated-my-job-and-it-made-me-a-better-leader" class="source" target="_blank">来源：GitHub Blog</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#8</span>
+                <span class="score">6/10</span>
+            </div>
+            <h3 class="card-title">GitHub 联合联盟推动加州 AI 透明度法案修正，保护开源</h3>
+            <p class="recommendation">AI 政策与开源交叉领域的重要动态，影响 AI 模型分发和开源协作。</p>
+            <p class="summary">GitHub 联合 Black Forest Labs、Hugging Face、Mozilla 推动加州 AI 透明度法案（SB 942/SB 1000）修正。核心问题：法案的许可撤销条款与开源许可证的永久不可撤销原则冲突。联盟提出参照欧盟 AI 法案透明度实践准则的替代方案。</p>
+            <div class="tags"><span class="tag">#GitHub</span><span class="tag">#政策</span><span class="tag">#开源</span><span class="tag">#AI法规</span></div>
+            <a href="https://github.blog/news-insights/policy-news-and-insights/github-joins-coalition-advocating-for-fixes-to-california-ai-transparency-act-to-protect-open-source" class="source" target="_blank">来源：GitHub Blog</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#9</span>
+                <span class="score">6/10</span>
+            </div>
+            <h3 class="card-title">现代 GPU 编程 for MLSys：CMU 课程教材上线</h3>
+            <p class="recommendation">GPU 编程和 ML 系统优化的高质量学习资源，但受众较窄。</p>
+            <p class="summary">卡内基梅隆大学 MLSys 课程教材发布在线版，涵盖 GPU 硬件理解、TIRx Python DSL、GEMM 优化（从 Tiled 到 SOTA）和 FlashAttention 4 实现。以 Blackwell 架构为主要目标，使用可运行代码逐步构建高性能 kernel。</p>
+            <div class="tags"><span class="tag">#GPU</span><span class="tag">#MLSys</span><span class="tag">#教育</span><span class="tag">#CUDA</span></div>
+            <a href="https://mlc.ai/modern-gpu-programming-for-mlsys" class="source" target="_blank">来源：MLC</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="rank">#10</span>
+                <span class="score">6/10</span>
+            </div>
+            <h3 class="card-title">Proctor：AI 编码 Agent 基准测试的签名隔离包</h3>
+            <p class="recommendation">AI 编码 Agent 评测基础设施，适合做 Agent 评估的团队。</p>
+            <p class="summary">开源工具，为 AI 编码 Agent 基准测试提供签名的隔离执行环境。确保测试结果的可重复性和完整性。</p>
+            <div class="tags"><span class="tag">#AI编码</span><span class="tag">#基准测试</span><span class="tag">#评测</span></div>
+            <a href="https://github.com/dylanp12/proctor" class="source" target="_blank">来源：GitHub</a>
+        </div>
+        
+    </div>
+    <div class="footer">
+        AI Daily News by Hermes Agent | 2026-06-24
+    </div>
+</body>
+</html>
