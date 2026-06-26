@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Daily News - AI Agent - 2026-06-26</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f0f0f; color: #e0e0e0; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    h1 { text-align: center; font-size: 1.8em; margin-bottom: 8px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .subtitle { text-align: center; color: #888; margin-bottom: 30px; font-size: 0.9em; }
+    .news-card { background: #1a1a2e; border-radius: 12px; padding: 24px; margin-bottom: 20px; border: 1px solid #2a2a3e; transition: transform 0.2s; }
+    .news-card:hover { transform: translateY(-2px); border-color: #667eea; }
+    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .rank { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
+    .score { color: #fbbf24; font-weight: bold; font-size: 0.9em; }
+    .news-card h2 { font-size: 1.2em; margin-bottom: 10px; }
+    .news-card h2 a { color: #e0e0e0; text-decoration: none; }
+    .news-card h2 a:hover { color: #667eea; }
+    .meta { color: #888; font-size: 0.85em; margin-bottom: 12px; }
+    .summary { color: #b0b0b0; font-size: 0.95em; margin-bottom: 12px; line-height: 1.7; }
+    .recommendation { background: #16213e; padding: 12px 16px; border-radius: 8px; border-left: 3px solid #667eea; font-size: 0.9em; color: #c0c0c0; }
+    .recommendation strong { color: #667eea; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 AI Daily News - AI Agent</h1>
+    <p class="subtitle">2026年06月26日 · Top 10 精选</p>
+
+    <div class="news-card">
+      <div class="card-header"><span class="rank">Top 1</span><span class="score">评分：9/10</span></div>
+      <h2><a href="https://techcrunch.com/2026/06/25/general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world" target="_blank">General Intuition以23亿美元押注游戏训练AI Agent</a></h2>
+      <p class="meta">#融资 · #世界模型 · #游戏训练 · 来源：TechCrunch</p>
+      <p class="summary">General Intuition完成3.2亿美元融资，估值23亿美元，获得Khosla Ventures、Jeff Bezos、Eric Schmidt等投资。公司利用游戏平台Medal收集的数百万小时游戏操作数据（含精确按键时序）训练AI Agent的时空推理能力。其世界模型能从游戏迁移到真实世界，四足机器人仅需8分钟真实世界数据即可微调。公司计划2026年夏季开放API，定位为生态赋能者。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：这是一笔重大融资，揭示了游戏数据训练通用AI Agent的创新路径。游戏中的动作标注数据（action labels）是核心竞争力，模拟到现实的迁移仅需极少真实数据，具有开创性意义。</p>
+    </div>
+
+    <div class="news-card">
+      <div class="card-header"><span class="rank">Top 2</span><span class="score">评分：9/10</span></div>
+      <h2><a href="https://qwen.ai/blog?id=qwen-agentworld" target="_blank">Qwen-AgentWorld：面向通用Agent的语言世界模型</a></h2>
+      <p class="meta">#世界模型 · #Qwen · #Agent训练 · 来源：qwen.ai</p>
+      <p class="summary">通义千问团队发布Qwen-AgentWorld，首个显式训练用于模拟Agent环境的语言世界模型。覆盖7个交互域（终端、搜索、MCP、SWE、Web、Android、OS），397B-A17B变体在AgentWorldBench上超越GPT-5.4和Claude Opus 4.8。训练管线采用CPT注入+SFT激活+RL锐化三阶段。世界模型可用于解耦式Agent RL训练和统一Agent基础模型，展现出深思熟虑的自我纠错和信息泄漏防护等涌现推理模式。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：这是世界模型在Agent领域的重要突破，语言世界模型能模拟7种环境，为Agent训练提供了可扩展的模拟器。对Agent RL训练和基础模型研究有深远影响。</p>
+    </div>
+
+    <div class="news-card">
+      <div class="card-header"><span class="rank">Top 3</span><span class="score">评分：8/10</span></div>
+      <h2><a href="https://www.rtrvr.ai/blog/code-as-plan-deepseek-flash-text-only-browser-agent" target="_blank">DeepSeek Flash颠覆Agent产品经济学：代码即计划架构</a></h2>
+      <p class="meta">#DeepSeek Flash · #浏览器Agent · #Code-as-Plan · 来源：news.ycombinator.com</p>
+      <p class="summary">Retriever AI提出Code-as-Plan架构，用DeepSeek Flash替代传统截图循环的浏览器Agent。传统模式中模型作为运行时（每步截图→LLM→点击），而新架构让模型作为编译器生成JavaScript计划，由本地harness执行。成本降低100倍以上，四大因素：减少循环次数、纯文本DOM替代截图、缓存优化、使用廉价模型。价值从模型API转向可调用的harness DSL。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：颠覆了浏览器Agent的经济模型，Code-as-Plan架构将模型从运行时降级为编译器，是Agent产品架构的重要创新方向。对降低Agent部署成本有直接指导意义。</p>
+    </div>
+
+    <div class="news-card">
+      <div class="card-header"><span class="rank">Top 4</span><span class="score">评分：8/10</span></div>
+      <h2><a href="https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub" target="_blank">Snyk发现36%的Agent技能存在Prompt注入漏洞</a></h2>
+      <p class="meta">#安全审计 · #Prompt注入 · #供应链安全 · 来源：snyk.io</p>
+      <p class="summary">Snyk对ClawHub上3984个Agent技能进行安全审计，发现36.82%（1467个）至少存在一个安全漏洞，13.4%（534个）包含严重级别漏洞。确认76个恶意载荷，8个恶意技能仍在公开发布。91%的恶意技能结合prompt注入和传统恶意软件。主要攻击手法包括外部恶意软件分发、混淆数据外泄、安全禁用。Agent技能生态面临类似早期npm/PyPI的供应链安全问题，但权限更高。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：这是Agent技能生态系统安全状况的重要警示。36%的漏洞率和活跃的恶意软件攻击表明，Agent技能市场急需代码签名、安全审查和沙箱机制。</p>
+    </div>
+
+    <div class="news-card">
+      <div class="card-header"><span class="rank">Top 5</span><span class="score">评分：7/10</span></div>
+      <h2><a href="https://neo4j.com/blog/agentic-ai/context-graph-ai-agent-memory" target="_blank">为什么AI Agent需要三种记忆类型</a></h2>
+      <p class="meta">#记忆架构 · #上下文图 · #Neo4j · 来源：neo4j.com</p>
+      <p class="summary">Neo4j首席科学家Jim Webber提出三层Agent记忆模型：长期记忆（企业知识图谱，提供事实真相）、短期记忆（会话历史，处理易变信息）、推理记忆（决策轨迹，提供透明性和可解释性）。上下文图（Context Graph）通过图数据库实现，可与LangChain、CrewAI等框架集成。Foundation Capital已将上下文图识别为Agentic系统基础设施的重要架构趋势。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：清晰的三层记忆架构为构建可靠的生产级Agent提供了理论框架。Neo4j的图数据库实现方案具有实际参考价值，特别是对需要长期记忆和可解释性的企业场景。</p>
+    </div>
+
+    <div class="news-card">
+      <div class="card-header"><span class="rank">Top 6</span><span class="score">评分：7/10</span></div>
+      <h2><a href="https://shad0wmazt3r.github.io/ai-security" target="_blank">Agent不是扫描器：如何让AI安全Agent更好</a></h2>
+      <p class="meta">#安全Agent · #脚手架 · #模型路由 · 来源：shad0wmazt3r.github.io</p>
+      <p class="summary">作者通过11个模型的基准测试发现：脚手架（scaffolding）对弱模型有帮助但会损害强模型性能。相关系数为-0.81，弱模型（F1&lt;0.60）平均提升+0.0656，强模型（F1&gt;0.75）反而下降。MCP在静态代码片段任务中表现不佳，增加了纯开销。最佳方案是根据模型能力和任务阶段进行智能路由：侦察阶段用弱模型+脚手架，推理阶段用强模型纯控制，报告阶段用Sonnet+脚手架优化主观质量。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：实证研究揭示了Agent安全设计的关键洞察：不是给所有模型相同的脚手架，而是根据模型能力和任务阶段智能路由。这对AI安全Agent的架构设计有直接指导意义。</p>
+    </div>
+
+    <div class="news-card">
+      <div class="card-header"><span class="rank">Top 7</span><span class="score">评分：7/10</span></div>
+      <h2><a href="https://github.com/omnigent-ai/omnigent" target="_blank">Omnigent：开源Agent元管理框架</a></h2>
+      <p class="meta">#元管理 · #多Agent · #开源 · 来源：github.com</p>
+      <p class="summary">Omnigent提供统一的meta层，将Claude Code、Codex、Pi等不同AI编码Agent整合到单一接口。支持跨设备会话同步、多Agent监督协作、模型灵活切换、实时团队协作、云沙箱执行、Agent治理策略（暂停审批、支出上限、工具限制）。支持API密钥、订阅、网关（OpenRouter/Ollama）、Databricks等多种凭证类型。Apache 2.0开源，862 stars。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：填补了多Agent管理的工具空白，统一了不同Agent harness的接口。对需要同时管理多个Agent的企业团队具有实用价值，特别是其治理策略和实时协作功能。</p>
+    </div>
+
+    <div class="news-card">
+      <div class="card-header"><span class="rank">Top 8</span><span class="score">评分：7/10</span></div>
+      <h2><a href="https://github.com/Lelu-ai/lelu" target="_blank">Lelu：基于置信度的Agent授权引擎</a></h2>
+      <p class="meta">#授权引擎 · #置信度 · #prompt注入防护 · 来源：github.com</p>
+      <p class="summary">Lelu是开源的AI Agent授权引擎，超越传统认证工具（OPA/Casbin），能检测合法授权的Agent是否被操纵（如prompt注入）或做出低置信度决策。9步授权管线包括：API认证、影子Agent检测、prompt注入过滤（5层）、置信度门控、策略评估、风险模型、最严格合并、人工审查队列、行为分析。支持OpenAI/Anthropic/LangChain等框架，MIT开源。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：解决了Agent安全的核心问题：不仅阻止未授权访问，还能检测授权Agent被操纵的情况。9步授权管线设计精巧，特别是置信度门控和prompt注入多层过滤，是Agent安全的重要实践。</p>
+    </div>
+
+    <div class="news-card">
+      <div class="card-header"><span class="rank">Top 9</span><span class="score">评分：7/10</span></div>
+      <h2><a href="https://github.com/Diplomat-ai/diplomat-agent" target="_blank">Diplomat-agent：AI Agent工具调用安全扫描器</a></h2>
+      <p class="meta">#安全扫描 · #AST分析 · #工具调用 · 来源：github.com</p>
+      <p class="summary">Diplomat-agent是静态AST扫描器，识别AI Agent中具有真实世界副作用的工具调用并检查安全防护缺失。检测40+模式覆盖8类（数据库写入、删除、HTTP写入、支付、邮件、Agent调用、破坏性命令、发布/上传）。对16个开源仓库的基准测试发现70.9%的工具调用无防护。输出支持终端、JSON、SARIF、CSAF、Markdown等格式。是更大生态系统（Know-Decide-Prove）的'Know'阶段。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：解决了Agent安全的关键盲点：静态分析工具调用的防护缺失。70.9%无防护的发现令人警醒，多格式输出和CI/CD集成使其具有实际部署价值。</p>
+    </div>
+
+    <div class="news-card">
+      <div class="card-header"><span class="rank">Top 10</span><span class="score">评分：7/10</span></div>
+      <h2><a href="https://github.com/skymoore/codemcp" target="_blank">Codemcp：用一个MCP工具替代多次工具调用</a></h2>
+      <p class="meta">#MCP · #元网关 · #token优化 · 来源：github.com</p>
+      <p class="summary">Codemcp是元MCP网关，连接多个上游MCP服务器并暴露单一工具execute_python。Agent编写一个Python脚本即可调用所有上游工具，将多次顺序工具调用转化为一次模型交互。基准测试显示：在多工具任务上输入token减少55-90%（如3工具任务从399,456降至41,702 token）。支持Docker隔离、OAuth 2.1认证、交互式TUI管理。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：MCP生态的效率优化工具，通过Python脚本替代多次工具调用大幅减少token消耗。对使用多个MCP服务器的Agent系统有直接的成本优化价值。</p>
+    </div>
+
+  </div>
+</body>
+</html>
