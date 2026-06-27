@@ -1,404 +1,136 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Daily - 2026-06-27 | AI Agent</title>
-<style>
-  :root {
-    --bg: #0d1117;
-    --card-bg: #161b22;
-    --border: #30363d;
-    --text: #e6edf3;
-    --text-secondary: #8b949e;
-    --accent: #58a6ff;
-    --accent-dim: #1f6feb;
-    --green: #3fb950;
-    --orange: #d29922;
-    --red: #f85149;
-    --purple: #bc8cff;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    padding: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .header h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, var(--accent), var(--purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .header .subtitle {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-  }
-  .header .date {
-    color: var(--accent);
-    font-size: 1rem;
-    margin-top: 0.3rem;
-  }
-  .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-bottom: 1.2rem;
-    transition: border-color 0.2s;
-  }
-  .card:hover { border-color: var(--accent-dim); }
-  .card-header {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 0.8rem;
-  }
-  .rank {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    flex-shrink: 0;
-  }
-  .rank-1 { background: linear-gradient(135deg, #ffd700, #ffaa00); color: #000; }
-  .rank-2 { background: linear-gradient(135deg, #c0c0c0, #a0a0a0); color: #000; }
-  .rank-3 { background: linear-gradient(135deg, #cd7f32, #b87333); color: #000; }
-  .rank-n { background: var(--border); color: var(--text); }
-  .card-title {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--text);
-    flex: 1;
-  }
-  .card-title a {
-    color: inherit;
-    text-decoration: none;
-  }
-  .card-title a:hover { color: var(--accent); }
-  .score {
-    display: inline-block;
-    background: var(--accent-dim);
-    color: #fff;
-    padding: 0.15rem 0.5rem;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    flex-shrink: 0;
-  }
-  .card-meta {
-    display: flex;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    margin-bottom: 0.6rem;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-  }
-  .tag {
-    display: inline-block;
-    background: rgba(88, 166, 255, 0.1);
-    color: var(--accent);
-    padding: 0.15rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.75rem;
-  }
-  .card-summary {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin-bottom: 0.6rem;
-  }
-  .card-recommendation {
-    background: rgba(63, 185, 80, 0.08);
-    border-left: 3px solid var(--green);
-    padding: 0.6rem 0.8rem;
-    border-radius: 0 6px 6px 0;
-    font-size: 0.85rem;
-    color: var(--text);
-  }
-  .card-recommendation::before {
-    content: '💡 推荐：';
-    font-weight: 600;
-    color: var(--green);
-  }
-  .score-breakdown {
-    display: flex;
-    gap: 0.6rem;
-    margin-top: 0.5rem;
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-  }
-  .score-item { display: flex; align-items: center; gap: 0.2rem; }
-  .score-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-  }
-  .footer {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border);
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent 每日新闻 - 2026-06-27</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #333; }
+        h1 { color: #1a1a1a; border-bottom: 3px solid #6366f1; padding-bottom: 10px; }
+        .news-card { background: white; border-radius: 12px; padding: 24px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .rank { font-size: 14px; font-weight: 700; color: #6366f1; background: #eef2ff; padding: 4px 12px; border-radius: 20px; }
+        .score { font-size: 14px; color: #059669; font-weight: 600; }
+        h2 { margin: 0 0 8px 0; font-size: 18px; }
+        h2 a { color: #1a1a1a; text-decoration: none; }
+        h2 a:hover { color: #6366f1; }
+        .meta { font-size: 13px; color: #6b7280; margin-bottom: 12px; }
+        .summary { font-size: 15px; line-height: 1.6; color: #374151; margin-bottom: 12px; }
+        .recommendation { font-size: 14px; color: #059669; background: #f0fdf4; padding: 12px; border-radius: 8px; border-left: 3px solid #059669; }
+        .source { font-size: 13px; color: #6366f1; }
+    </style>
 </head>
 <body>
-  <div class="header">
-    <h1>🤖 AI Daily - AI Agent</h1>
-    <div class="date">2026-06-27 (Saturday)</div>
-    <div class="subtitle">每日AI Agent领域精选资讯 Top 10 | 基于技术重要性排序</div>
-  </div>
+    <h1>🧠 AI Agent 每日新闻 - 2026年06月27日</h1>
 
-  <div class="card">
-    <div class="card-header">
-      <span class="rank rank-1">1</span>
-      <span class="card-title"><a href="https://github.com/workweave/router" target="_blank">WorkWeave Router：智能模型路由，为AI编程助手节省40-70%成本</a></span>
-      <span class="score">11.5</span>
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 1</span>
+            <span class="score">评分：9/10</span>
+        </div>
+        <h2><a href="https://www.rtrvr.ai/blog/code-as-plan-deepseek-flash-text-only-browser-agent">DeepSeek Flash 颠覆 Agent 产品经济学：代码即计划架构</a></h2>
+        <p class="meta">#AI Agent · #成本优化 · #DeepSeek · 来源：Retriever AI Blog</p>
+        <p class="summary">Retriever AI 提出 Code-as-Plan 架构，利用 DeepSeek Flash 生成可执行 JavaScript 代码，由本地 harness 执行，将浏览器 agent 成本降低 100 倍。核心创新在于将模型从运行时转变为编译器，通过文本 DOM 替代截图、代码替代工具调用转录、缓存优化等五大技术赌注实现成本革命。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：这一架构范式转变对所有 agent 开发者都有深远影响——它证明了便宜模型+好的 harness 可以替代昂贵模型，为 agent 产品的商业化开辟了新路径。</p>
     </div>
-    <div class="card-meta">
-      <span>⬆ 158 points</span>
-      <span class="tag">模型路由</span>
-      <span class="tag">成本优化</span>
-      <span class="tag">编程助手</span>
-      <span class="tag">基础设施</span>
-    </div>
-    <div class="card-summary">WorkWeave Router是一个即插即用的AI模型代理，通过嵌入式模型选择器在50ms内将请求路由到最优模型，实现40-70%的成本节省。RouterArena排行榜第一名。</div>
-    <div class="card-recommendation">模型路由是解决AI Agent成本问题的关键技术方向。WorkWeave Router提供了生产级的解决方案，支持Claude Code、Codex、Cursor等主流工具，强烈推荐关注。</div>
-    <div class="score-breakdown">
-      <div class="score-item"><span class="score-dot" style="background:#bc8cff"></span>新颖性 3×1.5=4.5</div>
-      <div class="score-item"><span class="score-dot" style="background:#58a6ff"></span>行业影响 3</div>
-      <div class="score-item"><span class="score-dot" style="background:#3fb950"></span>实用性 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#d29922"></span>时效性 2</div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="card-header">
-      <span class="rank rank-2">2</span>
-      <span class="card-title"><a href="https://www.rtrvr.ai/blog/code-as-plan-deepseek-flash-text-only-browser-agent" target="_blank">DeepSeek Flash颠覆Agent经济学：代码即计划架构使浏览器Agent成本降低100倍</a></span>
-      <span class="score">10.5</span>
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 2</span>
+            <span class="score">评分：9/10</span>
+        </div>
+        <h2><a href="https://cdn.openai.com/pdf/5d1e1489-21c0-43e4-9d42-f87efdbf0082/the-shift-to-agentic-ai-evidence-from-codex.pdf">OpenAI 研究论文：从对话式 AI 到 Agentic AI 的范式转移</a></h2>
+        <p class="meta">#Agentic AI · #OpenAI · #Codex · 来源：OpenAI Research</p>
+        <p class="summary">OpenAI 发布 Codex 使用数据分析论文，揭示 agentic AI 采用率在 2026 年初增长五倍。关键发现：OpenAI 内部 99.8% 输出 token 来自 Codex；用户委托的任务复杂度从 2.1% 增长到 25.6%（8小时以上任务）；重度用户围绕大型可重复并行工作流组织使用模式。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：这是理解 agentic AI 趋势的权威数据来源，展示了从'询问系统答案'到'管理执行任务的系统'的根本转变，对所有 AI 从业者都有战略参考价值。</p>
     </div>
-    <div class="card-meta">
-      <span>⬆ 9 points</span>
-      <span class="tag">架构创新</span>
-      <span class="tag">成本革命</span>
-      <span class="tag">浏览器Agent</span>
-      <span class="tag">DeepSeek</span>
-    </div>
-    <div class="card-summary">Retriever AI提出Code-as-Plan架构，用DeepSeek Flash生成JavaScript计划代码替代逐轮LLM调用，将浏览器Agent成本降低100倍。核心洞察：模型角色从运行时转变为编译器。</div>
-    <div class="card-recommendation">这是Agent架构层面的重要创新。Code-as-Plan模式将根本改变Agent的经济学，建议所有Agent开发者深入研究这一架构转变。</div>
-    <div class="score-breakdown">
-      <div class="score-item"><span class="score-dot" style="background:#bc8cff"></span>新颖性 3×1.5=4.5</div>
-      <div class="score-item"><span class="score-dot" style="background:#58a6ff"></span>行业影响 3</div>
-      <div class="score-item"><span class="score-dot" style="background:#3fb950"></span>实用性 1</div>
-      <div class="score-item"><span class="score-dot" style="background:#d29922"></span>时效性 2</div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="card-header">
-      <span class="rank rank-3">3</span>
-      <span class="card-title"><a href="https://krv.ai/field-notes/evaluating-code-generation" target="_blank">Topos：基于图论的Agent生成代码质量评估框架</a></span>
-      <span class="score">10.5</span>
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 3</span>
+            <span class="score">评分：8/10</span>
+        </div>
+        <h2><a href="https://neo4j.com/blog/agentic-ai/context-graph-ai-agent-memory">Neo4j 提出上下文图：AI Agent 需要三种记忆类型</a></h2>
+        <p class="meta">#AI Agent · #记忆架构 · #Neo4j · 来源：Neo4j Blog</p>
+        <p class="summary">Neo4j 首席科学家 Jim Webber 提出三层 Agent 记忆模型：长期记忆（企业知识/ground truth）、短期记忆（会话历史/实时编排）、推理记忆（决策轨迹/可解释性）。上下文图通过图数据库实现这三层记忆的统一查询，解决当前 agent 因记忆受限导致的计划遗忘、目标漂移等问题。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：为构建可靠的生产级 agent 提供了清晰的记忆架构蓝图，Neo4j Agent Memory 开源库可直接用于 LangChain、LlamaIndex 等主流框架。</p>
     </div>
-    <div class="card-meta">
-      <span>⬆ 5 points</span>
-      <span class="tag">代码质量</span>
-      <span class="tag">图论分析</span>
-      <span class="tag">Agent评估</span>
-      <span class="tag">自动化审查</span>
-    </div>
-    <div class="card-summary">Topos将代码解析为数学图（控制流、依赖、数据流），通过三个支柱（简单性、可组合性、安全性）评估代码质量，用奖牌系统（金/银/铜/垃圾）替代二元通过/失败。</div>
-    <div class="card-recommendation">解决了Agent生成代码审查的核心痛点——审查速度跟不上生成速度。Topos提供了可量化的质量目标，是Agent代码质量保障的重要工具。</div>
-    <div class="score-breakdown">
-      <div class="score-item"><span class="score-dot" style="background:#bc8cff"></span>新颖性 3×1.5=4.5</div>
-      <div class="score-item"><span class="score-dot" style="background:#58a6ff"></span>行业影响 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#3fb950"></span>实用性 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#d29922"></span>时效性 2</div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="card-header">
-      <span class="rank rank-n">4</span>
-      <span class="card-title"><a href="https://github.com/royashbrook/hush" target="_blank">Hush：让AI Agent安全使用密钥而不泄露明文的创新方案</a></span>
-      <span class="score">10.5</span>
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 4</span>
+            <span class="score">评分：8/10</span>
+        </div>
+        <h2><a href="https://github.com/workweave/router">Weave Router：为 Agentic 系统打造的智能模型路由器</a></h2>
+        <p class="meta">#模型路由 · #成本优化 · #开源 · 来源：GitHub - WorkWeave</p>
+        <p class="summary">Weave 发布开源模型路由器，可自动将每个 prompt 路由到最优模型，延迟低于 50ms，声称可降低 40-70% 成本。支持 Claude Code、Codex、Cursor 等工具的即插即用集成，基于嵌入分类器而非 prompt 启发式进行路由决策，在 RouterArena 排行榜排名第一。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：模型路由是降低 agent 成本的关键技术，这个开源方案提供了生产级的实现参考，对需要优化多模型调用成本的团队直接有用。</p>
     </div>
-    <div class="card-meta">
-      <span>⬆ 4 points</span>
-      <span class="tag">Agent安全</span>
-      <span class="tag">密钥管理</span>
-      <span class="tag">隐私保护</span>
-      <span class="tag">开源工具</span>
-    </div>
-    <div class="card-summary">Hush是一个密钥存储工具，核心原则是Agent永远看不到明文。密钥存储在OS钥匙链中，Agent可注入到命令中执行，但明文不会出现在stdout或对话记录中。</div>
-    <div class="card-recommendation">解决了Agent安全领域的关键问题——密钥泄露。其无get设计原则非常巧妙，是构建安全Agent的必备工具。</div>
-    <div class="score-breakdown">
-      <div class="score-item"><span class="score-dot" style="background:#bc8cff"></span>新颖性 3×1.5=4.5</div>
-      <div class="score-item"><span class="score-dot" style="background:#58a6ff"></span>行业影响 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#3fb950"></span>实用性 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#d29922"></span>时效性 2</div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="card-header">
-      <span class="rank rank-n">5</span>
-      <span class="card-title"><a href="https://www.pnas.org/doi/10.1073/pnas.2537030123" target="_blank">PNAS研究：AI Agent对助推行为高度敏感，风险超过人类</a></span>
-      <span class="score">10.5</span>
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 5</span>
+            <span class="score">评分：8/10</span>
+        </div>
+        <h2><a href="https://www.theregister.com/ai-and-ml/2026/06/24/ai-coding-agents-could-soon-cost-more-than-the-developers-using-them/5260864">Gartner 警告：AI 编码 Agent 成本或将超过开发者薪资</a></h2>
+        <p class="meta">#成本分析 · #AI编码 · #Gartner · 来源：The Register</p>
+        <p class="summary">The Register 报道 Gartner 分析指出，AI 编码 agent 从座位制转向消费制定价后，部分团队月成本从 $20-100 飙升至 $2,000-5,000，极端情况达 $20,000。Gartner 预测到 2028 年 AI 编码成本将超过平均开发者薪资，建议采用上下文工程、模型路由和消费优化策略控制成本。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：成本失控是 agent 大规模落地的关键障碍，Gartner 的分析和建议对所有使用 AI 编码工具的团队都有直接的预算规划参考价值。</p>
     </div>
-    <div class="card-meta">
-      <span>⬆ 3 points</span>
-      <span class="tag">Agent安全</span>
-      <span class="tag">对齐研究</span>
-      <span class="tag">行为漏洞</span>
-      <span class="tag">学术研究</span>
-      <span class="tag">PNAS</span>
-    </div>
-    <div class="card-summary">MIT Media Lab在PNAS发表的研究发现，AI Agent对默认值、建议、信息高亮等选择架构干预措施的敏感度超过人类，存在严重的对齐脆弱性。</div>
-    <div class="card-recommendation">这是Agent安全和对齐领域的重要研究成果。揭示了Agent在实际部署中面临的新型攻击面，对构建可信Agent系统有重要警示意义。</div>
-    <div class="score-breakdown">
-      <div class="score-item"><span class="score-dot" style="background:#bc8cff"></span>新颖性 3×1.5=4.5</div>
-      <div class="score-item"><span class="score-dot" style="background:#58a6ff"></span>行业影响 3</div>
-      <div class="score-item"><span class="score-dot" style="background:#3fb950"></span>实用性 1</div>
-      <div class="score-item"><span class="score-dot" style="background:#d29922"></span>时效性 2</div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="card-header">
-      <span class="rank rank-n">6</span>
-      <span class="card-title"><a href="https://github.com/inkeep/open-knowledge" target="_blank">OpenKnowledge：开源AI原生知识管理平台，对标Obsidian与Notion</a></span>
-      <span class="score">9.0</span>
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 6</span>
+            <span class="score">评分：7/10</span>
+        </div>
+        <h2><a href="https://github.com/inkeep/open-knowledge">OpenKnowledge：开源 AI 原生 Markdown 编辑器与 LLM Wiki</a></h2>
+        <p class="meta">#开源 · #知识管理 · #Markdown编辑器 · 来源：GitHub - Inkeep</p>
+        <p class="summary">Inkeep 发布 OpenKnowledge，一个本地优先的 markdown 编辑器和 LLM Wiki，集成 Claude、Codex、Cursor 的 AI 原生支持。提供完整 WYSIWYG 编辑体验、Git 驱动的团队协作同步、macOS 桌面应用和 CLI/Web 应用，GPL-3.0 开源许可。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：为知识管理和 AI 辅助写作提供了开源替代方案，特别适合需要本地优先、AI 集成的团队和个人用户。</p>
     </div>
-    <div class="card-meta">
-      <span>⬆ 364 points</span>
-      <span class="tag">AI知识管理</span>
-      <span class="tag">Agent上下文</span>
-      <span class="tag">开源工具</span>
-      <span class="tag">Markdown编辑器</span>
-    </div>
-    <div class="card-summary">OpenKnowledge是一款本地优先的AI原生Markdown编辑器和LLM Wiki，深度集成Claude、Codex和Cursor，支持Git同步协作。GPL-3.0开源，已有21星。</div>
-    <div class="card-recommendation">AI知识管理工具正从通用笔记向AI原生方向演进，OpenKnowledge为Agent提供了结构化的知识上下文层，值得关注其在Agent记忆系统中的应用潜力。</div>
-    <div class="score-breakdown">
-      <div class="score-item"><span class="score-dot" style="background:#bc8cff"></span>新颖性 2×1.5=3.0</div>
-      <div class="score-item"><span class="score-dot" style="background:#58a6ff"></span>行业影响 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#3fb950"></span>实用性 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#d29922"></span>时效性 2</div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="card-header">
-      <span class="rank rank-n">7</span>
-      <span class="card-title"><a href="https://cdn.openai.com/pdf/5d1e1489-21c0-43e4-9d42-f87efdbf0082/the-shift-to-agentic-ai-evidence-from-codex.pdf" target="_blank">OpenAI研究报告：从对话式AI到Agentic AI的转型</a></span>
-      <span class="score">9.0</span>
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 7</span>
+            <span class="score">评分：7/10</span>
+        </div>
+        <h2><a href="https://krv.ai/field-notes/evaluating-code-generation">Topos：用结构化指标评估 Agent 生成代码的质量</a></h2>
+        <p class="meta">#代码质量 · #Agent评估 · #开源 · 来源：Krv Labs</p>
+        <p class="summary">Krv Labs 推出 Topos 开源框架，将代码审查从逐行 diff 转向可验证的结构属性。通过将代码解析为数学图（AST、CFG、CPG、MDG），基于三个独立维度（简单性、可组合性、安全性）评估质量，生成金牌/银牌/铜牌/垃圾四级评分，解决 agent 生成代码的'绿色疲劳'问题。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：为 agent 代码质量评估提供了客观、可量化的标准，VS Code 插件和 MCP 服务器可直接集成到开发工作流中。</p>
     </div>
-    <div class="card-meta">
-      <span>⬆ 5 points</span>
-      <span class="tag">研究报告</span>
-      <span class="tag">Agentic AI</span>
-      <span class="tag">OpenAI</span>
-      <span class="tag">行业趋势</span>
-    </div>
-    <div class="card-summary">OpenAI发布权威研究报告，基于Codex真实使用数据揭示Agentic AI的采用趋势。核心发现：任务复杂度快速增长，70%用户提交需1小时以上人工时间的任务。</div>
-    <div class="card-recommendation">这是理解Agentic AI发展趋势的必读材料。报告提供了从对话式到委托式AI转型的量化证据，对产品策略和技术选型有重要参考价值。</div>
-    <div class="score-breakdown">
-      <div class="score-item"><span class="score-dot" style="background:#bc8cff"></span>新颖性 2×1.5=3.0</div>
-      <div class="score-item"><span class="score-dot" style="background:#58a6ff"></span>行业影响 3</div>
-      <div class="score-item"><span class="score-dot" style="background:#3fb950"></span>实用性 1</div>
-      <div class="score-item"><span class="score-dot" style="background:#d29922"></span>时效性 2</div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="card-header">
-      <span class="rank rank-n">8</span>
-      <span class="card-title"><a href="https://cecuro.ai/blog/building-effective-pen-testing-agents" target="_blank">构建高效渗透测试Agent：Cecuro多智能体安全系统的技术实践</a></span>
-      <span class="score">9.0</span>
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 8</span>
+            <span class="score">评分：7/10</span>
+        </div>
+        <h2><a href="https://github.com/BetterDB-inc/monitor/tree/master/packages">BetterDB：基于 Valkey 的 AI Agent 上下文层</a></h2>
+        <p class="meta">#Agent基础设施 · #缓存 · #Valkey · 来源：GitHub - BetterDB</p>
+        <p class="summary">BetterDB 发布一系列开源包，为 AI agent 提供基于 Valkey（Redis 兼容）的上下文基础设施，包括语义缓存、agent 缓存、检索 SDK、长期记忆等。支持 TypeScript 和 Python 双语言，提供 MCP 服务器集成 Claude Code，实现 agent 的多层缓存和持久化记忆。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：为需要构建具有持久记忆和高效缓存的 agent 系统提供了完整的开源基础设施方案，特别适合 Valkey/Redis 用户。</p>
     </div>
-    <div class="card-meta">
-      <span>⬆ 5 points</span>
-      <span class="tag">安全Agent</span>
-      <span class="tag">渗透测试</span>
-      <span class="tag">多智能体</span>
-      <span class="tag">智能合约审计</span>
-    </div>
-    <div class="card-summary">Cecuro分享了构建AI渗透测试Agent的经验，利用多智能体系统进行智能合约安全审计，展示了AI在网络安全领域的实际应用。</div>
-    <div class="card-recommendation">安全Agent是高价值应用场景，Cecuro的多智能体架构为构建专业领域Agent提供了有价值的参考模式。</div>
-    <div class="score-breakdown">
-      <div class="score-item"><span class="score-dot" style="background:#bc8cff"></span>新颖性 2×1.5=3.0</div>
-      <div class="score-item"><span class="score-dot" style="background:#58a6ff"></span>行业影响 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#3fb950"></span>实用性 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#d29922"></span>时效性 2</div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="card-header">
-      <span class="rank rank-n">9</span>
-      <span class="card-title"><a href="https://github.com/BetterDB-inc/monitor/tree/master/packages" target="_blank">BetterDB：基于Valkey的AI Agent上下文层与缓存基础设施</a></span>
-      <span class="score">8.0</span>
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 9</span>
+            <span class="score">评分：7/10</span>
+        </div>
+        <h2><a href="https://github.com/royashbrook/hush">Hush：让 AI Agent 使用密钥但永远看不到明文</a></h2>
+        <p class="meta">#Agent安全 · #密钥管理 · #开源 · 来源：GitHub</p>
+        <p class="summary">Hush 是一个跨平台密钥存储工具，核心规则是 agent 永远看不到密文明文。密钥存储在 OS 钥匙串中，通过命令注入使用，值永远不会进入 stdout、转录或云端。支持 macOS Keychain、Linux libsecret、Windows DPAPI，MIT 开源。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：解决了 agent 安全领域的关键痛点——密钥管理，设计简洁但有效，可直接集成到 Claude Code 等 agent 工作流中。</p>
     </div>
-    <div class="card-meta">
-      <span>⬆ 5 points</span>
-      <span class="tag">Agent基础设施</span>
-      <span class="tag">Valkey</span>
-      <span class="tag">语义缓存</span>
-      <span class="tag">Agent记忆</span>
-    </div>
-    <div class="card-summary">BetterDB提供了一系列开源包，包括语义缓存、Agent缓存、Agent记忆和MCP服务器，为AI Agent提供Valkey原生的上下文管理、缓存和可观测性。</div>
-    <div class="card-recommendation">Agent基础设施层的重要补充，特别是语义缓存和Agent记忆的组合使用，可有效降低Agent运行成本并提升响应质量。</div>
-    <div class="score-breakdown">
-      <div class="score-item"><span class="score-dot" style="background:#bc8cff"></span>新颖性 2×1.5=3.0</div>
-      <div class="score-item"><span class="score-dot" style="background:#58a6ff"></span>行业影响 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#3fb950"></span>实用性 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#d29922"></span>时效性 1</div>
-    </div>
-  </div>
 
-  <div class="card">
-    <div class="card-header">
-      <span class="rank rank-n">10</span>
-      <span class="card-title"><a href="https://neo4j.com/blog/agentic-ai/context-graph-ai-agent-memory" target="_blank">Neo4j：AI Agent需要三种记忆类型——上下文图的三层架构</a></span>
-      <span class="score">8.0</span>
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 10</span>
+            <span class="score">评分：6/10</span>
+        </div>
+        <h2><a href="https://slimsnap.ai/blog/json-not-screenshots">用 JSON 替代截图：优化编码 Agent 的输入方式</a></h2>
+        <p class="meta">#编码Agent · #输入优化 · #Token节省 · 来源：SlimSnap</p>
+        <p class="summary">SlimSnap 提出用结构化 JSON 替代截图作为编码 agent 的输入，token 消耗降低 55-85%（从 ~4784 降至 ~700 tokens）。JSON 包含元素 ID、类型、边界框、颜色和 OCR 文本，通过注解系统消除了 agent 对截图的猜测，开源 schema 标准确保工具无关性。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：为编码 agent 的输入优化提供了实用方案，token 节省在长会话中尤其有价值，开源 schema 标准值得前端团队关注。</p>
     </div>
-    <div class="card-meta">
-      <span>⬆ 3 points</span>
-      <span class="tag">Agent记忆</span>
-      <span class="tag">知识图谱</span>
-      <span class="tag">架构设计</span>
-      <span class="tag">Neo4j</span>
-    </div>
-    <div class="card-summary">Neo4j提出Agent记忆的三层架构：长期记忆（企业知识图谱）、短期记忆（会话历史）、推理记忆（决策轨迹），通过上下文图实现可靠、可解释的Agent运行。</div>
-    <div class="card-recommendation">为Agent记忆系统设计提供了清晰的架构框架。三层记忆模型是构建生产级Agent的重要参考，特别是推理记忆层对Agent可解释性至关重要。</div>
-    <div class="score-breakdown">
-      <div class="score-item"><span class="score-dot" style="background:#bc8cff"></span>新颖性 2×1.5=3.0</div>
-      <div class="score-item"><span class="score-dot" style="background:#58a6ff"></span>行业影响 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#3fb950"></span>实用性 2</div>
-      <div class="score-item"><span class="score-dot" style="background:#d29922"></span>时效性 1</div>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p>🤖 Generated by AI Daily News Pipeline | Data: Hacker News Algolia</p>
-    <p>Topic: ai-agent | Date: 2026-06-27 | Articles: 15 collected → 10 ranked</p>
-  </div>
 </body>
 </html>
