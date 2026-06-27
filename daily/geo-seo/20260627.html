@@ -1,206 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GEO/SEO Daily News — 2026-06-27</title>
+  <title>AI Daily - 2026-06-27 - GEO/SEO</title>
   <style>
-    :root {
-      --primary: #2563eb;
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #1e293b;
-      --muted: #64748b;
-      --border: #e2e8f0;
-    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-    header { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%); color: white; border-radius: 12px; margin-bottom: 30px; }
-    header h1 { font-size: 2em; margin-bottom: 8px; }
-    header .meta { opacity: 0.9; font-size: 0.95em; }
-    .section { margin-bottom: 30px; }
-    .section h2 { font-size: 1.3em; color: var(--primary); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
-    .article { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 16px; transition: box-shadow 0.2s; }
-    .article:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-    .article .rank { display: inline-block; background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-weight: bold; font-size: 0.85em; margin-right: 8px; }
-    .article h3 { display: inline; font-size: 1.1em; }
-    .article h3 a { color: var(--text); text-decoration: none; }
-    .article h3 a:hover { color: var(--primary); }
-    .article .source { color: var(--muted); font-size: 0.85em; margin: 8px 0; }
-    .article p { margin: 10px 0; color: var(--text); }
-    .article .takeaways { margin: 12px 0; padding-left: 20px; }
-    .article .takeaways li { margin: 4px 0; font-size: 0.95em; }
-    .article .why { background: #f1f5f9; padding: 10px 14px; border-radius: 6px; margin-top: 12px; font-size: 0.95em; }
-    .article .why strong { color: var(--primary); }
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-    .tag { background: #e0e7ff; color: #3730a3; padding: 3px 10px; border-radius: 12px; font-size: 0.8em; }
-    .honorable { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
-    .honorable h4 { font-size: 0.95em; }
-    .honorable h4 a { color: var(--text); text-decoration: none; }
-    .honorable h4 a:hover { color: var(--primary); }
-    .honorable .source { color: var(--muted); font-size: 0.8em; }
-    footer { text-align: center; padding: 30px; color: var(--muted); font-size: 0.85em; }
-    footer a { color: var(--primary); }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f0f; color: #e0e0e0; padding: 20px; max-width: 900px; margin: 0 auto; }
+    h1 { color: #00d4aa; margin-bottom: 8px; font-size: 1.8em; }
+    .subtitle { color: #888; margin-bottom: 24px; font-size: 0.95em; }
+    .stats { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+    .stat { background: #1a1a2e; padding: 12px 20px; border-radius: 8px; border: 1px solid #2a2a4a; }
+    .stat-num { font-size: 1.5em; font-weight: bold; color: #00d4aa; }
+    .stat-label { font-size: 0.8em; color: #888; }
+    .article-card { background: #1a1a2e; border-radius: 10px; padding: 20px; margin-bottom: 16px; border: 1px solid #2a2a4a; transition: border-color 0.2s; }
+    .article-card:hover { border-color: #00d4aa; }
+    .article-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .rank { background: #00d4aa; color: #000; font-weight: bold; padding: 4px 10px; border-radius: 16px; font-size: 0.85em; min-width: 36px; text-align: center; }
+    h3 { flex: 1; font-size: 1.1em; }
+    h3 a { color: #e0e0e0; text-decoration: none; }
+    h3 a:hover { color: #00d4aa; }
+    .score { font-size: 1.2em; font-weight: bold; padding: 4px 10px; border-radius: 6px; }
+    .score.high { background: #00d4aa22; color: #00d4aa; }
+    .score.mid { background: #ffd70022; color: #ffd700; }
+    .score.low { background: #ff6b6b22; color: #ff6b6b; }
+    .article-meta { display: flex; gap: 12px; margin-bottom: 10px; font-size: 0.85em; color: #888; }
+    .source { background: #2a2a4a; padding: 2px 8px; border-radius: 4px; }
+    .summary { margin-bottom: 8px; line-height: 1.6; color: #ccc; }
+    .recommendation { margin-bottom: 10px; line-height: 1.6; color: #aaa; font-size: 0.9em; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { background: #2a2a4a; color: #00d4aa; padding: 3px 10px; border-radius: 12px; font-size: 0.75em; }
+    footer { margin-top: 40px; text-align: center; color: #555; font-size: 0.8em; padding: 20px; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>🔍 GEO/SEO Daily News</h1>
-      <div class="meta">2026-06-27 • 10 articles ranked • Generated by AI Daily News</div>
-    </header>
-
-    <div class="section">
-      <h2>🔥 Top Stories</h2>
-
-      <div class="article">
-        <span class="rank">1</span>
-        <h3><a href="https://www.searchenginejournal.com/google-seo-for-ai-agents/580589" target="_blank">Google Answers Question About SEO For AI Agents</a></h3>
-        <div class="source">Search Engine Journal</div>
-        <p>Google has provided <strong>official guidance on optimizing for AI agents</strong>. This is a landmark moment as it represents Google's first explicit acknowledgment that SEO for AI agents is a legitimate optimization target.</p>
-        <ul class="takeaways">
-          <li>Google officially acknowledges SEO for AI agents as a valid practice</li>
-          <li>Official guidance on how to optimize for AI agent access</li>
-          <li>Signals Google's own integration of AI agents into search ecosystem</li>
-        </ul>
-        <div class="why"><strong>Why It Matters:</strong> Google officially acknowledging SEO for AI agents legitimizes the entire GEO field. Practitioners now have official guidance to follow.</div>
-        <div class="tags"><span class="tag">#Google</span><span class="tag">#AIAgents</span><span class="tag">#SEO</span><span class="tag">#OfficialGuidance</span><span class="tag">#GEO</span></div>
-      </div>
-
-      <div class="article">
-        <span class="rank">2</span>
-        <h3><a href="https://www.searchenginejournal.com/seo-pulse-google-spam-update-rolls-out-ai-manipulation-in-scope/580565" target="_blank">Google Spam Update Rolls Out, AI Manipulation In Scope</a></h3>
-        <div class="source">Search Engine Journal</div>
-        <p>Google's June 2026 spam update <strong>specifically targets AI-generated content manipulation</strong>. This is a significant development as it directly addresses the intersection of AI content and search quality.</p>
-        <ul class="takeaways">
-          <li>Google's first spam update explicitly targeting AI manipulation</li>
-          <li>AI-generated content for ranking manipulation is now a clear violation</li>
-          <li>Signals tighter enforcement on AI-generated spam going forward</li>
-        </ul>
-        <div class="why"><strong>Why It Matters:</strong> Draws the line between legitimate AI-assisted content and manipulation. SEO practitioners must understand these boundaries.</div>
-        <div class="tags"><span class="tag">#GoogleUpdate</span><span class="tag">#Spam</span><span class="tag">#AIContent</span><span class="tag">#Manipulation</span></div>
-      </div>
-
-      <div class="article">
-        <span class="rank">3</span>
-        <h3><a href="https://searchengineland.com/bruce-clay-the-father-of-seo-has-passed-away-481240" target="_blank">Bruce Clay, the Father of SEO, has passed away</a></h3>
-        <div class="source">Search Engine Land</div>
-        <p>Bruce Clay, widely regarded as the <strong>Father of SEO</strong>, has passed away. A pioneer who helped define the SEO industry from its earliest days.</p>
-        <ul class="takeaways">
-          <li>Bruce Clay, SEO pioneer and industry founder, has died</li>
-          <li>Invented content siloing methodology still used today</li>
-          <li>Major loss for the SEO community - end of an era</li>
-        </ul>
-        <div class="why"><strong>Why It Matters:</strong> End of an era for SEO. As the field transitions to GEO, honoring the pioneers reminds us of the foundation we build on.</div>
-        <div class="tags"><span class="tag">#Obituary</span><span class="tag">#SEOPioneer</span><span class="tag">#BruceClay</span><span class="tag">#IndustryLegacy</span></div>
-      </div>
-
-      <div class="article">
-        <span class="rank">4</span>
-        <h3><a href="https://searchengineland.com/paid-brand-mention-geo-481092" target="_blank">The paid brand mention problem in GEO</a></h3>
-        <div class="source">Search Engine Land</div>
-        <p>Investigates the growing concern around <strong>paid brand mentions in generative AI search results</strong>. As GEO becomes mainstream, brands are exploring paid placement strategies.</p>
-        <ul class="takeaways">
-          <li>No AI platform currently offers paid placement in generative answers</li>
-          <li>GEO citations are earned through content quality and structural markup</li>
-          <li>Brands need to focus on organic GEO optimization fundamentals</li>
-        </ul>
-        <div class="why"><strong>Why It Matters:</strong> As GEO matures, paid placement strategies will emerge. Understanding the current landscape helps practitioners prepare.</div>
-        <div class="tags"><span class="tag">#GEO</span><span class="tag">#PaidPlacement</span><span class="tag">#AISearch</span><span class="tag">#ContentQuality</span></div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>📊 Data &amp; Trends</h2>
-
-      <div class="article">
-        <span class="rank">5</span>
-        <h3><a href="https://searchengineland.com/google-june-2026-spam-update-done-rolling-out-481063" target="_blank">Google June 2026 spam update done rolling out</a></h3>
-        <div class="source">Search Engine Land</div>
-        <p>Official confirmation that the <strong>Google June 2026 spam update has completed its rollout</strong>. Provides the all-clear for practitioners to assess impact.</p>
-      </div>
-
-      <div class="article">
-        <span class="rank">6</span>
-        <h3><a href="https://www.searchenginejournal.com/my-ai-assistant-traffic-was-fake-the-googlebot-number-was-worse/580052" target="_blank">81.8% Of My 'AI Assistant' Traffic Was Fake</a></h3>
-        <div class="source">Search Engine Journal</div>
-        <p>A practitioner's investigation reveals that <strong>81.8% of traffic attributed to 'AI Assistant' sources was actually fake/bot traffic</strong>. The situation with Googlebot was even worse.</p>
-        <ul class="takeaways">
-          <li>81.8% of 'AI Assistant' traffic was fake/bot traffic</li>
-          <li>Critical measurement challenge for AI-era SEO</li>
-          <li>Need for robust traffic validation and bot detection</li>
-        </ul>
-        <div class="why"><strong>Why It Matters:</strong> GEO metrics are only as good as the data behind them. This article warns practitioners to validate their AI traffic data.</div>
-        <div class="tags"><span class="tag">#FakeTraffic</span><span class="tag">#Measurement</span><span class="tag">#AIAssistant</span><span class="tag">#Analytics</span></div>
-      </div>
-
-      <div class="article">
-        <span class="rank">7</span>
-        <h3><a href="https://www.searchenginejournal.com/bruce-clay-seo-pioneer-who-invented-content-siloing-has-died/580602" target="_blank">Bruce Clay, One of the Founding Figures of SEO, Has Died</a></h3>
-        <div class="source">Search Engine Journal</div>
-        <p>Additional coverage of Bruce Clay's passing, highlighting his invention of content siloing methodology. Cross-publication significance.</p>
-        <div class="tags"><span class="tag">#Obituary</span><span class="tag">#SEOPioneer</span><span class="tag">#BruceClay</span><span class="tag">#ContentSiloing</span></div>
-      </div>
-
-      <div class="article">
-        <span class="rank">8</span>
-        <h3><a href="https://www.axios.com/2026/06/23/people-inc-google-ai-search-crawler" target="_blank">People Inc. CEO accuses Google of abusing its market power</a></h3>
-        <div class="source">Axios / HN</div>
-        <p>Antitrust pressure on Google regarding AI search. Market structure implications for GEO strategy.</p>
-        <div class="tags"><span class="tag">#Google</span><span class="tag">#Antitrust</span><span class="tag">#AICrawlers</span><span class="tag">#Regulation</span></div>
-      </div>
-
-      <div class="article">
-        <span class="rank">9</span>
-        <h3><a href="https://www.searchenginejournal.com/a-third-of-fintech-is-invisible-to-ai-agents/576193" target="_blank">A Third Of Fintech Is Invisible To AI Agents</a></h3>
-        <div class="source">Search Engine Journal</div>
-        <p>Research reveals that approximately <strong>one-third of fintech companies are effectively invisible to AI agents</strong>. Highlights a significant GEO challenge in fintech.</p>
-        <div class="tags"><span class="tag">#Fintech</span><span class="tag">#AIAgents</span><span class="tag">#Visibility</span><span class="tag">#GEO</span></div>
-      </div>
-
-      <div class="article">
-        <span class="rank">10</span>
-        <h3><a href="https://www.searchenginejournal.com/google-desktop-ctr-climbs-while-mobile-dips-report-finds/580527" target="_blank">Google Desktop CTR Climbs While Mobile Dips</a></h3>
-        <div class="source">Search Engine Journal</div>
-        <p>New research shows <strong>Google desktop CTR is increasing while mobile CTR continues to decline</strong>. AI Overviews may be reshaping click behavior on mobile.</p>
-        <div class="tags"><span class="tag">#CTR</span><span class="tag">#Desktop</span><span class="tag">#Mobile</span><span class="tag">#AIOverviews</span></div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>🛠️ Honorable Mentions</h2>
-
-      <div class="honorable">
-        <h4><a href="https://clarvia.dev/geo-checker" target="_blank">A free checker for whether AI search engines can cite your site</a></h4>
-        <div class="source">Clarvia.dev — Free GEO checker tool</div>
-      </div>
-
-      <div class="honorable">
-        <h4><a href="https://searchengineland.com/content-audit-workflows-claude-481099" target="_blank">6 content audit workflows to build in Claude</a></h4>
-        <div class="source">Search Engine Land — AI-powered SEO workflows</div>
-      </div>
-
-      <div class="honorable">
-        <h4><a href="https://searchengineland.com/page-indexing-report-in-google-search-console-delayed-481210" target="_blank">Page indexing report in Google Search Console delayed</a></h4>
-        <div class="source">Search Engine Land — GSC reporting delays</div>
-      </div>
-
-      <div class="honorable">
-        <h4><a href="https://searchengineland.com/how-one-broken-form-cost-an-agency-months-of-leads-ft-danny-gavin-481247" target="_blank">How one broken form cost an agency months of leads</a></h4>
-        <div class="source">Search Engine Land — Technical SEO case study</div>
-      </div>
-
-      <div class="honorable">
-        <h4><a href="https://exa.ai/blog/announcing-series-c" target="_blank">AI Search Engine Exa Raises $250M Series C</a></h4>
-        <div class="source">Exa — Major AI search investment</div>
-      </div>
-    </div>
-
-    <footer>
-      <p>Generated by <strong>AI Daily News</strong> — GEO/SEO Edition</p>
-      <p>2026-06-27 • <a href="https://github.com/haihepeng/ai-news-daily">GitHub</a></p>
-    </footer>
+  <h1>AI Daily - GEO/SEO</h1>
+  <div class="subtitle">2026-06-27 | 营销重要性加权精选</div>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">10</div><div class="stat-label">精选文章</div></div>
+    <div class="stat"><div class="stat-num">15</div><div class="stat-label">短名单</div></div>
+    <div class="stat"><div class="stat-num">33</div><div class="stat-label">原始采集</div></div>
   </div>
+  
+    <div class="article-card">
+      <div class="article-header">
+        <span class="rank">#1</span>
+        <h3><a href="https://www.searchenginejournal.com/seo-pulse-google-spam-update-rolls-out-ai-manipulation-in-scope/580565" target="_blank">谷歌6月垃圾更新推出，AI操纵纳入打击范围</a></h3>
+        <span class="score high">9.5</span>
+      </div>
+      <div class="article-meta">
+        <span class="source">Search Engine Journal</span>
+        <span class="original-title">Google Spam Update Rolls Out, AI Manipulation In Scope</span>
+      </div>
+      <p class="summary">谷歌6月垃圾更新正式推出，首次明确将操纵AI回答（如购买或篡改引用）纳入垃圾策略打击范围。同时Google澄清AI印象计数方式及AI推荐带来的品牌搜索流量特征。</p>
+      <p class="recommendation"><strong>推荐操作：</strong>停止任何试图操纵AI概览或AI模式的策略；监控排名变化并分析受影响页面类型；理解AI影响往往通过品牌搜索而非直接点击体现。</p>
+      <div class="tags"><span class="tag">Google算法</span><span class="tag">垃圾更新</span><span class="tag">AI操纵</span><span class="tag">GEO合规</span><span class="tag">搜索控制台</span></div>
+    </div>
+    <div class="article-card">
+      <div class="article-header">
+        <span class="rank">#2</span>
+        <h3><a href="https://www.searchenginejournal.com/a-third-of-fintech-is-invisible-to-ai-agents/576193" target="_blank">三分之一的金融科技对AI代理不可见</a></h3>
+        <span class="score high">9.0</span>
+      </div>
+      <div class="article-meta">
+        <span class="source">Search Engine Journal</span>
+        <span class="original-title">A Third Of Fintech Is Invisible To AI Agents</span>
+      </div>
+      <p class="summary">研究分析274个顶级金融科技网站首页，发现36%的网站返回的原始HTML内容不足80%，因为AI爬虫不执行JavaScript渲染。47个网站返回零内容，仅显示框架结构。</p>
+      <p class="recommendation"><strong>推荐操作：</strong>使用DevTools禁用JavaScript测试网站可见性；采用SSR或静态生成确保关键内容不依赖客户端JS；优先修复主页、定价页和信任信号页。</p>
+      <div class="tags"><span class="tag">AI爬虫</span><span class="tag">JavaScript渲染</span><span class="tag">金融科技</span><span class="tag">网站架构</span><span class="tag">GEO基础</span></div>
+    </div>
+    <div class="article-card">
+      <div class="article-header">
+        <span class="rank">#3</span>
+        <h3><a href="https://searchengineland.com/paid-brand-mention-geo-481092" target="_blank">GEO中的付费品牌提及问题</a></h3>
+        <span class="score high">8.5</span>
+      </div>
+      <div class="article-meta">
+        <span class="source">Search Engine Land</span>
+        <span class="original-title">The paid brand mention problem in GEO</span>
+      </div>
+      <p class="summary">GEO供应商正将黑帽链接建设策略重新包装为「品牌提及推广」，存在严重合规和品牌风险。虚假研究数据、PBN品牌提及、Reddit刷帖等手段短期内可能有效，但长期必然被AI平台过滤。</p>
+      <p class="recommendation"><strong>推荐操作：</strong>警惕以数量为导向的GEO供应商，优先追求来自可信行业来源的真实品牌背书，而非付费批量提及。对GEO供应商的承诺保持批判性审查。</p>
+      <div class="tags"><span class="tag">GEO风险</span><span class="tag">品牌安全</span><span class="tag">黑帽SEO</span><span class="tag">AI搜索可见性</span><span class="tag">供应商合规</span></div>
+    </div>
+    <div class="article-card">
+      <div class="article-header">
+        <span class="rank">#4</span>
+        <h3><a href="https://www.searchenginejournal.com/my-ai-assistant-traffic-was-fake-the-googlebot-number-was-worse/580052" target="_blank">81.8%的AI助手流量是假的，Googlebot更严重</a></h3>
+        <span class="score high">8.5</span>
+      </div>
+      <div class="article-meta">
+        <span class="source">Search Engine Journal</span>
+        <span class="original-title">81.8% Of My AI Assistant Traffic Was Fake. The Googlebot Number Was Worse</span>
+      </div>
+      <p class="summary">作者验证发现81.8%的AI助手流量和87%的Googlebot流量为伪造——通过IP地址与官方发布范围交叉验证可识别。真实爬虫中Anthropic ClaudeBot（166次）比Googlebot（107次）更活跃，且伪造流量立即用于凭证扫描。</p>
+      <p class="recommendation"><strong>推荐操作：</strong>实施IP验证机制区分真实和伪造爬虫流量；使用Python脚本交叉验证请求IP与官方发布范围；不要仅依赖User-Agent字符串判断爬虫真实性。</p>
+      <div class="tags"><span class="tag">爬虫验证</span><span class="tag">虚假流量</span><span class="tag">AI爬虫</span><span class="tag">安全防护</span><span class="tag">数据分析</span></div>
+    </div>
+    <div class="article-card">
+      <div class="article-header">
+        <span class="rank">#5</span>
+        <h3><a href="https://www.searchenginejournal.com/google-seo-for-ai-agents/580589" target="_blank">谷歌回答关于AI代理SEO的问题</a></h3>
+        <span class="score high">8.0</span>
+      </div>
+      <div class="article-meta">
+        <span class="source">Search Engine Journal</span>
+        <span class="original-title">Google Answers Question About SEO For AI Agents</span>
+      </div>
+      <p class="summary">Google的John Mueller表示，为人类用户优化的网站同样会适用于AI代理浏览；但新的基本原则是不要盲目屏蔽AI代理爬虫，否则可能损害搜索可见性。</p>
+      <p class="recommendation"><strong>推荐操作：</strong>继续以人类用户体验为核心进行优化；审计robots.txt确保不屏蔽主流AI代理User-Agent；关注AI代理SEO最佳实践的持续演进。</p>
+      <div class="tags"><span class="tag">Google官方</span><span class="tag">AI代理</span><span class="tag">SEO基础</span><span class="tag">爬虫策略</span><span class="tag">搜索可见性</span></div>
+    </div>
+    <div class="article-card">
+      <div class="article-header">
+        <span class="rank">#6</span>
+        <h3><a href="https://www.axios.com/2026/06/23/people-inc-google-ai-search-crawler" target="_blank">People Inc. CEO指控谷歌滥用市场支配地位</a></h3>
+        <span class="score high">8.0</span>
+      </div>
+      <div class="article-meta">
+        <span class="source">Axios</span>
+        <span class="original-title">People Inc. CEO accuses Google of abusing its market power</span>
+      </div>
+      <p class="summary">People Inc.（前Dotdash Meredith）CEO指控谷歌使用同一个爬虫同时服务于搜索索引和AI训练，构成市场滥用——出版商无法单独屏蔽AI爬虫而不丢失搜索流量。该公司已与Meta、OpenAI和微软达成AI内容授权协议。</p>
+      <p class="recommendation"><strong>推荐操作：</strong>关注AI内容授权模式的发展；理解出版商在AI搜索生态中的议价权正在增强；考虑自身内容的AI授权策略。</p>
+      <div class="tags"><span class="tag">AI版权</span><span class="tag">市场垄断</span><span class="tag">内容授权</span><span class="tag">出版商权益</span><span class="tag">爬虫策略</span></div>
+    </div>
+    <div class="article-card">
+      <div class="article-header">
+        <span class="rank">#7</span>
+        <h3><a href="https://searchengineland.com/google-june-2026-spam-update-done-rolling-out-481063" target="_blank">谷歌6月2026垃圾更新已完成推出</a></h3>
+        <span class="score mid">7.5</span>
+      </div>
+      <div class="article-meta">
+        <span class="source">Search Engine Land</span>
+        <span class="original-title">Google June 2026 spam update done rolling out</span>
+      </div>
+      <p class="summary">谷歌确认6月2026垃圾更新已完全推出，从6月24日开始至6月26日结束，历时两天。这是2026年第二次垃圾更新，影响范围比3月更新更大。</p>
+      <p class="recommendation"><strong>推荐操作：</strong>确认网站是否受更新影响；未受影响的网站可维持现有策略；受影响的网站需排查垃圾信号并进行修复。</p>
+      <div class="tags"><span class="tag">Google算法</span><span class="tag">垃圾更新</span><span class="tag">算法恢复</span><span class="tag">SEO监测</span></div>
+    </div>
+    <div class="article-card">
+      <div class="article-header">
+        <span class="rank">#8</span>
+        <h3><a href="https://exa.ai/blog/announcing-series-c" target="_blank">AI搜索引擎Exa完成2.5亿美元C轮融资</a></h3>
+        <span class="score mid">7.5</span>
+      </div>
+      <div class="article-meta">
+        <span class="source">Exa</span>
+        <span class="original-title">AI Search Engine Exa Raises $250M Series C</span>
+      </div>
+      <p class="summary">AI搜索引擎Exa以22亿美元估值完成2.5亿美元C轮融资，由a16z领投。Exa已为Cursor、Cognition等40万+开发者提供搜索服务，计划用于训练下一代搜索模型和扩展基础设施，以应对AI代理搜索量将超Google 1000倍的未来。</p>
+      <p class="recommendation"><strong>推荐操作：</strong>关注AI搜索替代方案的发展；了解AI代理搜索API生态；评估自身内容在非Google搜索引擎中的可见性策略。</p>
+      <div class="tags"><span class="tag">AI搜索</span><span class="tag">融资</span><span class="tag">Exa</span><span class="tag">搜索API</span><span class="tag">AI代理</span></div>
+    </div>
+    <div class="article-card">
+      <div class="article-header">
+        <span class="rank">#9</span>
+        <h3><a href="https://clarvia.dev/geo-checker" target="_blank">免费GEO检查器：检测AI搜索引擎能否引用你的网站</a></h3>
+        <span class="score mid">7.0</span>
+      </div>
+      <div class="article-meta">
+        <span class="source">Clarvia</span>
+        <span class="original-title">A free checker for whether AI search engines can cite your site</span>
+      </div>
+      <p class="summary">Clarvia推出免费GEO检查工具，扫描7个技术层（llms.txt、结构化数据、JSON-LD、OpenAPI规范等），评估网站在ChatGPT、Claude、Perplexity和Gemini中的可见性，提供A-F等级评分。</p>
+      <p class="recommendation"><strong>推荐操作：</strong>立即使用该工具扫描自有网站，获取GEO评分并针对性优化7个技术层中的薄弱环节。</p>
+      <div class="tags"><span class="tag">GEO工具</span><span class="tag">AI可见性</span><span class="tag">免费工具</span><span class="tag">结构化数据</span><span class="tag">技术SEO</span></div>
+    </div>
+    <div class="article-card">
+      <div class="article-header">
+        <span class="rank">#10</span>
+        <h3><a href="https://searchengineland.com/content-audit-workflows-claude-481099" target="_blank">6个可在Claude中构建的内容审计工作流</a></h3>
+        <span class="score mid">7.0</span>
+      </div>
+      <div class="article-meta">
+        <span class="source">Search Engine Land</span>
+        <span class="original-title">6 content audit workflows to build in Claude</span>
+      </div>
+      <p class="summary">介绍6个基于Claude的内容审计工作流：品牌声音一致性检查、竞品覆盖对比、内容新鲜度审计、AEO与AI可检索性评估、性能分诊和主题缺口分析，帮助将一次性提示转化为可重复使用的审计技能。</p>
+      <p class="recommendation"><strong>推荐操作：</strong>从单篇文章开始尝试AEO审计和品牌声音检查工作流；利用Claude在Chrome扩展抓取竞品内容进行对比分析；将审计结果保存为可复用技能。</p>
+      <div class="tags"><span class="tag">内容审计</span><span class="tag">Claude</span><span class="tag">AEO</span><span class="tag">工作流</span><span class="tag">内容策略</span></div>
+    </div>
+  <footer>
+    AI Daily News Pipeline | Generated 2026-06-27 | GEO/SEO Topic
+  </footer>
 </body>
 </html>
