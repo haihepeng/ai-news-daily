@@ -1,189 +1,136 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Daily - 2026-06-27 - GEO/SEO</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f0f; color: #e0e0e0; padding: 20px; max-width: 900px; margin: 0 auto; }
-    h1 { color: #00d4aa; margin-bottom: 8px; font-size: 1.8em; }
-    .subtitle { color: #888; margin-bottom: 24px; font-size: 0.95em; }
-    .stats { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
-    .stat { background: #1a1a2e; padding: 12px 20px; border-radius: 8px; border: 1px solid #2a2a4a; }
-    .stat-num { font-size: 1.5em; font-weight: bold; color: #00d4aa; }
-    .stat-label { font-size: 0.8em; color: #888; }
-    .article-card { background: #1a1a2e; border-radius: 10px; padding: 20px; margin-bottom: 16px; border: 1px solid #2a2a4a; transition: border-color 0.2s; }
-    .article-card:hover { border-color: #00d4aa; }
-    .article-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-    .rank { background: #00d4aa; color: #000; font-weight: bold; padding: 4px 10px; border-radius: 16px; font-size: 0.85em; min-width: 36px; text-align: center; }
-    h3 { flex: 1; font-size: 1.1em; }
-    h3 a { color: #e0e0e0; text-decoration: none; }
-    h3 a:hover { color: #00d4aa; }
-    .score { font-size: 1.2em; font-weight: bold; padding: 4px 10px; border-radius: 6px; }
-    .score.high { background: #00d4aa22; color: #00d4aa; }
-    .score.mid { background: #ffd70022; color: #ffd700; }
-    .score.low { background: #ff6b6b22; color: #ff6b6b; }
-    .article-meta { display: flex; gap: 12px; margin-bottom: 10px; font-size: 0.85em; color: #888; }
-    .source { background: #2a2a4a; padding: 2px 8px; border-radius: 4px; }
-    .summary { margin-bottom: 8px; line-height: 1.6; color: #ccc; }
-    .recommendation { margin-bottom: 10px; line-height: 1.6; color: #aaa; font-size: 0.9em; }
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .tag { background: #2a2a4a; color: #00d4aa; padding: 3px 10px; border-radius: 12px; font-size: 0.75em; }
-    footer { margin-top: 40px; text-align: center; color: #555; font-size: 0.8em; padding: 20px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEO/SEO 每日新闻 - 2026-06-27</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f5; color: #333; }
+        h1 { color: #1a1a1a; border-bottom: 3px solid #10b981; padding-bottom: 10px; }
+        .news-card { background: white; border-radius: 12px; padding: 24px; margin: 16px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .rank { font-size: 14px; font-weight: 700; color: #10b981; background: #ecfdf5; padding: 4px 12px; border-radius: 20px; }
+        .score { font-size: 14px; color: #059669; font-weight: 600; }
+        h2 { margin: 0 0 8px 0; font-size: 18px; }
+        h2 a { color: #1a1a1a; text-decoration: none; }
+        h2 a:hover { color: #10b981; }
+        .meta { font-size: 13px; color: #6b7280; margin-bottom: 12px; }
+        .summary { font-size: 15px; line-height: 1.6; color: #374151; margin-bottom: 12px; }
+        .recommendation { font-size: 14px; color: #059669; background: #f0fdf4; padding: 12px; border-radius: 8px; border-left: 3px solid #059669; }
+        .source { font-size: 13px; color: #10b981; }
+    </style>
 </head>
 <body>
-  <h1>AI Daily - GEO/SEO</h1>
-  <div class="subtitle">2026-06-27 | 营销重要性加权精选</div>
-  <div class="stats">
-    <div class="stat"><div class="stat-num">10</div><div class="stat-label">精选文章</div></div>
-    <div class="stat"><div class="stat-num">15</div><div class="stat-label">短名单</div></div>
-    <div class="stat"><div class="stat-num">33</div><div class="stat-label">原始采集</div></div>
-  </div>
-  
-    <div class="article-card">
-      <div class="article-header">
-        <span class="rank">#1</span>
-        <h3><a href="https://www.searchenginejournal.com/seo-pulse-google-spam-update-rolls-out-ai-manipulation-in-scope/580565" target="_blank">谷歌6月垃圾更新推出，AI操纵纳入打击范围</a></h3>
-        <span class="score high">9.5</span>
-      </div>
-      <div class="article-meta">
-        <span class="source">Search Engine Journal</span>
-        <span class="original-title">Google Spam Update Rolls Out, AI Manipulation In Scope</span>
-      </div>
-      <p class="summary">谷歌6月垃圾更新正式推出，首次明确将操纵AI回答（如购买或篡改引用）纳入垃圾策略打击范围。同时Google澄清AI印象计数方式及AI推荐带来的品牌搜索流量特征。</p>
-      <p class="recommendation"><strong>推荐操作：</strong>停止任何试图操纵AI概览或AI模式的策略；监控排名变化并分析受影响页面类型；理解AI影响往往通过品牌搜索而非直接点击体现。</p>
-      <div class="tags"><span class="tag">Google算法</span><span class="tag">垃圾更新</span><span class="tag">AI操纵</span><span class="tag">GEO合规</span><span class="tag">搜索控制台</span></div>
+    <h1>📈 GEO/SEO 每日新闻 - 2026年06月27日</h1>
+
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 1</span>
+            <span class="score">评分：10/10</span>
+        </div>
+        <h2><a href="https://www.searchenginejournal.com/seo-pulse-google-spam-update-rolls-out-ai-manipulation-in-scope/580565">Google 六月垃圾更新完成 rollout，AI 操纵纳入打击范围</a></h2>
+        <p class="meta">#Google更新 · #垃圾政策 · #AI操纵 · 来源：Search Engine Journal</p>
+        <p class="summary">Google 于6月24日开始推出的六月垃圾更新已于6月26日完成。此次更新明确将操纵生成式 AI 回复（如购买或篡改引用）纳入垃圾政策范围。搜索排名可能在未来几天波动。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：这是 GEO/SEO 从业者必须了解的政策变化——操纵 AI 引用现在被视为垃圾行为，可能面临排名惩罚。</p>
     </div>
-    <div class="article-card">
-      <div class="article-header">
-        <span class="rank">#2</span>
-        <h3><a href="https://www.searchenginejournal.com/a-third-of-fintech-is-invisible-to-ai-agents/576193" target="_blank">三分之一的金融科技对AI代理不可见</a></h3>
-        <span class="score high">9.0</span>
-      </div>
-      <div class="article-meta">
-        <span class="source">Search Engine Journal</span>
-        <span class="original-title">A Third Of Fintech Is Invisible To AI Agents</span>
-      </div>
-      <p class="summary">研究分析274个顶级金融科技网站首页，发现36%的网站返回的原始HTML内容不足80%，因为AI爬虫不执行JavaScript渲染。47个网站返回零内容，仅显示框架结构。</p>
-      <p class="recommendation"><strong>推荐操作：</strong>使用DevTools禁用JavaScript测试网站可见性；采用SSR或静态生成确保关键内容不依赖客户端JS；优先修复主页、定价页和信任信号页。</p>
-      <div class="tags"><span class="tag">AI爬虫</span><span class="tag">JavaScript渲染</span><span class="tag">金融科技</span><span class="tag">网站架构</span><span class="tag">GEO基础</span></div>
+
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 2</span>
+            <span class="score">评分：9/10</span>
+        </div>
+        <h2><a href="https://www.searchenginejournal.com/google-seo-for-ai-agents/580589">Google 回答关于 AI Agent SEO 的问题：核心原则不变</a></h2>
+        <p class="meta">#Google · #AI Agent · #SEO原则 · 来源：Search Engine Journal</p>
+        <p class="summary">Google 的 John Mueller 表示，以创造有用内容为核心的 SEO 原则对 AI agent 仍然有效。但引入了新的技术考量：网站必须避免盲目阻止 agentic 浏览器。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：Google 官方对 AI agent SEO 的立场——传统 SEO 最佳实践仍然适用，但需要确保不阻止 AI 爬虫访问。</p>
     </div>
-    <div class="article-card">
-      <div class="article-header">
-        <span class="rank">#3</span>
-        <h3><a href="https://searchengineland.com/paid-brand-mention-geo-481092" target="_blank">GEO中的付费品牌提及问题</a></h3>
-        <span class="score high">8.5</span>
-      </div>
-      <div class="article-meta">
-        <span class="source">Search Engine Land</span>
-        <span class="original-title">The paid brand mention problem in GEO</span>
-      </div>
-      <p class="summary">GEO供应商正将黑帽链接建设策略重新包装为「品牌提及推广」，存在严重合规和品牌风险。虚假研究数据、PBN品牌提及、Reddit刷帖等手段短期内可能有效，但长期必然被AI平台过滤。</p>
-      <p class="recommendation"><strong>推荐操作：</strong>警惕以数量为导向的GEO供应商，优先追求来自可信行业来源的真实品牌背书，而非付费批量提及。对GEO供应商的承诺保持批判性审查。</p>
-      <div class="tags"><span class="tag">GEO风险</span><span class="tag">品牌安全</span><span class="tag">黑帽SEO</span><span class="tag">AI搜索可见性</span><span class="tag">供应商合规</span></div>
+
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 3</span>
+            <span class="score">评分：9/10</span>
+        </div>
+        <h2><a href="https://www.searchenginejournal.com/a-third-of-fintech-is-invisible-to-ai-agents/576193">三分之一的金融科技公司对 AI Agent 不可见</a></h2>
+        <p class="meta">#AI可见性 · #金融科技 · #JavaScript渲染 · 来源：Search Engine Journal</p>
+        <p class="summary">对 274 个金融科技首页的研究发现，36% 的网站在原始 HTML 中返回不到 80% 的内容。47 个网站返回 0% 内容。Stripe、Adyen 等使用 SSR 的公司实现 100% 原始可见性。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：36% 的领先金融科技网站未能向 AI agent 提供完整内容，直接排除在 AI 生成的答案之外。</p>
     </div>
-    <div class="article-card">
-      <div class="article-header">
-        <span class="rank">#4</span>
-        <h3><a href="https://www.searchenginejournal.com/my-ai-assistant-traffic-was-fake-the-googlebot-number-was-worse/580052" target="_blank">81.8%的AI助手流量是假的，Googlebot更严重</a></h3>
-        <span class="score high">8.5</span>
-      </div>
-      <div class="article-meta">
-        <span class="source">Search Engine Journal</span>
-        <span class="original-title">81.8% Of My AI Assistant Traffic Was Fake. The Googlebot Number Was Worse</span>
-      </div>
-      <p class="summary">作者验证发现81.8%的AI助手流量和87%的Googlebot流量为伪造——通过IP地址与官方发布范围交叉验证可识别。真实爬虫中Anthropic ClaudeBot（166次）比Googlebot（107次）更活跃，且伪造流量立即用于凭证扫描。</p>
-      <p class="recommendation"><strong>推荐操作：</strong>实施IP验证机制区分真实和伪造爬虫流量；使用Python脚本交叉验证请求IP与官方发布范围；不要仅依赖User-Agent字符串判断爬虫真实性。</p>
-      <div class="tags"><span class="tag">爬虫验证</span><span class="tag">虚假流量</span><span class="tag">AI爬虫</span><span class="tag">安全防护</span><span class="tag">数据分析</span></div>
+
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 4</span>
+            <span class="score">评分：8/10</span>
+        </div>
+        <h2><a href="https://searchengineland.com/paid-brand-mention-geo-481092">GEO 中的付费品牌提及问题：欺骗性战术正在破坏合法 AI 可见性</a></h2>
+        <p class="meta">#GEO · #付费品牌提及 · #黑帽SEO · 来源：Search Engine Land</p>
+        <p class="summary">不道德供应商将黑帽链接建设策略重新包装为 GEO 服务，收取高价。使用 PBN 提及、Reddit 水军和无关域名投放。这些策略可能暂时有效，但长期会损害品牌声誉。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：GEO 从业者必须警惕付费品牌提及骗局——Google 已明确表示不真实提及是操纵行为。</p>
     </div>
-    <div class="article-card">
-      <div class="article-header">
-        <span class="rank">#5</span>
-        <h3><a href="https://www.searchenginejournal.com/google-seo-for-ai-agents/580589" target="_blank">谷歌回答关于AI代理SEO的问题</a></h3>
-        <span class="score high">8.0</span>
-      </div>
-      <div class="article-meta">
-        <span class="source">Search Engine Journal</span>
-        <span class="original-title">Google Answers Question About SEO For AI Agents</span>
-      </div>
-      <p class="summary">Google的John Mueller表示，为人类用户优化的网站同样会适用于AI代理浏览；但新的基本原则是不要盲目屏蔽AI代理爬虫，否则可能损害搜索可见性。</p>
-      <p class="recommendation"><strong>推荐操作：</strong>继续以人类用户体验为核心进行优化；审计robots.txt确保不屏蔽主流AI代理User-Agent；关注AI代理SEO最佳实践的持续演进。</p>
-      <div class="tags"><span class="tag">Google官方</span><span class="tag">AI代理</span><span class="tag">SEO基础</span><span class="tag">爬虫策略</span><span class="tag">搜索可见性</span></div>
+
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 5</span>
+            <span class="score">评分：8/10</span>
+        </div>
+        <h2><a href="https://www.axios.com/2026/06/23/people-inc-google-ai-search-crawler">People Inc. CEO 指控 Google 滥用市场权力</a></h2>
+        <p class="meta">#Google · #出版商 · #AI爬虫 · 来源：Axios</p>
+        <p class="summary">People Inc. CEO 指控 Google 使用单一爬虫同时服务于搜索和 AI 产品，阻止出版商选择性阻止 AI 抓取而不牺牲搜索流量。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：揭示了 AI 时代出版商与搜索引擎之间的核心矛盾。</p>
     </div>
-    <div class="article-card">
-      <div class="article-header">
-        <span class="rank">#6</span>
-        <h3><a href="https://www.axios.com/2026/06/23/people-inc-google-ai-search-crawler" target="_blank">People Inc. CEO指控谷歌滥用市场支配地位</a></h3>
-        <span class="score high">8.0</span>
-      </div>
-      <div class="article-meta">
-        <span class="source">Axios</span>
-        <span class="original-title">People Inc. CEO accuses Google of abusing its market power</span>
-      </div>
-      <p class="summary">People Inc.（前Dotdash Meredith）CEO指控谷歌使用同一个爬虫同时服务于搜索索引和AI训练，构成市场滥用——出版商无法单独屏蔽AI爬虫而不丢失搜索流量。该公司已与Meta、OpenAI和微软达成AI内容授权协议。</p>
-      <p class="recommendation"><strong>推荐操作：</strong>关注AI内容授权模式的发展；理解出版商在AI搜索生态中的议价权正在增强；考虑自身内容的AI授权策略。</p>
-      <div class="tags"><span class="tag">AI版权</span><span class="tag">市场垄断</span><span class="tag">内容授权</span><span class="tag">出版商权益</span><span class="tag">爬虫策略</span></div>
+
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 6</span>
+            <span class="score">评分：8/10</span>
+        </div>
+        <h2><a href="https://exa.ai/blog/announcing-series-c">Exa 获 2.5 亿美元 C 轮融资，打造 AI 的搜索引擎</a></h2>
+        <p class="meta">#AI搜索 · #融资 · #Exa · 来源：Exa Blog</p>
+        <p class="summary">AI 搜索引擎 Exa 以 22 亿美元估值获得 a16z 领投的 2.5 亿美元 C 轮融资。已为 40 万开发者提供搜索服务。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：AI 搜索基础设施的重大投资信号——验证了 AI agent 搜索市场的巨大潜力。</p>
     </div>
-    <div class="article-card">
-      <div class="article-header">
-        <span class="rank">#7</span>
-        <h3><a href="https://searchengineland.com/google-june-2026-spam-update-done-rolling-out-481063" target="_blank">谷歌6月2026垃圾更新已完成推出</a></h3>
-        <span class="score mid">7.5</span>
-      </div>
-      <div class="article-meta">
-        <span class="source">Search Engine Land</span>
-        <span class="original-title">Google June 2026 spam update done rolling out</span>
-      </div>
-      <p class="summary">谷歌确认6月2026垃圾更新已完全推出，从6月24日开始至6月26日结束，历时两天。这是2026年第二次垃圾更新，影响范围比3月更新更大。</p>
-      <p class="recommendation"><strong>推荐操作：</strong>确认网站是否受更新影响；未受影响的网站可维持现有策略；受影响的网站需排查垃圾信号并进行修复。</p>
-      <div class="tags"><span class="tag">Google算法</span><span class="tag">垃圾更新</span><span class="tag">算法恢复</span><span class="tag">SEO监测</span></div>
+
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 7</span>
+            <span class="score">评分：8/10</span>
+        </div>
+        <h2><a href="https://www.searchenginejournal.com/my-ai-assistant-traffic-was-fake-the-googlebot-number-was-worse/580052">81.8% 的 AI 助手流量是伪造的</a></h2>
+        <p class="meta">#Bot验证 · #流量分析 · #AI爬虫 · 来源：Search Engine Journal</p>
+        <p class="summary">对新网站服务器日志的调查发现，81.8% 标记为 AI 助手的流量和约 87% 标记为 Googlebot 的流量是伪造的。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：SEO 从业者必须学会验证 bot 流量——不要信任 User-Agent 字符串。</p>
     </div>
-    <div class="article-card">
-      <div class="article-header">
-        <span class="rank">#8</span>
-        <h3><a href="https://exa.ai/blog/announcing-series-c" target="_blank">AI搜索引擎Exa完成2.5亿美元C轮融资</a></h3>
-        <span class="score mid">7.5</span>
-      </div>
-      <div class="article-meta">
-        <span class="source">Exa</span>
-        <span class="original-title">AI Search Engine Exa Raises $250M Series C</span>
-      </div>
-      <p class="summary">AI搜索引擎Exa以22亿美元估值完成2.5亿美元C轮融资，由a16z领投。Exa已为Cursor、Cognition等40万+开发者提供搜索服务，计划用于训练下一代搜索模型和扩展基础设施，以应对AI代理搜索量将超Google 1000倍的未来。</p>
-      <p class="recommendation"><strong>推荐操作：</strong>关注AI搜索替代方案的发展；了解AI代理搜索API生态；评估自身内容在非Google搜索引擎中的可见性策略。</p>
-      <div class="tags"><span class="tag">AI搜索</span><span class="tag">融资</span><span class="tag">Exa</span><span class="tag">搜索API</span><span class="tag">AI代理</span></div>
+
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 8</span>
+            <span class="score">评分：7/10</span>
+        </div>
+        <h2><a href="https://www.searchenginejournal.com/google-desktop-ctr-climbs-while-mobile-dips-report-finds/580527">Google 桌面 CTR 上升而移动端下降：Q1 2026 数据</a></h2>
+        <p class="meta">#CTR数据 · #桌面vs移动 · #搜索趋势 · 来源：Search Engine Journal</p>
+        <p class="summary">Q1 2026 数据显示桌面 CTR 整体上升，而移动端 #1 位 CTR 下降 2.20 个百分点。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：不要使用单一的混合 CTR 基准——桌面和移动端需要分开分析。</p>
     </div>
-    <div class="article-card">
-      <div class="article-header">
-        <span class="rank">#9</span>
-        <h3><a href="https://clarvia.dev/geo-checker" target="_blank">免费GEO检查器：检测AI搜索引擎能否引用你的网站</a></h3>
-        <span class="score mid">7.0</span>
-      </div>
-      <div class="article-meta">
-        <span class="source">Clarvia</span>
-        <span class="original-title">A free checker for whether AI search engines can cite your site</span>
-      </div>
-      <p class="summary">Clarvia推出免费GEO检查工具，扫描7个技术层（llms.txt、结构化数据、JSON-LD、OpenAPI规范等），评估网站在ChatGPT、Claude、Perplexity和Gemini中的可见性，提供A-F等级评分。</p>
-      <p class="recommendation"><strong>推荐操作：</strong>立即使用该工具扫描自有网站，获取GEO评分并针对性优化7个技术层中的薄弱环节。</p>
-      <div class="tags"><span class="tag">GEO工具</span><span class="tag">AI可见性</span><span class="tag">免费工具</span><span class="tag">结构化数据</span><span class="tag">技术SEO</span></div>
+
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 9</span>
+            <span class="score">评分：7/10</span>
+        </div>
+        <h2><a href="https://searchengineland.com/content-audit-workflows-claude-481099">用 Claude 构建 6 个内容审计工作流</a></h2>
+        <p class="meta">#内容审计 · #Claude · #AI工作流 · 来源：Search Engine Land</p>
+        <p class="summary">6 个可复用的 Claude 内容审计工作流：品牌声音一致性、覆盖范围比较、新鲜度审计、AEO 审计等。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：为 SEO 从业者提供了实用的 AI 辅助内容审计方法论。</p>
     </div>
-    <div class="article-card">
-      <div class="article-header">
-        <span class="rank">#10</span>
-        <h3><a href="https://searchengineland.com/content-audit-workflows-claude-481099" target="_blank">6个可在Claude中构建的内容审计工作流</a></h3>
-        <span class="score mid">7.0</span>
-      </div>
-      <div class="article-meta">
-        <span class="source">Search Engine Land</span>
-        <span class="original-title">6 content audit workflows to build in Claude</span>
-      </div>
-      <p class="summary">介绍6个基于Claude的内容审计工作流：品牌声音一致性检查、竞品覆盖对比、内容新鲜度审计、AEO与AI可检索性评估、性能分诊和主题缺口分析，帮助将一次性提示转化为可重复使用的审计技能。</p>
-      <p class="recommendation"><strong>推荐操作：</strong>从单篇文章开始尝试AEO审计和品牌声音检查工作流；利用Claude在Chrome扩展抓取竞品内容进行对比分析；将审计结果保存为可复用技能。</p>
-      <div class="tags"><span class="tag">内容审计</span><span class="tag">Claude</span><span class="tag">AEO</span><span class="tag">工作流</span><span class="tag">内容策略</span></div>
+
+    <div class="news-card">
+        <div class="card-header">
+            <span class="rank">Top 10</span>
+            <span class="score">评分：7/10</span>
+        </div>
+        <h2><a href="https://searchengineland.com/bruce-clay-the-father-of-seo-has-passed-away-481240">Bruce Clay 去世：SEO 之父的遗产与贡献</a></h2>
+        <p class="meta">#Bruce Clay · #SEO历史 · #行业领袖 · 来源：Search Engine Land</p>
+        <p class="summary">被誉为 SEO 之父的 Bruce Clay 去世。1996 年创立专业 SEO 机构，发明了内容孤岛概念。</p>
+        <p class="recommendation"><strong>推荐理由</strong>：SEO 行业的重大损失——Bruce Clay 的创新奠定了现代 SEO 的基础。</p>
     </div>
-  <footer>
-    AI Daily News Pipeline | Generated 2026-06-27 | GEO/SEO Topic
-  </footer>
 </body>
 </html>
