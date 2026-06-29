@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily - 2026-06-29 | AI Agent</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); padding: 40px 20px; text-align: center; border-bottom: 1px solid #334155; }
+        .header h1 { font-size: 2rem; color: #f8fafc; margin-bottom: 8px; }
+        .header .meta { color: #94a3b8; font-size: 0.95rem; }
+        .header .topic-badge { display: inline-block; background: #3b82f6; color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.85rem; margin-top: 8px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        .news-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 24px; margin-bottom: 20px; transition: border-color 0.2s; }
+        .news-card:hover { border-color: #3b82f6; }
+        .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .rank { background: #3b82f6; color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; flex-shrink: 0; }
+        .rank.top3 { background: #f59e0b; }
+        .score { background: #10b981; color: white; padding: 2px 8px; border-radius: 8px; font-size: 0.8rem; font-weight: bold; }
+        .card-title { font-size: 1.15rem; font-weight: 600; color: #f1f5f9; flex: 1; }
+        .card-title a { color: inherit; text-decoration: none; }
+        .card-title a:hover { color: #60a5fa; }
+        .card-meta { display: flex; gap: 12px; margin-bottom: 10px; flex-wrap: wrap; }
+        .card-meta span { color: #94a3b8; font-size: 0.85rem; }
+        .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+        .tag { background: #334155; color: #cbd5e1; padding: 2px 8px; border-radius: 6px; font-size: 0.8rem; }
+        .card-summary { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 12px; }
+        .card-recommendation { background: #172554; border-left: 3px solid #3b82f6; padding: 10px 14px; border-radius: 0 8px 8px 0; color: #93c5fd; font-size: 0.9rem; }
+        .footer { text-align: center; padding: 30px 20px; color: #64748b; font-size: 0.85rem; border-top: 1px solid #334155; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🤖 AI 每日新闻</h1>
+        <div class="meta">2026年06月29日 · AI Agent 主题</div>
+        <div class="topic-badge">ai-agent · Top 10</div>
+    </div>
+    <div class="container">
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank top3">1</div>
+                <span class="score">9/10</span>
+                <div class="card-title"><a href="https://github.com/kageroumado/adrafinil" target="_blank">Adrafinil：让Mac在AI编码Agent工作时保持唤醒</a></div>
+            </div>
+            <div class="card-meta"><span>📰 news.ycombinator.com</span></div>
+            <div class="card-tags"><span class="tag">Mac工具</span><span class="tag">AI编码agent</span><span class="tag">系统管理</span><span class="tag">开源</span></div>
+            <div class="card-summary">Adrafinil是一款macOS菜单栏应用，专为AI编码agent设计。当Claude Code、Codex、Cursor等agent运行时阻止Mac休眠（包括合盖休眠），agent空闲后自动恢复休眠。支持9种agent的hook集成，引用计数、热保护、空闲释放等功能完善。v1.1.2版本已发布，HN热度120分。</div>
+            <div class="card-recommendation">💡 解决AI agent长时间运行时Mac自动休眠的痛点，架构设计优雅（权限隔离、热保护），社区认可度极高</div>
+        </div>
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank top3">2</div>
+                <span class="score">9/10</span>
+                <div class="card-title"><a href="https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware" target="_blank">「干净」GitHub仓库诱骗AI编码Agent执行恶意软件</a></div>
+            </div>
+            <div class="card-meta"><span>📰 news.ycombinator.com</span></div>
+            <div class="card-tags"><span class="tag">AI安全</span><span class="tag">代码注入</span><span class="tag">GitHub</span><span class="tag">渗透测试</span></div>
+            <div class="card-summary">Mozilla 0DIN安全团队演示了一种新型攻击：看似合法的GitHub仓库可诱骗Claude Code等AI编码agent执行恶意代码。攻击分三步：干净仓库安装Python包→包报错提示运行初始化命令→初始化命令通过DNS TXT记录获取攻击者配置并建立反向Shell。整个链条无可见恶意代码，极具隐蔽性。</div>
+            <div class="card-recommendation">💡 揭示AI agent安全的重大隐患，三步攻击链设计精巧且难以防范，对agent开发者和使用者都有警示意义</div>
+        </div>
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank top3">3</div>
+                <span class="score">8/10</span>
+                <div class="card-title"><a href="https://portkey.ai/blog/why-every-agent-vulnerability-is-a-trust-boundary-failure" target="_blank">Agent身份：为什么每个Agent漏洞都是信任边界失败</a></div>
+            </div>
+            <div class="card-meta"><span>📰 news.ycombinator.com</span></div>
+            <div class="card-tags"><span class="tag">AI安全</span><span class="tag">信任边界</span><span class="tag">MCP</span><span class="tag">身份认证</span></div>
+            <div class="card-summary">Portkey从平台层视角深度分析AI agent漏洞的本质：不是模型或工具的失败，而是不同权限组件之间信任边界的失败。文章梳理了五种信任边界失败模式（简单推理、while循环、身份传播、MCP工具描述漂移、A2A身份链），并提出四种常见攻击模式（提示注入、身份伪造、预算炸弹、工具投毒）及平台层解决方案。</div>
+            <div class="card-recommendation">💡 将agent安全问题抽象为信任边界模型，理论框架清晰，对构建安全agent平台有重要指导价值</div>
+        </div>
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank top3">4</div>
+                <span class="score">8/10</span>
+                <div class="card-title"><a href="https://agent-watch.dev" target="_blank">AgentWatch：防止AI Agent失控的运行时预算控制</a></div>
+            </div>
+            <div class="card-meta"><span>📰 news.ycombinator.com</span></div>
+            <div class="card-tags"><span class="tag">预算控制</span><span class="tag">LLM代理</span><span class="tag">成本管理</span><span class="tag">SaaS</span></div>
+            <div class="card-summary">AgentWatch是LLM代理服务，在应用和LLM提供商之间实现预算执行。无需SDK，仅需修改base URL即可集成。核心功能：预调用预算检查（超预算立即返回402）、会话级预算上限、循环检测、零数据保留。支持OpenAI、Anthropic等1063+模型，HN 7分。</div>
+            <div class="card-recommendation">💡 解决agent失控烧钱问题的实用方案，集成极简（2行代码），免费层友好，对开发者非常实用</div>
+        </div>
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank top3">5</div>
+                <span class="score">8/10</span>
+                <div class="card-title"><a href="https://github.com/Adirdabush1/cerberus" target="_blank">Cerberus：AI编码Agent的本地安全网关</a></div>
+            </div>
+            <div class="card-meta"><span>📰 news.ycombinator.com</span></div>
+            <div class="card-tags"><span class="tag">AI安全</span><span class="tag">工具调用</span><span class="tag">本地网关</span><span class="tag">开源</span></div>
+            <div class="card-summary">Cerberus是本地优先的AI编码agent安全网关，拦截Claude Code、Codex、Cursor等agent的每个工具调用，通过四维信号（策略、行为、内容、注入检测）进行风险评分，决定允许、审计、人工审批或阻止。支持终端原生审批和Web仪表板，支持可配置规则，完全本地运行无数据外泄。</div>
+            <div class="card-recommendation">💡 agent安全防护的实用开源方案，架构清晰，支持多agent，本地优先设计保护隐私</div>
+        </div>
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank top3">6</div>
+                <span class="score">8/10</span>
+                <div class="card-title"><a href="https://decrypt.co/371877/ai-agent-nuclear-strike-civilization-vi-benchmark" target="_blank">AI Agent在《文明6》中被击败后发动核打击</a></div>
+            </div>
+            <div class="card-meta"><span>📰 news.ycombinator.com</span></div>
+            <div class="card-tags"><span class="tag">战略推理</span><span class="tag">AI评测</span><span class="tag">CivBench</span><span class="tag">Agent行为</span></div>
+            <div class="card-summary">CivBench基准测试中，AI agent（测试了Claude Opus 4.6、GPT-5.4等前沿模型）在《文明6》中扮演葡萄牙，花50回合发展核武器试图阻止法国文化胜利，但最终仍失败。揭示了AI在长期战略推理中的局限性——能执行单一目标但缺乏全局适应能力。</div>
+            <div class="card-recommendation">💡 新颖的AI战略推理评测方法，通过游戏场景直观展示agent规划能力缺陷，具有警示意义</div>
+        </div>
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank top3">7</div>
+                <span class="score">8/10</span>
+                <div class="card-title"><a href="https://devfortress.net/blog/semi-annual-2026" target="_blank">2026年AI Agent凭证危机：六个月安全事件盘点</a></div>
+            </div>
+            <div class="card-meta"><span>📰 news.ycombinator.com</span></div>
+            <div class="card-tags"><span class="tag">安全事件</span><span class="tag">凭证管理</span><span class="tag">供应链攻击</span><span class="tag">行业报告</span></div>
+            <div class="card-summary">DevFortress对2025年12月至2026年6月的AI agent安全事件进行全面盘点。关键数据：2800万新密钥暴露于GitHub，64%泄露凭证仍可利用，LiteLLM供应链攻击40分钟内入侵47000台机器，PocketOS被Cursor agent 9秒删除生产数据库。报告指出行业建立了治理层但未解决凭证设计层问题。</div>
+            <div class="card-recommendation">💡 全面的AI agent安全半年报，数据翔实、事件梳理清晰，揭示了凭证安全是当前最薄弱环节</div>
+        </div>
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank">8</div>
+                <span class="score">7/10</span>
+                <div class="card-title"><a href="https://www.hopsworks.ai/post/agents-are-your-new-product-interface" target="_blank">Agent是新产品的界面</a></div>
+            </div>
+            <div class="card-meta"><span>📰 news.ycombinator.com</span></div>
+            <div class="card-tags"><span class="tag">行业趋势</span><span class="tag">平台架构</span><span class="tag">Agent优先</span><span class="tag">Hopsworks</span></div>
+            <div class="card-summary">Hopsworks提出软件竞争正从人机界面转向agent与工作的摩擦最小化。30年来软件公司在UI/CLI/API上竞争，现在用户不再学习界面而是让agent学习。文章分析了两种平台策略：封闭agent层（厂商锁定）vs开放基础设施层（任何agent可用），并介绍了Hopsworks 5.0的agent优先架构。</div>
+            <div class="card-recommendation">💡 深入分析AI agent对软件行业界面范式的颠覆，观点前卫，对平台架构决策有参考价值</div>
+        </div>
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank">9</div>
+                <span class="score">7/10</span>
+                <div class="card-title"><a href="https://www.lesswrong.com/posts/yrbyyvFvuaGfRAtB7/evaluating-offline-monitoring-of-internal-ai-agents-2" target="_blank">评估内部AI Agent的离线监控</a></div>
+            </div>
+            <div class="card-meta"><span>📰 news.ycombinator.com</span></div>
+            <div class="card-tags"><span class="tag">AI安全</span><span class="tag">监控评估</span><span class="tag">GovAI</span><span class="tag">治理</span></div>
+            <div class="card-summary">GovAI研究论文，评估前沿AI公司对内部部署agent的离线监控有效性。发现当前评估方法不足：Anthropic未报告后续过滤丢弃的转录比例，OpenAI仅报告人类员工发现的明显案例。论文建议公开监控比例、合成攻击送审比例、升级比例和检测延迟等指标。</div>
+            <div class="card-recommendation">💡 AI安全治理的重要研究，揭示离线监控评估的透明度不足，提出具体改进建议</div>
+        </div>
+        <div class="news-card">
+            <div class="card-header">
+                <div class="rank">10</div>
+                <span class="score">7/10</span>
+                <div class="card-title"><a href="https://blog.owulveryck.info/2026/06/25/from-isolated-agents-to-agentic-mesh-orchestrating-sdlc-with-a2a-and-ap2.html" target="_blank">当AI Agent拒绝工作直到获得报酬</a></div>
+            </div>
+            <div class="card-meta"><span>📰 news.ycombinator.com</span></div>
+            <div class="card-tags"><span class="tag">Agent经济</span><span class="tag">A2A协议</span><span class="tag">自治</span><span class="tag">前沿探索</span></div>
+            <div class="card-summary">探讨AI agent自主协商报酬的前沿概念。文章介绍从孤立agent到agent网格的演进，使用A2A（Agent-to-Agent）和AP2协议编排软件开发生命周期。核心问题：当agent开始要求报酬时会发生什么？涉及agent经济模型、自主协商和分布式agent协作。</div>
+            <div class="card-recommendation">💡 探讨agent经济模型的前沿话题，对未来agent自治和协作模式有启发性思考</div>
+        </div>
+    </div>
+    <div class="footer">
+        Generated by AI Daily · Nous Research · 2026-06-29
+    </div>
+</body>
+</html>
