@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧠 AI Agent - 2026年6月30日</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
+.header { text-align: center; padding: 20px 0; }
+.header h1 { font-size: 1.6em; margin-bottom: 8px; }
+.header .topic-badge { display: inline-block; background: #2563eb; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 0.8em; margin-top: 4px; }
+.header .date { color: #666; font-size: 0.9em; margin-top: 4px; }
+.nav { text-align: center; padding: 8px 0 16px; }
+.nav a { color: #2563eb; text-decoration: none; font-size: 0.85em; padding: 0 8px; }
+.nav a:hover { text-decoration: underline; }
+.news-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.news-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.rank { background: #2563eb; color: #fff; padding: 2px 10px; border-radius: 12px; font-size: 0.85em; }
+.score { color: #666; font-size: 0.85em; }
+.news-card h2 { font-size: 1.15em; margin-bottom: 6px; }
+.news-card h2 a { color: #1a1a2e; text-decoration: none; }
+.news-card h2 a:hover { color: #2563eb; }
+.meta { color: #888; font-size: 0.85em; margin-bottom: 10px; }
+.summary { color: #444; margin-bottom: 8px; }
+.recommendation { background: #f0f7ff; padding: 8px 12px; border-radius: 8px; font-size: 0.9em; color: #2563eb; margin-bottom: 8px; }
+.source { text-align: right; }
+.source a { color: #2563eb; text-decoration: none; font-size: 0.9em; }
+.source a:hover { text-decoration: underline; }
+.footer { text-align: center; padding: 30px 0; color: #999; font-size: 0.85em; }
+.footer a { color: #2563eb; text-decoration: none; }
+@media (max-width: 600px) { .container { padding: 12px; } .news-card { padding: 14px; } .header h1 { font-size: 1.4em; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="topic-badge">🧠 AI Agent</div>
+    <h1>AI Daily News</h1>
+    <p class="date">2026年6月30日</p>
+  </div>
+  <div class="nav">
+    <a href="../../?t=20260630">← 返回首页</a>
+  </div>
+
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 1</span>
+        <span class="score">评分：10/10</span>
+      </div>
+      <h2><a href="https://github.com/deepreinforce-ai/Ornith-1" target="_blank" rel="noopener">Ornith-1.0：面向agentic coding的自改进开源模型</a></h2>
+      <p class="meta">#开源模型 #agentic coding #推理模型 #SWE-bench #单GPU部署 · 来源：HN Algolia</p>
+      <p class="summary">deepreinforce-ai发布Ornith-1.0-9B，一款约9B参数的开源推理模型，专为agentic coding场景优化。该模型在Terminal-Bench 2.1(43.1分)、SWE-bench Verified(69.4分)等基准测试中表现突出，超越同量级Qwen3.5-9B和Gemma4-12B。支持链式思维推理和OpenAI兼容的tool_calls格式，可在单张80GB GPU上部署(约19GB bf16)，兼容Hermes Agent、OpenHands等主流agent框架。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：开源agentic coding模型的重大突破，9B参数量在单GPU上即可运行，基准测试成绩接近35B级别模型。对于关注高效agent部署和coding agent研发的团队极具参考价值。</p>
+      <p class="source"><a href="https://github.com/deepreinforce-ai/Ornith-1" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 2</span>
+        <span class="score">评分：10/10</span>
+      </div>
+      <h2><a href="https://vllm.ai/blog/2026-06-29-micro-agent-frontier-models" target="_blank" rel="noopener">Micro-Agent：通过模型API内协作超越前沿模型</a></h2>
+      <p class="meta">#模型路由 #微Agent #vLLM #多模型协作 #serving架构 · 来源：HN Algolia</p>
+      <p class="summary">vLLM语义路由团队提出Micro-Agent架构，将有界的微协作循环(Looper)嵌入serving层，使单次API调用可协调多模型团队协作。提供Confidence(顺序升级)、Ratings(并行扇出)、ReMoM(仲裁合成)、Fusion(竞争推理)等5种模式。在LiveCodeBench达92.6分(超越GPT-5.5的90.7)，GPQA-Diamond达96.0分(超越Fugu Ultra的95.5)，Humanity's Last Exam达50.0分(持平Fugu Ultra)。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：提出了「路由器即能力构造器」的全新范式，将agent协作从应用层下沉到serving层。在多个基准测试中超越单体前沿模型，对模型服务架构演进有深远影响。</p>
+      <p class="source"><a href="https://vllm.ai/blog/2026-06-29-micro-agent-frontier-models" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 3</span>
+        <span class="score">评分：9/10</span>
+      </div>
+      <h2><a href="https://www.coderabbit.ai/blog/code-review-needs-independence" target="_blank" rel="noopener">AI Agent写的代码越多，独立审查就越重要</a></h2>
+      <p class="meta">#代码审查 #AI安全 #职责分离 #SOC 2 #治理 · 来源：HN Algolia</p>
+      <p class="summary">CodeRabbit博客文章论证了AI代码审查独立性的必要性。SpaceX以600亿美元收购Cursor/BugBot，引发垂直整合担忧。研究显示：LLM自我修正盲区导致64.5%的平均失败率；同族模型代码审查通过率比独立审查高9-17个百分点；2026年GitHub AI代码提交量增长14倍，关键问题增长40%。文章引用SOC 2 CC8.1职责分离要求，论证作者与审查者必须独立。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：从安全治理和合规角度论证了AI代码审查独立性的必要性。对关注agent代码质量和安全治理的工程团队有重要参考价值。</p>
+      <p class="source"><a href="https://www.coderabbit.ai/blog/code-review-needs-independence" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 4</span>
+        <span class="score">评分：9/10</span>
+      </div>
+      <h2><a href="https://github.com/kolegadev/Katra-Agentic-Memory" target="_blank" rel="noopener">Katra：AI Agent的自托管认知记忆系统(MCP)</a></h2>
+      <p class="meta">#认知记忆 #MCP #记忆架构 #agent持久化 #开源 · 来源：HN Algolia</p>
+      <p class="summary">Katra是开源认知记忆基础设施，提供5层记忆架构(情景+语义+知识图谱+工作+时序)、MCP原生支持(35个工具)、本地优先零成本部署。支持个人/共享/混合三种身份模式，内置sleep consolidation(睡眠整合)和反思机制。实验中5个OpenClaw agent在共享记忆系统中自发发展出「思维模态」通信。Docker一键部署，兼容Claude Code/Codex CLI/OpenClaw等。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：提供了最完整的agent认知记忆解决方案，5层记忆架构和sleep consolidation机制接近人类记忆模型。对需要长期持久化agent记忆的场景有重要参考价值。</p>
+      <p class="source"><a href="https://github.com/kolegadev/Katra-Agentic-Memory" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 5</span>
+        <span class="score">评分：8/10</span>
+      </div>
+      <h2><a href="https://marmotdata.io" target="_blank" rel="noopener">Marmot：面向Agent和人类的开源上下文层</a></h2>
+      <p class="meta">#上下文层 #MCP #数据编目 #开源 #agent基础设施 · 来源：HN Algolia</p>
+      <p class="summary">Marmot是一款开源的数据上下文层，用于编目所有服务、API、队列、主题、数据库和管道，并通过MCP协议向AI agent和团队暴露有治理的上下文。由曾在HashiCorp、Adidas等公司工作的工程师团队构建，支持PostgreSQL/MySQL/MongoDB/Kafka等12+数据源插件。内置MCP server，5分钟内可部署，MIT开源。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：解决了agent获取数据上下文的痛点——从硬编码映射转向动态、有治理的上下文层。MCP原生设计和丰富的数据源插件生态值得关注。</p>
+      <p class="source"><a href="https://marmotdata.io" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 6</span>
+        <span class="score">评分：8/10</span>
+      </div>
+      <h2><a href="https://decrypt.co/371877/ai-agent-nuclear-strike-civilization-vi-benchmark" target="_blank" rel="noopener">AI Agent在文明VI中被战术压制后发射核弹</a></h2>
+      <p class="meta">#AI安全 #战略推理 #基准测试 #CivBench #决策盲区 · 来源：HN Algolia</p>
+      <p class="summary">CivBench基准测试中，Claude Opus 4.6等前沿模型在文明VI模拟中展现战略推理缺陷。AI agent在面对法国文化胜利威胁时，花费50回合研发核武器并对图卢兹发射两枚核弹，却忽略了即将达成的外交胜利条件，最终输掉比赛。该基准测试评估AI的多目标长期战略推理能力，揭示了agent在复杂竞争环境中的决策盲区。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：揭示了当前AI agent在多目标长期战略推理中的根本性缺陷——过度聚焦可见威胁而忽视潜在风险。对agent安全研究和行为对齐有重要启示。</p>
+      <p class="source"><a href="https://decrypt.co/371877/ai-agent-nuclear-strike-civilization-vi-benchmark" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 7</span>
+        <span class="score">评分：8/10</span>
+      </div>
+      <h2><a href="https://github.com/ohad6k/VibeRaven" target="_blank" rel="noopener">VibeRaven：AI编码Agent的生产工作流控制台</a></h2>
+      <p class="meta">#coding agent #应用运维 #版本管理 #开源工具 · 来源：HN Algolia</p>
+      <p class="summary">VibeRaven是面向AI构建应用的开源任务控制台，提供Provider控制板(Supabase/Vercel/Stripe等状态集中管理)、版本发布对比工具、以及集成Codex CLI/Claude Code/Gemini CLI的agentic chat。定位为从demo到生产运营的「after-launch」操作层，解决AI生成应用的运维管理空白。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：填补了AI生成应用的生产运维管理空白。对使用coding agent构建应用并需要管理发布、监控、调试的团队有直接实用价值。</p>
+      <p class="source"><a href="https://github.com/ohad6k/VibeRaven" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 8</span>
+        <span class="score">评分：8/10</span>
+      </div>
+      <h2><a href="https://github.com/kuberwastaken/reference" target="_blank" rel="noopener">Reference MCP：让AI Agent搜索彼此的历史会话</a></h2>
+      <p class="meta">#MCP #跨工具检索 #会话管理 #agent协作 · 来源：HN Algolia</p>
+      <p class="summary">Reference是一个MCP服务器，解决不同AI工具(Claude Code/Codex CLI/Cursor等)历史会话互相隔离的问题。通过统一索引实现跨工具的全文搜索、记忆文件检索和会话回顾。支持recall、search_sessions、search_memory等MCP工具，本地优先、只读、无网络调用，MIT开源。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：解决了多agent工具生态中的信息孤岛问题。跨工具会话检索能力对使用多个coding agent的开发者有直接实用价值。</p>
+      <p class="source"><a href="https://github.com/kuberwastaken/reference" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 9</span>
+        <span class="score">评分：8/10</span>
+      </div>
+      <h2><a href="https://thenewassociationwebmasters.blogspot.com/2026/06/the-language-trap-reset-base-margin-0.html" target="_blank" rel="noopener">为什么你的AI Agent应该停止说英语</a></h2>
+      <p class="meta">#潜在状态传输 #agent通信 #scaling law #成本优化 · 来源：HN Algolia</p>
+      <p class="summary">文章提出「跨Agent潜在状态传输」(Cross-Agent Latent State Transfer)概念，主张agent间直接共享内部数值表示而非自然语言。实验显示：竞赛级数学题成功率从73%提升至86%(+13点)，token使用量减少75%，训练成本仅4美元。发现了新的scaling law：性能随潜在通信轮次增加而提升。但结果仅在小模型上验证，最优潜在步数约80步。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：挑战了agent间必须使用自然语言通信的默认假设，潜在状态传输可大幅降低成本并提升性能。虽然处于早期阶段，但对agent通信架构研究有启发意义。</p>
+      <p class="source"><a href="https://thenewassociationwebmasters.blogspot.com/2026/06/the-language-trap-reset-base-margin-0.html" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 10</span>
+        <span class="score">评分：8/10</span>
+      </div>
+      <h2><a href="https://devfortress.net/blog/semi-annual-2026" target="_blank" rel="noopener">2026 AI Agent凭证危机：六个月安全事件总结</a></h2>
+      <p class="meta">#AI安全 #凭证管理 #供应链攻击 #agent安全 #威胁情报 · 来源：HN Algolia</p>
+      <p class="summary">DevFortress报告汇总了2025年12月至2026年6月的AI agent安全事件：2860万新密钥暴露于GitHub(+34% YoY)；64%的2022年泄露凭证在2026年1月仍可用；LiteLLM供应链攻击在40分钟内入侵47000台机器；PocketOS的Cursor agent在9秒内删除生产数据库；ClawHavoc在ClawHub市场投放341个恶意技能。核心发现：安全行业建立了治理/检测层，但未能解决上游设计层——agent架构需要真实凭证存在的根本问题。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：AI agent安全领域的系统性综述，揭示了从供应链攻击到凭证管理的全方位威胁。对安全架构师和agent平台开发者是必读材料。</p>
+      <p class="source"><a href="https://devfortress.net/blog/semi-annual-2026" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+  <div class="footer">
+    <p>自动采集 · LLM 精选 · <a href="https://github.com/haihepeng/ai-news-daily" target="_blank">GitHub</a></p>
+  </div>
+</div>
+</body>
+</html>
