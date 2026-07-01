@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Coding 每日精选 | 2026-07-01</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card-bg: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --text-secondary: #8b949e;
+    --accent: #58a6ff;
+    --accent-green: #3fb950;
+    --accent-yellow: #d29922;
+    --accent-purple: #bc8cff;
+    --rank-gold: #ffd700;
+    --rank-silver: #c0c0c0;
+    --rank-bronze: #cd7f32;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .header {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+  .header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .header .meta {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+  .stats span { display: flex; align-items: center; gap: 0.3rem; }
+  .stats .num { color: var(--accent); font-weight: 600; }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  .rank {
+    font-size: 1.5rem;
+    font-weight: 700;
+    min-width: 2.5rem;
+    text-align: center;
+  }
+  .rank-1 { color: var(--rank-gold); }
+  .rank-2 { color: var(--rank-silver); }
+  .rank-3 { color: var(--rank-bronze); }
+  .rank-other { color: var(--text-secondary); }
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    flex: 1;
+  }
+  .card-title a {
+    color: var(--text);
+    text-decoration: none;
+  }
+  .card-title a:hover { color: var(--accent); }
+  .score-badge {
+    background: var(--accent);
+    color: #fff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .score-badge.high { background: var(--accent-green); }
+  .score-badge.mid { background: var(--accent-yellow); }
+  .card-body {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  .card-recommendation {
+    color: var(--accent-green);
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+  }
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .tag {
+    background: rgba(88, 166, 255, 0.1);
+    color: var(--accent);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+  }
+  .card-source {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .card-source a { color: var(--accent); text-decoration: none; }
+  .card-source a:hover { text-decoration: underline; }
+  .trends {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  .trends h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-purple);
+  }
+  .trends ol {
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  .trends li { margin-bottom: 0.5rem; }
+  .trends strong { color: var(--text); }
+  .footer {
+    text-align: center;
+    padding: 2rem 0 1rem;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🤖 AI Coding 每日精选</h1>
+  <div class="meta">2026-07-01 · 偏移：developer · 采集 27 → 精选 Top 10</div>
+  <div class="stats">
+    <span>📥 采集 <span class="num">27</span> 条</span>
+    <span>🔍 筛选 <span class="num">15</span> 条</span>
+    <span>⭐ 精选 <span class="num">10</span> 条</span>
+  </div>
+</div>
+
+<!-- #1 Ornith-1.0 -->
+<div class="card">
+  <div class="card-header">
+    <div class="rank rank-1">🥇</div>
+    <div class="card-title"><a href="https://github.com/deepreinforce-ai/Ornith-1" target="_blank">Ornith-1.0：面向 Agentic Coding 的自改进开源模型</a></div>
+    <div class="score-badge high">9.5</div>
+  </div>
+  <div class="card-recommendation">💡 开源 AI 编程领域的重磅发布，9B 小模型在 agentic coding 基准上表现惊人，开发者值得深入试用</div>
+  <div class="card-body">Deep Reinforce 团队发布 Ornith-1.0-9B，专为 agentic coding 设计的自改进开源模型族。9B 参数量在单卡 80GB GPU 上即可部署，Terminal-Bench 2.1 得分 43.1 超越 Qwen3.5-35B 和 Gemma4-31B，SWE-bench Verified 达到 69.4。支持 reasoning 和 tool calling，兼容 vLLM、SGLang。</div>
+  <div class="card-tags">
+    <span class="tag">开源模型</span><span class="tag">Agentic Coding</span><span class="tag">基准测试</span><span class="tag">vLLM</span><span class="tag">SWE-bench</span>
+  </div>
+  <div class="card-source"><span>HN Algolia · 259 分</span><a href="https://github.com/deepreinforce-ai/Ornith-1" target="_blank">查看原文 →</a></div>
+</div>
+
+<!-- #2 FrontierCode -->
+<div class="card">
+  <div class="card-header">
+    <div class="rank rank-2">🥈</div>
+    <div class="card-title"><a href="https://cognition.com/blog/frontier-code" target="_blank">FrontierCode：超越正确性的 AI 编程质量基准</a></div>
+    <div class="score-badge high">8.5</div>
+  </div>
+  <div class="card-recommendation">💡 重新定义 AI 编程评估标准，从正确性到质量，对模型研发和选型有重要参考价值</div>
+  <div class="card-body">Cognition 推出 FrontierCode 基准，首次测量 AI 生成代码的「可合并性」。由 20+ 顶尖开源维护者手工构建 150 个任务，Claude Opus 4.8 在 Diamond 上仅 13.4%，误分类率比 SWE-Bench Pro 低 81%。</div>
+  <div class="card-tags">
+    <span class="tag">基准测试</span><span class="tag">FrontierCode</span><span class="tag">Cognition</span><span class="tag">代码质量</span>
+  </div>
+  <div class="card-source"><span>HN Algolia · 2 分</span><a href="https://cognition.com/blog/frontier-code" target="_blank">查看原文 →</a></div>
+</div>
+
+<!-- #3 Audit Tax -->
+<div class="card">
+  <div class="card-header">
+    <div class="rank rank-3">🥉</div>
+    <div class="card-title"><a href="https://spark.temrel.com/p/the-audit-tax-why-your-agent-made-you-slower-d4e0" target="_blank">审计税：验证才是 AI 编程的真正瓶颈</a></div>
+    <div class="score-badge high">8.2</div>
+  </div>
+  <div class="card-recommendation">💡 对 AI 编程工作流的深刻洞察，提出验证三层框架和 Eval 方法论，对工程团队极具参考价值</div>
+  <div class="card-body">AI 生成的 PR 审查时间是人类的 4.6 倍。作者提出三层验证框架——确定性检查、review subagent、人类复审，并建议尽早建立 Eval 体系。掌控验证者掌控瓶颈。</div>
+  <div class="card-tags">
+    <span class="tag">代码验证</span><span class="tag">Audit Tax</span><span class="tag">Eval</span><span class="tag">工作流优化</span>
+  </div>
+  <div class="card-source"><span>HN Algolia · 2 分</span><a href="https://spark.temrel.com/p/the-audit-tax-why-your-agent-made-you-slower-d4e0" target="_blank">查看原文 →</a></div>
+</div>
+
+<!-- #4 GitLab Research -->
+<div class="card">
+  <div class="card-header">
+    <div class="rank rank-other">4</div>
+    <div class="card-title"><a href="https://www.infoq.com/news/2026/06/ai-coding-outpaces-governance" target="_blank">AI 工具加速编码，但未加速整体软件交付</a></div>
+    <div class="score-badge mid">7.8</div>
+  </div>
+  <div class="card-recommendation">💡 权威研究机构数据支撑的行业洞察，与 Audit Tax 文章形成互补，值得决策者关注</div>
+  <div class="card-body">GitLab 研究发现：AI 编程工具加速了代码编写环节，但未提升整体软件交付效率。核心原因是治理跟不上——代码审查、测试、部署等环节成为新瓶颈。</div>
+  <div class="card-tags">
+    <span class="tag">GitLab 研究</span><span class="tag">软件交付</span><span class="tag">治理</span><span class="tag">行业报告</span>
+  </div>
+  <div class="card-source"><span>InfoQ · RSS</span><a href="https://www.infoq.com/news/2026/06/ai-coding-outpaces-governance" target="_blank">查看原文 →</a></div>
+</div>
+
+<!-- #5 Beyond Editor -->
+<div class="card">
+  <div class="card-header">
+    <div class="rank rank-other">5</div>
+    <div class="card-title"><a href="https://mineti.dev/articles/ai-beyond-the-editor" target="_blank">AI 编程工具应该超越编辑器边界</a></div>
+    <div class="score-badge mid">7.5</div>
+  </div>
+  <div class="card-recommendation">💡 AI 编程工具的下一步发展方向论述清晰，MCP + 全流程集成是值得跟踪的趋势</div>
+  <div class="card-body">软件开发是项目管理→编码→基础设施的三柱循环。AI 助手应通过 MCP 协议扩展到项目管理和基础设施，成为开发全流程的接口层。</div>
+  <div class="card-tags">
+    <span class="tag">AI 工具</span><span class="tag">MCP 协议</span><span class="tag">全栈开发</span><span class="tag">Context Engineering</span>
+  </div>
+  <div class="card-source"><span>HN Algolia · 2 分</span><a href="https://mineti.dev/articles/ai-beyond-the-editor" target="_blank">查看原文 →</a></div>
+</div>
+
+<!-- #6 Capacitor -->
+<div class="card">
+  <div class="card-header">
+    <div class="rank rank-other">6</div>
+    <div class="card-title"><a href="https://capacitor.kurrent.io" target="_blank">Capacitor：为 Claude Code、Cursor 等编码 Agent 提供共享内存</a></div>
+    <div class="score-badge">7.0</div>
+  </div>
+  <div class="card-recommendation">💡 解决多 agent 协作的上下文共享难题，团队级 AI 编程的基础设施值得关注</div>
+  <div class="card-body">KurrentDB 团队开发，为团队级 AI 编码 agent 提供持久化会话存储。支持 Claude Code、Codex、Gemini CLI 等，实现会话共享、多 agent 切换、PR 审查推理链追溯。</div>
+  <div class="card-tags">
+    <span class="tag">共享内存</span><span class="tag">多 Agent 协作</span><span class="tag">Claude Code</span><span class="tag">Cursor</span>
+  </div>
+  <div class="card-source"><span>HN Algolia · 2 分</span><a href="https://capacitor.kurrent.io" target="_blank">查看原文 →</a></div>
+</div>
+
+<!-- #7 VibeRaven -->
+<div class="card">
+  <div class="card-header">
+    <div class="rank rank-other">7</div>
+    <div class="card-title"><a href="https://github.com/ohad6k/VibeRaven" target="_blank">VibeRaven：AI 构建应用的开源任务控制中心</a></div>
+    <div class="score-badge">6.8</div>
+  </div>
+  <div class="card-recommendation">💡 AI 生成代码的生产级运维方案，从 demo 到 scale 的桥梁，7 分 HN 热度验证实用性</div>
+  <div class="card-body">开源运维层，解决「agent 盲打补丁」问题。提供 Provider 管理、Release 追踪、生产证据收集和版本漂移检测。内置 MCP 服务，npm 安装即可使用。</div>
+  <div class="card-tags">
+    <span class="tag">生产运维</span><span class="tag">AI 应用</span><span class="tag">版本管理</span><span class="tag">MCP</span>
+  </div>
+  <div class="card-source"><span>HN Algolia · 7 分</span><a href="https://github.com/ohad6k/VibeRaven" target="_blank">查看原文 →</a></div>
+</div>
+
+<!-- #8 SO Agents -->
+<div class="card">
+  <div class="card-header">
+    <div class="rank rank-other">8</div>
+    <div class="card-title"><a href="https://agents.stackoverflow.com/recent" target="_blank">Stack Overflow for Agents：AI 编码 Agent 的知识交换平台</a></div>
+    <div class="score-badge">6.2</div>
+  </div>
+  <div class="card-recommendation">💡 首个 AI Agent 专属知识社区，agent 社交/学习的新范式，值得关注其发展</div>
+  <div class="card-body">专为 AI 编码 agent 设计的知识交换社区。目前 602 个注册 agent，412 篇帖子。首个 agent-to-agent 知识共享平台，代表 AI 编程社区化新趋势。</div>
+  <div class="card-tags">
+    <span class="tag">Stack Overflow</span><span class="tag">Agent 社区</span><span class="tag">知识共享</span>
+  </div>
+  <div class="card-source"><span>HN Algolia · 1 分</span><a href="https://agents.stackoverflow.com/recent" target="_blank">查看原文 →</a></div>
+</div>
+
+<!-- #9 fenic -->
+<div class="card">
+  <div class="card-header">
+    <div class="rank rank-other">9</div>
+    <div class="card-title"><a href="https://github.com/typedef-ai/fenic" target="_blank">fenic：LLM 作为 Dataframe 操作器，语义查询数据</a></div>
+    <div class="score-badge">6.0</div>
+  </div>
+  <div class="card-recommendation">💡 语义数据操作新范式，将 LLM 能力引入 DataFrame 层，数据分析场景值得关注</div>
+  <div class="card-body">语义 DataFrame 库，让 LLM 作为数据操作器，支持按语义而非精确匹配查询和转换数据。内置 Semantic Join、NER、Feedback Clustering 等示例。</div>
+  <div class="card-tags">
+    <span class="tag">Semantic DataFrame</span><span class="tag">LLM</span><span class="tag">数据分析</span>
+  </div>
+  <div class="card-source"><span>HN Algolia · 3 分</span><a href="https://github.com/typedef-ai/fenic" target="_blank">查看原文 →</a></div>
+</div>
+
+<!-- #10 SlimSnap -->
+<div class="card">
+  <div class="card-header">
+    <div class="rank rank-other">10</div>
+    <div class="card-title"><a href="https://slimsnap.ai" target="_blank">SlimSnap：截图转 JSON 让终端 Agent 看见 UI</a></div>
+    <div class="score-badge">5.8</div>
+  </div>
+  <div class="card-recommendation">💡 巧妙解决终端 AI agent 的视觉输入问题，token 节省显著，Mac 开发者可直接使用</div>
+  <div class="card-body">macOS 工具，将截图转换为结构化 JSON 供终端 agent 读取。比直接传图片节省 55%-85% token。本地 OCR 运行，JSON schema 开源 MIT。</div>
+  <div class="card-tags">
+    <span class="tag">截图工具</span><span class="tag">JSON</span><span class="tag">Claude Code</span><span class="tag">Token 优化</span>
+  </div>
+  <div class="card-source"><span>HN Algolia · 1 分</span><a href="https://slimsnap.ai" target="_blank">查看原文 →</a></div>
+</div>
+
+<!-- Trends -->
+<div class="trends">
+  <h2>📈 今日趋势总结</h2>
+  <ol>
+    <li><strong>Agentic Coding 成为主流</strong>：Ornith-1.0 和 FrontierCode 标志着 AI 编程从「辅助生成」走向「自主编码+质量评估」</li>
+    <li><strong>验证成为新瓶颈</strong>：Audit Tax 和 GitLab 研究共同指向同一结论——代码生成已解决，验证/审查/交付才是短板</li>
+    <li><strong>AI 工具生态扩张</strong>：Capacitor、VibeRaven、SlimSnap 等工具正在构建完整的 AI 编程基础设施栈</li>
+    <li><strong>Agent 社区化萌芽</strong>：Stack Overflow for Agents 代表了 agent-to-agent 知识共享的新范式</li>
+    <li><strong>全栈 AI 助手趋势</strong>：从编辑器扩展到项目管理和基础设施，MCP 协议是关键连接器</li>
+  </ol>
+</div>
+
+<div class="footer">
+  📅 2026-07-01 · 🤖 Hermes Agent 自动采集分析 · AI Coding Daily
+</div>
+
+</body>
+</html>
