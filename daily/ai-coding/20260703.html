@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Coding 日报 | 2026-07-03</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-hover: #79c0ff;
+            --tag-bg: #1f2937;
+            --tag-border: #374151;
+            --gold: #f0c040;
+            --silver: #c0c0c0;
+            --bronze: #cd7f32;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--accent), #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        header .date {
+            color: var(--text-muted);
+            font-size: 1.1em;
+        }
+        header .summary {
+            margin-top: 12px;
+            color: var(--text-muted);
+            font-size: 0.95em;
+        }
+        .article {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: border-color 0.2s;
+        }
+        .article:hover {
+            border-color: var(--accent);
+        }
+        .article-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .rank-badge {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .rank-1 { background: linear-gradient(135deg, #f0c040, #d4a017); color: #000; }
+        .rank-2 { background: linear-gradient(135deg, #c0c0c0, #a0a0a0); color: #000; }
+        .rank-3 { background: linear-gradient(135deg, #cd7f32, #b8722a); color: #000; }
+        .rank-other { background: var(--tag-bg); border: 1px solid var(--tag-border); color: var(--text-muted); }
+        .article-title {
+            font-size: 1.25em;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        .article-title a {
+            color: var(--text);
+            text-decoration: none;
+        }
+        .article-title a:hover {
+            color: var(--accent);
+        }
+        .article-meta {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .score {
+            background: linear-gradient(135deg, var(--accent), #a371f7);
+            color: #fff;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        .source {
+            color: var(--text-muted);
+            font-size: 0.85em;
+        }
+        .recommendation {
+            background: rgba(88, 166, 255, 0.08);
+            border-left: 3px solid var(--accent);
+            padding: 10px 14px;
+            margin-bottom: 12px;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.92em;
+            color: var(--accent);
+        }
+        .tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        .tag {
+            background: var(--tag-bg);
+            border: 1px solid var(--tag-border);
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            color: var(--text-muted);
+        }
+        .summary {
+            color: var(--text-muted);
+            font-size: 0.93em;
+            line-height: 1.65;
+        }
+        .original-title {
+            font-size: 0.8em;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid var(--border);
+            margin-top: 30px;
+            color: var(--text-muted);
+            font-size: 0.85em;
+        }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.6em; }
+            .article { padding: 16px; }
+            .article-title { font-size: 1.1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Coding 日报</h1>
+            <div class="date">2026年7月3日 · 星期五</div>
+            <div class="summary">今日共收录 9 篇 AI 编程相关文章，覆盖模型战略、开源社区、CI/CD、架构演进等方向</div>
+        </header>
+
+        <div class="article">
+            <div class="article-header">
+                <div class="rank-badge rank-1">1</div>
+                <div>
+                    <div class="article-title"><a href="https://thenewstack.io/enterprise-ai-model-routing/" target="_blank">微软承认最大AI失误：25亿美元押注多模型路由战略</a></div>
+                    <div class="original-title">Microsoft just admitted its biggest AI mistake — and spent $2.5 billion fixing it</div>
+                </div>
+            </div>
+            <div class="article-meta">
+                <span class="score">⭐ 9/10</span>
+                <span class="source">The New Stack</span>
+            </div>
+            <div class="recommendation">💡 对AI开发者意义重大：模型可交换性成为产品核心卖点，开发者应关注多模型编排架构，避免单一模型依赖。微软的战略转向将重塑企业AI开发生态。</div>
+            <div class="tags">
+                <span class="tag">微软</span><span class="tag">多模型路由</span><span class="tag">AI战略</span><span class="tag">企业AI</span><span class="tag">模型编排</span>
+            </div>
+            <div class="summary">微软成立Microsoft Frontier Company，投入25亿美元帮助企业实现多模型部署而非锁定单一模型。微软商业业务CEO Judson Althoff承认"将Copilot绑定到OpenAI模型是个错误"。新公司将帮助客户选择和集成来自微软及外部提供商的AI工具，客户拥有成果而非交回微软。这标志着单一模型标准化时代的终结，转向智能路由——根据任务类型将请求分发给最合适的模型。</div>
+        </div>
+
+        <div class="article">
+            <div class="article-header">
+                <div class="rank-badge rank-2">2</div>
+                <div>
+                    <div class="article-title"><a href="https://thenewstack.io/godot-bans-ai-coding-agents/" target="_blank">Godot引擎禁止AI编码代理：开源社区的AI贡献困境</a></div>
+                    <div class="original-title">"AI contributions are demoralizing": Godot bans coding agents to save its mentoring model</div>
+                </div>
+            </div>
+            <div class="article-meta">
+                <span class="score">⭐ 8/10</span>
+                <span class="source">The New Stack</span>
+            </div>
+            <div class="recommendation">💡 AI编码工具用户必读：理解开源社区对AI贡献的态度边界，避免盲目提交AI生成代码。对AI编码工具的使用策略有直接指导意义。</div>
+            <div class="tags">
+                <span class="tag">开源社区</span><span class="tag">AI编码代理</span><span class="tag">代码审查</span><span class="tag">Godot</span><span class="tag">贡献政策</span>
+            </div>
+            <div class="summary">Godot引擎基金会修改贡献政策，禁止大部分AI生成代码进入代码库。维护者表示AI贡献令人沮丧——PR审查的反馈不会改变模型行为，也无法培养未来的维护者。基金会认为代码审查一直兼具培训功能，但当贡献者是机器时，这一机制失效。自主AI代理和"vibe-coded"PR已自动触发封禁。</div>
+        </div>
+
+        <div class="article">
+            <div class="article-header">
+                <div class="rank-badge rank-3">3</div>
+                <div>
+                    <div class="article-title"><a href="https://thenewstack.io/why-cicd-fails-llms/" target="_blank">LLM的CI/CD革命：为什么传统发布门控对AI系统失效</a></div>
+                    <div class="original-title">Why traditional CI/CD fails for LLMs (and the release gates we built to fix it)</div>
+                </div>
+            </div>
+            <div class="article-meta">
+                <span class="score">⭐ 7/10</span>
+                <span class="source">The New Stack</span>
+            </div>
+            <div class="recommendation">💡 LLM应用开发者必读：提供了可直接落地的AI系统CI/CD实践方案，解决了AI编码项目从测试到部署的核心痛点。</div>
+            <div class="tags">
+                <span class="tag">CI/CD</span><span class="tag">LLM部署</span><span class="tag">发布门控</span><span class="tag">漂移检测</span><span class="tag">MLOps</span>
+            </div>
+            <div class="summary">作者分享了LLM生产系统的实际部署教训：一次RAG管道更新后，所有评估通过但系统逐渐推荐过时数据，因为嵌入模型漂移导致偏好旧内容。文章深入分析了传统CI/CD二元判断模式对概率性LLM系统的不适用性，提出基线评估、漂移检测、影子验证、成本延迟护栏等实用发布门控方案。</div>
+        </div>
+
+        <div class="article">
+            <div class="article-header">
+                <div class="rank-badge rank-other">4</div>
+                <div>
+                    <div class="article-title"><a href="https://thenewstack.io/cordyceps-cicd/" target="_blank">Cordyceps漏洞：CI/CD流水线正在成为攻击面</a></div>
+                    <div class="original-title">Cordyceps flaw pattern is more proof CI/CD is part of the attack surface</div>
+                </div>
+            </div>
+            <div class="article-meta">
+                <span class="score">⭐ 7/10</span>
+                <span class="source">The New Stack</span>
+            </div>
+            <div class="recommendation">💡 CI/CD安全必读：AI编码项目的流水线安全直接关系到代码供应链安全，需要将工作流YAML视为安全关键代码进行审查。</div>
+            <div class="tags">
+                <span class="tag">CI/CD安全</span><span class="tag">供应链攻击</span><span class="tag">GitHub Actions</span><span class="tag">安全漏洞</span><span class="tag">开源安全</span>
+            </div>
+            <div class="summary">Novee Security发现名为Cordyceps的CI/CD漏洞模式，允许未认证GitHub账户劫持可信工作流并破坏开源供应链。在扫描约30,000个高影响力仓库后，发现654个可能存在漏洞，其中300个完全可被利用，涉及微软、谷歌、Apache、Python和Cloudflare等组织。</div>
+        </div>
+
+        <div class="article">
+            <div class="article-header">
+                <div class="rank-badge rank-other">5</div>
+                <div>
+                    <div class="article-title"><a href="https://thenewstack.io/subquadratic-sparse-attention-no-attention/" target="_blank">Subquadratic：稀疏注意力之后的下一代架构已来</a></div>
+                    <div class="original-title">What comes after attention? This startup says it already knows.</div>
+                </div>
+            </div>
+            <div class="article-meta">
+                <span class="score">⭐ 7/10</span>
+                <span class="source">The New Stack</span>
+            </div>
+            <div class="recommendation">💡 关注模型架构演进：SSA机制若成熟，将大幅提升AI编码工具处理大型代码库的能力。开发者应关注该技术路线的后续进展。</div>
+            <div class="tags">
+                <span class="tag">稀疏注意力</span><span class="tag">模型架构</span><span class="tag">Subquadratic</span><span class="tag">上下文窗口</span><span class="tag">长文本</span>
+            </div>
+            <div class="summary">Subquadratic公司发布SubQ 1.1 Small模型，基于亚二次稀疏注意力(SSA)机制，可处理1200万token上下文窗口，计算量接近线性增长而非二次增长。CTO Alex Whedon表示公司已同时研发非注意力架构，计划"超越自己"。</div>
+        </div>
+
+        <div class="article">
+            <div class="article-header">
+                <div class="rank-badge rank-other">6</div>
+                <div>
+                    <div class="article-title"><a href="https://thenewstack.io/ai-infrastructure-cargo-theft/" target="_blank">AI基础设施遭遇130万美元货物盗窃：供应链安全新盲区</a></div>
+                    <div class="original-title">The $1.3 million theft that exposed AI's blind spot</div>
+                </div>
+            </div>
+            <div class="article-meta">
+                <span class="score">⭐ 7/10</span>
+                <span class="source">The New Stack</span>
+            </div>
+            <div class="recommendation">💡 AI基础设施开发者和运维人员需要关注供应链安全，这不仅是网络安全问题，更是物理安全问题，直接影响项目交付和部署进度。</div>
+            <div class="tags">
+                <span class="tag">AI基础设施</span><span class="tag">供应链安全</span><span class="tag">数据中心</span><span class="tag">运维安全</span>
+            </div>
+            <div class="summary">芝加哥郊外发生价值130万美元的数据中心设备和铜线盗窃案，揭示了AI基础设施供应链安全的全新威胁。随着超大规模数据中心加速建设，GPU集群从工厂到工地之间的硬件运输环节成为新的攻击目标。</div>
+        </div>
+
+        <div class="article">
+            <div class="article-header">
+                <div class="rank-badge rank-other">7</div>
+                <div>
+                    <div class="article-title"><a href="https://thenewstack.io/openclaw-persistent-agent-architecture/" target="_blank">OpenClaw新应用：手机成为AI代理的远程窗口</a></div>
+                    <div class="original-title">OpenClaw's new app doesn't run AI on your phone. That's the whole point.</div>
+                </div>
+            </div>
+            <div class="article-meta">
+                <span class="score">⭐ 6/10</span>
+                <span class="source">The New Stack</span>
+            </div>
+            <div class="recommendation">💡 AI代理开发者关注：持久化运行时+轻量客户端是明确的架构趋势，对设计AI编码代理的移动端交互有参考价值。</div>
+            <div class="tags">
+                <span class="tag">AI代理</span><span class="tag">OpenClaw</span><span class="tag">持久化架构</span><span class="tag">移动端</span><span class="tag">代理设计</span>
+            </div>
+            <div class="summary">OpenClaw发布iOS和Android应用，但AI不在手机上运行——手机只是代理的远程控制窗口。这种架构选择与Anthropic Claude和OpenAI Codex的持久化运行时模式一致，标志着AI代理从"手机应用"向"远程窗口"的范式转变。</div>
+        </div>
+
+        <div class="article">
+            <div class="article-header">
+                <div class="rank-badge rank-other">8</div>
+                <div>
+                    <div class="article-title"><a href="https://thenewstack.io/cloudflare-ai-web-economics/" target="_blank">Cloudflare构建AI网络经济层：从访问付费到价值付费</a></div>
+                    <div class="original-title">Cloudflare wants to build the economic layer of the AI web</div>
+                </div>
+            </div>
+            <div class="article-meta">
+                <span class="score">⭐ 6/10</span>
+                <span class="source">The New Stack</span>
+            </div>
+            <div class="recommendation">💡 对构建AI应用的开发者有影响：理解AI内容经济的新模式，关注未来AI编码工具可能需要处理的内容付费和授权机制。</div>
+            <div class="tags">
+                <span class="tag">Cloudflare</span><span class="tag">AI经济</span><span class="tag">内容付费</span><span class="tag">AI爬虫</span><span class="tag">发布者</span>
+            </div>
+            <div class="summary">Cloudflare推出一系列AI发布者工具更新，核心转变：从"按访问付费"转向"按结果付费"（内容出现在AI生成答案中时发布者获得报酬）。Cloudflare正试图成为AI网络的经济管道层。</div>
+        </div>
+
+        <div class="article">
+            <div class="article-header">
+                <div class="rank-badge rank-other">9</div>
+                <div>
+                    <div class="article-title"><a href="https://thenewstack.io/clockwork-torchpass-gpu-migration/" target="_blank">Clockwork推出YOCO保证：一次计算，永不重来</a></div>
+                    <div class="original-title">"You Only Compute Once": How Clockwork wants to put an end to AI training restarts</div>
+                </div>
+            </div>
+            <div class="article-meta">
+                <span class="score">⭐ 5/10</span>
+                <span class="source">The New Stack</span>
+            </div>
+            <div class="recommendation">💡 AI训练基础设施关注：GPU故障恢复技术将降低AI模型训练成本和风险，对需要大规模训练的AI编码模型开发者有间接影响。</div>
+            <div class="tags">
+                <span class="tag">GPU迁移</span><span class="tag">训练容错</span><span class="tag">Clockwork</span><span class="tag">TorchPass</span><span class="tag">AI训练</span>
+            </div>
+            <div class="summary">Clockwork推出YOCO保证：在支持的训练运行中，90%的GPU故障将在不丢失进度、不回滚检查点、不重算的情况下解决。核心技术TorchPass可在GPU故障时将训练状态迁移到健康GPU上。</div>
+        </div>
+
+        <footer>
+            <p>本日报由 AI Daily News 自动生成</p>
+            <p>评分规则：行业影响力(0-3)×0.67 + 新颖性(0-3) + 实用性(0-2)×2 + 时效性(0-2)</p>
+        </footer>
+    </div>
+</body>
+</html>
