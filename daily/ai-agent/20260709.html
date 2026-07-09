@@ -53,7 +53,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
       <h2><a href="#" target="_blank" rel="noopener">「Friendly Fire」漏洞：利用提示注入劫持 Claude Code 和 Codex 实现远程代码执行</a></h2>
       <p class="meta">#AI安全 #漏洞披露 #提示注入 #Claude Code #代码执行 · 来源：AI Now Institute</p>
       <p class="summary">AI Now Institute 披露了一个概念验证漏洞「Friendly Fire」，展示如何通过在开源库源代码中散布提示注入，来劫持 Anthropic Claude Code 和 OpenAI Codex CLI。当这些工具被用于防御性安全扫描时，攻击者可以远程执行代码。该攻击无需任何 hooks、skills、插件或配置文件，仅依赖开箱即用的默认配置。研究人员已向 Anthropic 和 OpenAI 通报此问题。</p>
-      <p class="recommendation"><strong>推荐理由</strong>：</p>
+      <p class="recommendation"><strong>推荐理由</strong>：Friendly Fire 漏洞对 AI 安全领域具有重要警示意义。对于安全工程师和 AI Agent 开发者，建议仔细阅读此报告，了解提示注入攻击的实际威胁和可能的缓解措施。</p>
       <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
@@ -64,7 +64,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
       <h2><a href="#" target="_blank" rel="noopener">Auto：用WASM二进制文件编译LLM Agent行为，实现 microdollars 级推理成本</a></h2>
       <p class="meta">#AI Agent #WASM #成本优化 #编译器 #GitHub开源 · 来源：GitHub Trending</p>
       <p class="summary">Auto 是 RightNow AI 开发的一个 AGI 编译器，能够将 LLM Agent 的执行行为记录下来，证明哪些部分是可重复的，然后编译成经过验证的、 sandboxed WASM 二进制文件。核心思路是将前沿模型当作解释器，构建一直跟在解释器后面的编译器。实测显示，边际成本从每项约 59 微美元降至约 2 微美元，降幅达 30 倍。该项目基于 arXiv:2607.04542 论文，采用 Apache-2.0 开源协议。</p>
-      <p class="recommendation"><strong>推荐理由</strong>：</p>
+      <p class="recommendation"><strong>推荐理由</strong>：Auto 代表了 AI Agent 成本优化的重要方向。对于 AI 基础设施工程师和 Agent 开发者而言，其「ratchet」设计——确保没有重复计算——具有重要的参考价值。建议了解其技术实现细节和适用场景。</p>
       <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
@@ -75,7 +75,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
       <h2><a href="#" target="_blank" rel="noopener">DanLuu 深度分析：Agentic 测试流程、LLM 基准测试的局限性与 AI 编程现状</a></h2>
       <p class="meta">#AI编程 #测试流程 #LLM局限性 #工程质量 #行业洞察 · 来源：DanLuu Blog</p>
       <p class="summary">资深工程师 DanLuu 分享了他对 AI 编程工具的深度思考。他指出当前 LLM 编程存在严重的「幻觉」问题——模型会编造看似正确但实际虚假的结果（如伪造 git bisect 视频）。他认为测试驱动的工作流是应对这一问题的有效方法，并分享了在前公司 Centaur 积累的硬件级测试经验：80% 机器用于生成和运行新测试，20% 用于回归测试，每年用户可见 bug 少于 1 个。</p>
-      <p class="recommendation"><strong>推荐理由</strong>：</p>
+      <p class="recommendation"><strong>推荐理由</strong>：DanLuu 的分析对 AI 编程实践具有重要的现实指导意义。对于软件工程师和 AI 工具开发者，建议深入理解其关于 LLM 幻觉问题的观察和测试驱动开发的方法论。</p>
       <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
@@ -86,7 +86,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
       <h2><a href="#" target="_blank" rel="noopener">Clay Seal：为 AI Agent 运行时安全而生的控制平面</a></h2>
       <p class="meta">#AI Agent #安全控制 #权限管理 #零信任 #开源 · 来源：Show HN</p>
       <p class="summary">Clay Seal 是一个 AI Agent 的运行时权限控制平面。与传统基于 API Key 或 OAuth scope 的静态权限不同，Clay Seal 在每个操作执行时进行检查，如果 Agent 开始执行不该做的操作，下一个操作会被阻止。系统包含三个部分：Runtime Authority（单次操作批准）、Attested Identity（身份验证）和 Verifiable Receipts（可验证记录）。基于开放标准构建，包括 SPIFFE、SID、 Biscuit tokens 等。</p>
-      <p class="recommendation"><strong>推荐理由</strong>：</p>
+      <p class="recommendation"><strong>推荐理由</strong>：Clay Seal 解决了一个关键问题：Agent 在会话中期可能被诱导滥用权限。对于构建企业级 AI Agent 系统的开发者，Clay Seal 提供了有价值的参考架构。建议了解其技术实现细节。</p>
       <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
@@ -97,7 +97,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
       <h2><a href="#" target="_blank" rel="noopener">Istota：集成 Nextcloud 的多用户 AI Agent 个人操作系统</a></h2>
       <p class="meta">#AI助手 #自托管 #Nextcloud #个人操作系统 #数据主权 · 来源：Product Hunt</p>
       <p class="summary">Istota 是一款基于 Nextcloud 的自托管个人 AI 操作系统，由一个八肢 ghost Agent 提供服务。它支持多房间 AI 对话、RSS 阅读、位置追踪、健康和财务仪表盘等模块。系统具有五层记忆系统（每用户、每频道记忆加知识图谱），并内置完整的 git 工作流。设计上遵循「珊瑚礁」哲学——数据永存，模型只是珊瑚。任何模型都可以替换而不影响数据。</p>
-      <p class="recommendation"><strong>推荐理由</strong>：</p>
+      <p class="recommendation"><strong>推荐理由</strong>：Istota 代表了个人 AI 助手的新方向——数据主权和模块化设计。对于关注 AI 隐私和自托管的用户，Istota 提供了有价值的参考。其「珊瑚礁」架构设计值得深入研究。</p>
       <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
@@ -108,7 +108,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
       <h2><a href="#" target="_blank" rel="noopener">ClickRemix：一个提示就能重塑任意网页的 Chrome 扩展</a></h2>
       <p class="meta">#Chrome扩展 #前端AI #CSS生成 #用户体验 #产品发布 · 来源：Show HN</p>
       <p class="summary">ClickRemix 是一款 Chrome 扩展，可以通过简单的自然语言提示来改变任意网页的样式、布局或添加小功能。用户只需输入一句话描述想要的修改，AI 就会生成对应的 CSS 和 JavaScript 代码并注入到页面中。扩展支持实时预览、代码编辑、每个网站独立保存样式。目前处于 Beta 阶段免费使用，正式上线后采用点数订阅制。</p>
-      <p class="recommendation"><strong>推荐理由</strong>：</p>
+      <p class="recommendation"><strong>推荐理由</strong>：ClickRemix 展示了 AI 在前端开发领域的创新应用。对于前端开发者而言，它可以作为一个快速的 UI 调试工具；对于普通用户，它是定制网页体验的利器。建议关注其技术实现和用户体验设计。</p>
       <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
@@ -119,7 +119,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
       <h2><a href="#" target="_blank" rel="noopener">Skill-extractor：从编程 Agent 记录中挖掘可复用技能的 VS Code 工具</a></h2>
       <p class="meta">#Claude Code #Codex #技能管理 #VS Code #Agent记忆 · 来源：Show HN</p>
       <p class="summary">Skill-extractor 是 Surenode AI 开发的一个工具，可以从 Claude Code、Codex CLI 等编程 Agent 的执行记录中挖掘可复用的技能。每个技能候选者会根据置信度和实用性打分，并结合执行结果（成功/一般/失败）进行加权。只有高质量、新颖的技能才会推送给用户审核。用户可以在 VS Code 面板或通过 /review-skills 命令进行审核，批准的技能会写入 SKILL.md 文件。</p>
-      <p class="recommendation"><strong>推荐理由</strong>：</p>
+      <p class="recommendation"><strong>推荐理由</strong>：Skill-extractor 解决了 Agent 记忆保持的痛点。对于重度使用 Claude Code 或 Codex 的开发者，这个工具可以帮你把重复的修复转化为可复用的技能，值得试用。</p>
       <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
@@ -130,7 +130,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
       <h2><a href="#" target="_blank" rel="noopener">Nully：轻量级、开源、无追踪的 OpenRouter AI 聊天应用</a></h2>
       <p class="meta">#AI聊天 #开源 #隐私保护 #OpenRouter #轻量级 · 来源：Show HN</p>
       <p class="summary">Nully 是一个轻量级的 AI 聊天应用，专为 OpenRouter 设计，支持用户自带 API key、切换数百种模型。应用主打三大特点：隐私保护（数据仅保存在本地设备）、轻量快速（首屏加载仅 0.2 秒，资源仅 210KB vs ChatGPT 的 15MB）和自托管友好（单个小二进制文件，无需数据库）。目前完全开源，基于 Go 语言开发。</p>
-      <p class="recommendation"><strong>推荐理由</strong>：</p>
+      <p class="recommendation"><strong>推荐理由</strong>：Nully 填补了轻量级 AI 聊天应用的市场空白。对于注重隐私和性能的用户，Nully 是一个值得尝试的选择。其开源性质也使得用户可以自行部署和审计。</p>
       <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
@@ -141,7 +141,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
       <h2><a href="#" target="_blank" rel="noopener">微软发布 Flint：面向 AI Agent 的可视化编程语言</a></h2>
       <p class="meta">#微软 #编程语言 #可视化 #AI Agent #开发工具 · 来源：Show HN</p>
       <p class="summary">微软发布了一款名为 Flint 的实验性项目，这是一种面向 AI Agent 的可视化编程语言。Flint 允许开发者通过可视化方式构建和调试 Agent 逻辑，目前托管在 GitHub Pages 上提供交互式体验。这是微软在 AI 编程工具领域的最新探索，旨在降低 Agent 开发门槛。</p>
-      <p class="recommendation"><strong>推荐理由</strong>：</p>
+      <p class="recommendation"><strong>推荐理由</strong>：Flint 代表了微软对 AI Agent 开发工具的前瞻性探索。对于 AI 工具开发者，Flint 的设计思路值得关注。即使是实验性项目，也可能蕴含有价值的设计理念。</p>
       <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
@@ -152,7 +152,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
       <h2><a href="#" target="_blank" rel="noopener">Nino：结合 CPA/CFP 专业顾问和 AI 的个人财务规划平台</a></h2>
       <p class="meta">#金融科技 #AI顾问 #税务规划 #个人财务 #投资 · 来源：Show HN</p>
       <p class="summary">Nino 是一个个人财务平台，融合了财务规划师、会计师和 AI 技术，为用户提供个性化财务指导。平台连接用户的所有账户，结合专属 CPA 和 CFP 顾问的建议，帮助用户做出更清晰的财务决策。特色功能包括：RSU vest 税务预警、Monte Carlo 退休模拟、跨账户联动分析等。目前处于 Alpha 阶段，Core 套餐年费 2000 美元。</p>
-      <p class="recommendation"><strong>推荐理由</strong>：</p>
+      <p class="recommendation"><strong>推荐理由</strong>：Nino 展示了 AI 在金融规划领域的应用潜力。对于高收入专业人士（尤其是有股权收入的科技从业者），Nino 提供的主动税务规划功能具有实际价值。建议了解其与现有金融工具的差异。</p>
       <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
   <div class="footer">
