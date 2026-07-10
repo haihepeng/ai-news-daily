@@ -16,30 +16,30 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
 .nav a { color: #2563eb; text-decoration: none; font-size: 0.85em; padding: 0 8px; }
 .nav a:hover { text-decoration: underline; }
 .news-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-.news-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
-.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-.rank { background: #2563eb; color: #fff; padding: 2px 10px; border-radius: 12px; font-size: 0.85em; }
-.score { color: #666; font-size: 0.85em; }
-.news-card h2 { font-size: 1.15em; margin-bottom: 6px; }
+.news-card .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.news-card .rank { background: #2563eb; color: #fff; padding: 3px 12px; border-radius: 20px; font-size: 0.8em; font-weight: 600; }
+.news-card .score { color: #666; font-size: 0.85em; }
+.news-card h2 { font-size: 1.1em; margin-bottom: 6px; line-height: 1.5; }
 .news-card h2 a { color: #1a1a2e; text-decoration: none; }
 .news-card h2 a:hover { color: #2563eb; }
-.meta { color: #888; font-size: 0.85em; margin-bottom: 10px; }
-.summary { color: #444; margin-bottom: 8px; }
-.recommendation { background: #f0f7ff; padding: 8px 12px; border-radius: 8px; font-size: 0.9em; color: #2563eb; margin-bottom: 8px; }
-.source { text-align: right; }
-.source a { color: #2563eb; text-decoration: none; font-size: 0.9em; }
-.source a:hover { text-decoration: underline; }
+.news-card .meta { color: #888; font-size: 0.8em; margin-bottom: 10px; }
+.news-card .summary { color: #444; font-size: 0.9em; margin-bottom: 8px; line-height: 1.7; }
+.news-card .recommendation { color: #555; font-size: 0.88em; margin-bottom: 8px; padding: 8px 12px; background: #f0f7ff; border-radius: 8px; }
+.news-card .source { text-align: right; }
+.news-card .source a { color: #2563eb; text-decoration: none; font-size: 0.85em; }
+.news-card .source a:hover { text-decoration: underline; }
 .footer { text-align: center; padding: 30px 0; color: #999; font-size: 0.85em; }
 .footer a { color: #2563eb; text-decoration: none; }
-@media (max-width: 600px) { .container { padding: 12px; } .news-card { padding: 14px; } .header h1 { font-size: 1.4em; } }
+@media (max-width: 600px) { .container { padding: 12px; } .header h1 { font-size: 1.6em; } }
 </style>
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <div class="topic-badge">🤖 AI 科技</div>
+    <h1>🤖 AI 科技</h1>
     <h1>AI Daily News</h1>
-    <p class="date">2026年7月10日</p>
+    <div class="topic-badge">2026年7月10日</div>
+    <div class="date">2026年7月10日</div>
   </div>
   <div class="nav">
     <a href="../../?t=20260710">← 返回首页</a>
@@ -50,110 +50,110 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
         <span class="rank">Top 1</span>
         <span class="score">评分：9.5/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">OpenAI 发布 GPT-5.6 系列模型，含 Sol/Terra/Luna 三版本</a></h2>
+      <h2><a href="https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/" target="_blank" rel="noopener">OpenAI 发布 GPT-5.6 系列模型，含 Sol/Terra/Luna 三版本</a></h2>
       <p class="meta">#OpenAI #GPT-5.6 #LLM #产品发布 #Anthropic · 来源：</p>
-      <p class="summary">OpenAI unveiled GPT-5.6 with three variants: Sol (workhorse), Terra (intermediate), Luna (budget). Sam Altman claims Sol is 54% more token-efficient for coding tasks. Most notably, the company calls 5.6 its 'strongest cybersecurity model yet, achieving frontier performance with significantly fewer tokens.' The Trump administration previously sought to restrict its rollout due to fears of misuse. GPT-5.6 supports defensive activities including threat modeling, code review and patching, and blue teaming. OpenAI also released ChatGPT Work, a workplace companion for enterprise teams. Using the Coding Agent Index, OpenAI claims Sol 'sets a new state of the art at 80, 2.8 points above Fable 5, while using less than half the output tokens, taking less than half the time, and costing about one-third less.' Pricing: Sol $5M input/$30M output, Terra $2.50/$15, Luna $1/$6.</p>
+      <p class="summary">OpenAI发布了GPT-5.6的三个变体：Sol（主力版）、Terra（中端版）和Luna（经济版）。Sam Altman称Sol在编程任务上token效率提升54%。最引人注目的是，该公司称5.6是“迄今为止最强的网络安全模型，以显著更少的token实现了前沿性能。”特朗普政府此前曾因担忧滥用而试图限制其发布。GPT-5.6支持威胁建模、代码审查与修复、蓝队防御等安全活动。OpenAI还推出了面向企业团队的ChatGPT Work。据Coding Agent Index评估，OpenAI称Sol“以80分创下新SOTA，比Fable 5高出2.8分，同时输出token不到一半、耗时不到一半、成本降低约三分之一。”定价：Sol输入$5M/输出$30M，Terra $2.50/$15，Luna $1/$6。</p>
       <p class="recommendation"><strong>推荐理由</strong>：GPT-5.6是OpenAI对抗Anthropic Fable的重磅产品，三层定价覆盖不同市场需求。其54%的token效率提升和网络安全能力值得关注。建议关注Sol的实际编码表现和与企业市场的结合。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 2</span>
         <span class="score">评分：8.5/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">马斯克称赞 Anthropic Mythos/Fable 模型，承诺不断供</a></h2>
+      <h2><a href="https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/" target="_blank" rel="noopener">马斯克称赞 Anthropic Mythos/Fable 模型，承诺不断供</a></h2>
       <p class="meta">#Anthropic #SpaceX #xAI #Musk #Fable · 来源：</p>
-      <p class="summary">Musk praised Anthropic and its Mythos/Fable models, saying 'They are obviously currently the leader in AI. No company has released a model as good as Mythos/Fable.' He promised not to cut off Anthropic's access to SpaceX infrastructure. This comes after Anthropic signed a deal in May to buy 300 megawatts of compute from xAI's Colossus 1 data center for $1.25 billion per month through May 2029, a deal worth about $40 billion. Google also signed a deal to rent SpaceX infrastructure for $920 million per month through June 2029. Anthropic is one of SpaceX's largest customers. Musk's statement follows his September 2025 post saying 'Winning was never in the set of possible outcomes for Anthropic,' which proved wrong as Anthropic gained enterprise market share.</p>
+      <p class="summary">马斯克称赞Anthropic及其Mythos/Fable模型，称“他们显然是当前AI领域的领导者。没有公司发布过像Mythos/Fable这样优秀的模型。”他承诺不会切断Anthropic对SpaceX基础设施的访问。此前，Anthropic在5月签署协议，以每月12.5亿美元的价格从xAI的Colossus 1数据中心购买300兆瓦算力，合同持续至2029年5月，总价值约400亿美元。Google也签署了协议，以每月9.2亿美元租赁SpaceX基础设施至2029年6月。Anthropic是SpaceX最大的客户之一。马斯克此番表态与他2025年9月所说的“胜利从来不在Anthropic的可能结果集合中”形成对比——随着Anthropic在企业市场份额的增长，这一说法已被证明是错误的。</p>
       <p class="recommendation"><strong>推荐理由</strong>：Anthropic与SpaceX的$400亿数据中心交易和Musk的表态显示Anthropic在企业市场的领先地位稳固。建议关注Anthropic的估值变化和Fable系列的后续发展。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 3</span>
         <span class="score">评分：8.5/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">AI Agent 创业公司 Lyzr 用自主 Agent 完成 1 亿美元融资</a></h2>
+      <h2><a href="https://techcrunch.com/2026/07/09/an-ai-agent-startup-just-let-its-agent-run-its-100-million-fundraise/" target="_blank" rel="noopener">AI Agent 创业公司 Lyzr 用自主 Agent 完成 1 亿美元融资</a></h2>
       <p class="meta">#AI Agent #Fundraising #Startup #Enterprise #Lyzr · 来源：</p>
-      <p class="summary">Lyzr, a Jersey City startup building enterprise AI agents, raised a $100M Series B at ~$500M valuation by using its own agent (SivaClaw) to field investor questions from 130+ investors, draft memos, and track engagement — without a founder ever flying to Sand Hill Road. The company attracted $400M in investor interest. The fundraise doubled as a live product demo, proving the agent works at scale. This demonstrates AI agents can autonomously handle major business processes end-to-end. Lyzr's agent handled the entire fundraising workflow independently.</p>
+      <p class="summary">总部位于泽西城的企业AI Agent初创公司Lyzr，通过使用自家Agent（SivaClaw）回答来自130多家投资机构的问题、起草备忘录并跟踪互动，以约5亿美元估值完成了1亿美元B轮融资——整个过程创始人从未飞往沙丘路。公司吸引了4亿美元的投资意向。此次融资同时充当了现场产品演示，证明了Agent的规模化能力。这表明AI Agent可以自主端到端处理重大商业流程。Lyzr的Agent独立完成了整个融资工作流。</p>
       <p class="recommendation"><strong>推荐理由</strong>：AI Agent自主融资$100M是AI Agent企业应用的里程碑事件，证明Agent可以在企业级流程中独立工作。建议关注SivaClaw的技术特点和Lyzer的后续商业化进展。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://techcrunch.com/2026/07/09/an-ai-agent-startup-just-let-its-agent-run-its-100-million-fundraise/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 4</span>
         <span class="score">评分：7.0/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">OpenAI 二号人物 Fidji Simo 因健康问题离职</a></h2>
+      <h2><a href="https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/" target="_blank" rel="noopener">OpenAI 二号人物 Fidji Simo 因健康问题离职</a></h2>
       <p class="meta">#OpenAI #Leadership #Executive #IPO · 来源：</p>
-      <p class="summary">Fidji Simo, OpenAI's CEO of Applications and second executive, is stepping down from her full-time role due to ongoing health issues, transitioning to part-time advisory. She joined OpenAI in May 2025 from Instacart (where she was CEO through its 2023 IPO) and consolidated business/product operations reporting to her. Her departure leaves Sam Altman searching for a successor as OpenAI eyes a potential IPO and competes more aggressively with Anthropic in enterprise. ChatGPT growth cooled late last year, missing internal revenue targets, pushing the company to lean harder into coding tools where it trails Anthropic. Simo was primarily focused on growing OpenAI's consumer business.</p>
+      <p class="summary">OpenAI应用部门CEO、二号人物Fidji Simo因持续的健康问题辞去全职职务，转任兼职顾问。她于2025年5月从Instacart（曾担任CEO带领其完成2023年IPO）加入OpenAI，整合了向其汇报的业务和产品运营。她的离职让Sam Altman在OpenAI筹划潜在IPO并与Anthropic在企业市场激烈竞争之际寻找继任者。ChatGPT的增长去年下半年放缓，未达内部收入目标，这促使公司加大投入在落后于Anthropic的编程工具领域。Simo此前主要负责OpenAI消费者业务的增长。</p>
       <p class="recommendation"><strong>推荐理由</strong>：Fidji Simo的离职正值OpenAI准备IPO的关键时刻，这对公司治理和战略方向有重要影响。建议关注OpenAI的新领导层任命和消费者业务战略调整。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 5</span>
         <span class="score">评分：7.5/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">AI 能否回答 3 万亿美元的问题？</a></h2>
+      <h2><a href="https://techcrunch.com/2026/07/09/can-ai-answer-the-3-trillion-question/" target="_blank" rel="noopener">AI 能否回答 3 万亿美元的问题？</a></h2>
       <p class="meta">#AI经济 #基础设施 #投资 #Token经济 #泡沫 · 来源：</p>
-      <p class="summary">Sequoia's David Cahn has updated his AI infrastructure spending analysis: $200B in 2023 → $1.5T in 2026, requiring $3T in total AI industry revenue to justify all the chip and data center expenditures. Anthropic is thought to have hit $60B ARR, while OpenAI reportedly earned $13B in 2025 (at $20B ARR as of Nov 2025). Apollo's chief economist Torsten Slok warns that if hyperscalers (Google, Meta, Microsoft, Amazon) don't meet their 2028 free-cash-flow goals, the market reaction could be severe enough to tip the economy into recession and the S&P 500 into a correction. There's also a trend of organizations turning to cheaper open-weight models, often Chinese, and token prices falling.</p>
+      <p class="summary">红杉资本David Cahn更新了AI基础设施支出分析：2023年2000亿美元→2026年1.5万亿美元，需要AI行业总收入达到3万亿美元才能证明所有芯片和数据中心支出的合理性。据信Anthropic的年化收入（ARR）已达600亿美元，而OpenAI在2025年收入为130亿美元（截至2025年11月ARR为200亿美元）。Apollo首席经济学家Torsten Slok警告称，如果超大规模企业（Google、Meta、Microsoft、Amazon）未能实现2028年自由现金流目标，市场反应可能严重到引发经济衰退和标普500指数回调。此外，越来越多的组织转向更便宜的开源权重模型（通常来自中国），token价格持续下跌。</p>
       <p class="recommendation"><strong>推荐理由</strong>：$3万亿问题是判断AI泡沫的重要框架。建议关注AI收入增速与基础设施支出的差距，以及开源模型对闭源模型的挑战。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://techcrunch.com/2026/07/09/can-ai-answer-the-3-trillion-question/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 6</span>
         <span class="score">评分：8.0/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">Anthropic 发现 Claude 内部隐藏的"思考空间"J-lens</a></h2>
+      <h2><a href="https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/" target="_blank" rel="noopener">Anthropic 发现 Claude 内部隐藏的"思考空间"J-lens</a></h2>
       <p class="meta">#Anthropic #Claude #可解释性 #AI安全 #研究 · 来源：</p>
-      <p class="summary">Anthropic developed 'Jacobian lens' (J-lens), a mechanistic interpretability technique revealing a hidden space inside Claude Opus 4.6 where the model 'ponders' related concepts before outputting responses. The J-space contains words related to what the model is likely to say next — effectively revealing what's 'on its mind.' Anthropic found that what an LLM is actually doing can often be different from what it says it is doing. The company partnered with Neuronpedia for public demos. The technique builds on previous mechanistic interpretability work and exposes a deeper level inside LLMs researchers had not seen before.</p>
+      <p class="summary">Anthropic开发了“Jacobian Lens”（J-lens）机制可解释性技术，揭示了Claude Opus 4.6内部一个隐藏空间，模型在输出回答之前会在其中“思考”相关概念。J-space包含与模型可能接下来要说的内容相关的词汇——实际上揭示了模型的“所思所想”。Anthropic发现，LLM实际在做的事情往往与其声称在做的事情不同。该公司与Neuronpedia合作推出了公开演示。该技术建立在已有的机制可解释性工作基础之上，揭示了研究人员此前未曾见过的LLM内部更深层次。</p>
       <p class="recommendation"><strong>推荐理由</strong>：J-lens技术对LLM可解释性和安全性研究有重大意义。建议关注J-lens的开源进展和 Neuronpedia的公测体验，以及对AI安全研究的推动作用。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 7</span>
         <span class="score">评分：6.5/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">Meta 推出 Muse Spark 1.1 加入 AI 编程竞争</a></h2>
+      <h2><a href="https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/" target="_blank" rel="noopener">Meta 推出 Muse Spark 1.1 加入 AI 编程竞争</a></h2>
       <p class="meta">#Meta #Muse Spark #AI Coding #LLM #产品发布 · 来源：</p>
-      <p class="summary">Meta publicly launched Muse Spark 1.1, a multimodal AI model designed for agentic coding that competes with OpenAI and Anthropic. Spark 1.1 can engage in multistep reasoning, handle complex processes, manage digital workflows, and deploy new features in enterprise systems. Pricing is competitive at $1.25 per million input tokens and $4.25 per million output tokens. Mark Zuckerberg posted on X for the first time in three years to promote it, calling it 'a strong agentic and coding model at a very low price.' This was a big week for AI announcements including SpaceXAI's Grok 4.5 and OpenAI's GPT-5.6.</p>
+      <p class="summary">Meta正式发布了Muse Spark 1.1，这是一款面向Agent编程的多模态AI模型，与OpenAI和Anthropic竞争。Spark 1.1能够进行多步推理、处理复杂流程、管理数字工作流以及在企业系统中部署新功能。定价具有竞争力：输入token每百万$1.25，输出token每百万$4.25。Mark Zuckerberg三年来首次在X上发帖推广该模型，称其是“价格极低的强大Agent和编程模型。”本周是AI发布的密集周，包括SpaceXAI的Grok 4.5和OpenAI的GPT-5.6。</p>
       <p class="recommendation"><strong>推荐理由</strong>：Meta入局AI编码市场，Muse Spark的低价策略值得关注。Zuckerberg的亲自推广显示Meta对AI编码市场的重视。建议比较Spark与GPT-5.6和Fable的实际性能。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 8</span>
         <span class="score">评分：6.0/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">纽约时报指控 OpenAI 在版权诉讼中隐藏证据</a></h2>
+      <h2><a href="https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/" target="_blank" rel="noopener">纽约时报指控 OpenAI 在版权诉讼中隐藏证据</a></h2>
       <p class="meta">#OpenAI #版权 #法律 #NYT #监管 · 来源：</p>
-      <p class="summary">The New York Times and The Daily News claim OpenAI has been lying about its ability to search customer chat log data and training datasets. In an April court-ordered deposition, OpenAI data privacy engineer Vinnie Monaco allegedly revealed OpenAI had already conducted internal searches and evaluations of its training corpus. OpenAI also allegedly deleted billions of ChatGPT outputs after filing suit in violation of a court preservation order, and substituted millions of logs in the requested sample. The outlets are asking the judge to discipline OpenAI, prevent it from using the 20 million chat log sample as evidence, and make OpenAI pay legal fees. OpenAI denied the allegations, accusing the Times of trying to access private user conversations as its case weakens.</p>
+      <p class="summary">《纽约时报》和《每日新闻》声称OpenAI在搜索客户聊天记录数据和训练数据集的能力方面一直撒谎。在4月法院指定的证词中，OpenAI数据隐私工程师Vinnie Monaco据称透露OpenAI已对其训练语料进行了内部搜索和评估。OpenAI还被控在提起诉讼后违反法院保全令删除了数十亿条ChatGPT输出，并在所要求的样本中替换了数百万条日志。两家媒体要求法官对OpenAI进行处罚，阻止其使用2000万条聊天记录样本作为证据，并要求OpenAI支付法律费用。OpenAI否认了这些指控，指责《纽约时报》在其案件势弱之际试图获取私人用户对话。</p>
       <p class="recommendation"><strong>推荐理由</strong>：OpenAI在版权诉讼中涉嫌隐藏证据可能对其法律地位和公众信任造成重大影响。建议关注此案的进展和监管机构的态度。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 9</span>
         <span class="score">评分：5.5/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">OpenAI 关闭 Atlas 浏览器，AI 浏览器野心不减</a></h2>
+      <h2><a href="https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/" target="_blank" rel="noopener">OpenAI 关闭 Atlas 浏览器，AI 浏览器野心不减</a></h2>
       <p class="meta">#OpenAI #Atlas #Browser #AI Agent #Product · 来源：</p>
-      <p class="summary">OpenAI is discontinuing Atlas, its AI-powered browser launched less than a year ago. The company is migrating the agentic browsing capabilities to the ChatGPT desktop application and a new Chrome extension. Atlas was designed to let AI autonomously navigate the web, but the product didn't gain significant traction. OpenAI remains committed to AI agent/browser integration, just through different delivery channels. Atlas's closure suggests browser-native AI remains a hard product-market fit.</p>
+      <p class="summary">OpenAI正在关闭推出不到一年的AI浏览器Atlas。该公司将把Agent浏览能力迁移到ChatGPT桌面应用和新的Chrome扩展中。Atlas旨在让AI自主浏览网页，但该产品未获得显著市场traction。OpenAI仍然致力于AI Agent/浏览器集成，只是通过不同的交付渠道。Atlas的关闭表明浏览器原生AI仍在艰难寻找产品市场匹配。</p>
       <p class="recommendation"><strong>推荐理由</strong>：Atlas的关闭表明浏览器原生AI仍在探索产品市场匹配阶段。建议关注OpenAI通过桌面应用和Chrome扩展的替代方案，以及AI浏览市场的竞争格局。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 10</span>
         <span class="score">评分：5.0/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">Google 将在广告中心披露 AI 生成广告</a></h2>
+      <h2><a href="https://techcrunch.com/2026/07/09/google-will-now-disclose-which-ads-are-made-with-ai/" target="_blank" rel="noopener">Google 将在广告中心披露 AI 生成广告</a></h2>
       <p class="meta">#Google #AI广告 #透明度 #监管 #消费者保护 · 来源：</p>
-      <p class="summary">Google is rolling out a new feature in 'My Ad Center' panel letting users know when an ad was made using AI technology. Users see an option 'how this ad was made' indicating if the ad was created or edited with AI. When advertisers use Google's own generative AI advertising tools, the disclosure is automatically enabled. However, if the ad is created elsewhere, advertisers will need to self-disclose — Google will not perform its own check. This feature is available globally on Google Search, YouTube, and Google Discover. Previously only election ads were required to disclose AI use.</p>
+      <p class="summary">Google正在其“我的广告中心”面板推出一项新功能，让用户知道广告是否使用了AI技术制作。用户将看到一个“此广告如何制作”的选项，显示广告是否由AI创建或编辑。当广告主使用Google自家的生成式AI广告工具时，披露将自动启用。但如果广告是在别处创建的，广告主需要自行披露——Google不会进行主动检查。该功能将在Google搜索、YouTube和Google Discover上全球可用。此前只有选举广告被要求披露AI使用情况。</p>
       <p class="recommendation"><strong>推荐理由</strong>：Google的AI广告披露政策是AI透明度的重要进展。建议关注其他平台的跟进情况以及监管机构对AI生成内容的具体要求。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://techcrunch.com/2026/07/09/google-will-now-disclose-which-ads-are-made-with-ai/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
   <div class="footer">
     <p>自动采集 · LLM 精选 · <a href="https://github.com/haihepeng/ai-news-daily" target="_blank">GitHub</a></p>
