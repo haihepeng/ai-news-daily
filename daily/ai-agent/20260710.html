@@ -25,21 +25,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
 .news-card h2 a:hover { color: #2563eb; }
 .meta { color: #888; font-size: 0.85em; margin-bottom: 10px; }
 .summary { color: #444; margin-bottom: 8px; }
-.recommendation { background: #f0f7ff; padding: 8px 12px; border-radius: 8px; font-size: 0.9em; color: #2563eb; margin-bottom: 8px; }
+.recommendation { background: #f0f7ff; padding: 8px 12px; border-radius: 8px; font-size: 0.9em; color: #555; }
 .source { text-align: right; }
-.source a { color: #2563eb; text-decoration: none; font-size: 0.9em; }
+.source a { color: #2563eb; text-decoration: none; font-size: 0.85em; }
 .source a:hover { text-decoration: underline; }
 .footer { text-align: center; padding: 30px 0; color: #999; font-size: 0.85em; }
 .footer a { color: #2563eb; text-decoration: none; }
-@media (max-width: 600px) { .container { padding: 12px; } .news-card { padding: 14px; } .header h1 { font-size: 1.4em; } }
+@media (max-width: 600px) { .container { padding: 12px; } .header h1 { font-size: 1.6em; } }
 </style>
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <div class="topic-badge">🧠 AI Agent</div>
+    <h1>🧠 AI Agent</h1>
     <h1>AI Daily News</h1>
-    <p class="date">2026年7月10日</p>
+    <div class="topic-badge">2026年7月10日</div>
+    <div class="date">2026年7月10日</div>
   </div>
   <div class="nav">
     <a href="../../?t=20260710">← 返回首页</a>
@@ -50,110 +51,110 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto
         <span class="rank">Top 1</span>
         <span class="score">评分：9/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">Microsoft 发布 Flint：AI Agent 可视化中间语言</a></h2>
+      <h2><a href="https://microsoft.github.io/flint-chart/#/" target="_blank" rel="noopener">Microsoft 发布 Flint：AI Agent 可视化中间语言</a></h2>
       <p class="meta">#Microsoft #可视化 #MCP协议 #开发者工具 #开源 · 来源：HN Algolia</p>
-      <p class="summary"></p>
+      <p class="summary">Microsoft Research 发布 Flint，一种面向 AI Agent 的可视化中间语言，让 Agent 通过简单的语义化图表规范可靠地生成图表。Flint 从数据本身、语义类型和编码方式推导图表配置，支持 46 种图表类型，可渲染为 Vega-Lite、ECharts 和 Chart.js。提供 MCP 服务器，Agent 可直接调用。340 票 133 评论，HN 当日热门。</p>
       <p class="recommendation"><strong>推荐理由</strong>：Flint 为 AI Agent 提供了标准化图表生成能力，是 Agent 与数据可视化结合的实用工具。开发者可关注其 MCP 协议集成方式，评估在自动化报告、数据仪表盘等场景的落地价值。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://microsoft.github.io/flint-chart/#/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 2</span>
         <span class="score">评分：9/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">Colibri：纯 C 零依赖在 25GB RAM 上运行 GLM-5.2 (744B MoE)</a></h2>
+      <h2><a href="https://github.com/JustVugg/colibri" target="_blank" rel="noopener">Colibri：纯 C 零依赖在 25GB RAM 上运行 GLM-5.2 (744B MoE)</a></h2>
       <p class="meta">#LLM #推理优化 #本地部署 #MoE #开源 · 来源：HN Algolia</p>
-      <p class="summary"></p>
+      <p class="summary">Colibri 是一个纯 C 编写的推理引擎，可在 25GB RAM 的消费级机器上运行 GLM-5.2（744B MoE）。通过磁盘流式加载专家（每层 LRU 缓存）+ 压缩 KV-cache（576 floats/token vs 32768），实现极致轻量化。MTP 投机解码达到 2.00 tokens/forward。HN 390 票 103 评论。</p>
       <p class="recommendation"><strong>推荐理由</strong>：Colibri 展示了极致轻量化推理的可能性，其磁盘流式专家和压缩 KV-cache 设计对在资源受限环境部署大模型 Agent 有重要参考价值。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://github.com/JustVugg/colibri" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 3</span>
         <span class="score">评分：8/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">FableCut：AI Agent 可驱动的零依赖浏览器视频编辑器</a></h2>
+      <h2><a href="https://github.com/ronak-create/FableCut" target="_blank" rel="noopener">FableCut：AI Agent 可驱动的零依赖浏览器视频编辑器</a></h2>
       <p class="meta">#视频编辑 #MCP #浏览器 #AI Agent #开源 · 来源：HN Algolia</p>
-      <p class="summary"></p>
+      <p class="summary">FableCut 是一个完全在浏览器中运行的 Premiere 风格非线性视频编辑器，将整个时间线暴露为 JSON 文档。AI Agent（Claude Code、Claude Desktop 或任何支持 MCP/REST 的工具）可以实时驱动编辑，人和 Agent 可同时操作同一时间线。零 npm 依赖，提供 MCP 服务器。85 票 58 评论。</p>
       <p class="recommendation"><strong>推荐理由</strong>：FableCut 创新性地将项目文件作为接口，为 AI Agent 操控复杂 GUI 应用提供了新范式。其 JSON 时间线 + SSE 热重载设计值得 Agent 框架开发者借鉴。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://github.com/ronak-create/FableCut" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 4</span>
         <span class="score">评分：8/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">反向工程 Web 应用为 Agent 工具：自动生成 MCP 服务器</a></h2>
+      <h2><a href="https://news.ycombinator.com/item?id=48847834" target="_blank" rel="noopener">反向工程 Web 应用为 Agent 工具：自动生成 MCP 服务器</a></h2>
       <p class="meta">#MCP #Web自动化 #API集成 #逆向工程 #开发者工具 · 来源：HN Algolia</p>
-      <p class="summary"></p>
+      <p class="summary">通过浏览器 Agent 观察 Web 应用的 API 调用，自动将认证 API 转化为 Agent 工具（recipes），无需维护代码，可自更新。已支持 Jira、Spotify 等产品的自动化操作。相比 MCP 或 computer-use 方案，速度更快、消耗更少。25 票 5 评论。 该新闻对相关领域从业者具有参考价值，建议深入了解。</p>
       <p class="recommendation"><strong>推荐理由</strong>：这是 AI Agent 工具扩展的创新方法，解决了 Web 应用缺乏标准化 API 的痛点。对需要深度集成各类 Web 产品的 Agent 开发者有较高参考价值。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://news.ycombinator.com/item?id=48847834" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 5</span>
         <span class="score">评分：8/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">Kastra：AI 系统的运行时授权控制平面</a></h2>
+      <h2><a href="https://kastra.ai/" target="_blank" rel="noopener">Kastra：AI 系统的运行时授权控制平面</a></h2>
       <p class="meta">#安全 #授权 #运行时控制 #Claude Code #开发者工具 · 来源：HN Algolia</p>
-      <p class="summary"></p>
+      <p class="summary">Kastra 是 AI 系统的运行时授权层，在每个操作执行前检查是否符策（<1ms）。支持 Claude Code、Cursor、Codex CLI，提供 Edge 桌面客户端和云端策略引擎。可对 shell.exec、fs.write、数据库查询等进行细粒度控制。 该新闻对相关领域从业者具有参考价值，建议深入了解。</p>
       <p class="recommendation"><strong>推荐理由</strong>：Kastra 填补了 AI Agent 安全控制的空白，其运行时授权模式对在企业环境部署 Agent 有重要参考价值。开发者应关注其策略语言和 MCP 集成方式。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://kastra.ai/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 6</span>
         <span class="score">评分：8/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">对 AI Agent 说'Hi'的真正成本：等待时间而非 Token 费用</a></h2>
+      <h2><a href="https://quesma.com/blog/the-true-cost-of-saying-hi-to-an-ai-agent/" target="_blank" rel="noopener">对 AI Agent 说'Hi'的真正成本：等待时间而非 Token 费用</a></h2>
       <p class="meta">#成本分析 #LLM评测 #Agent效率 #延迟优化 #实证研究 · 来源：HN Algolia</p>
-      <p class="summary"></p>
+      <p class="summary">Quesma 基准测试 14 个模型：'Hi'的 Token 成本仅$0.005，但等待成本（按工资计算）从$0.07到$0.84不等。Sonnet 等模型会对简单问候执行 20+ 次工具调用并审计整个代码库。部分模型 5 次测试中 3 次超时失败。真实任务（'commit'）反而比简单问候更稳定。</p>
       <p class="recommendation"><strong>推荐理由</strong>：这是关于 AI Agent 实际成本的深度实证研究，揭示了等待时间而非 Token 成本才是主要开销。对 Agent 开发者优化用户体验和成本控制有重要参考价值。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://quesma.com/blog/the-true-cost-of-saying-hi-to-an-ai-agent/" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 7</span>
         <span class="score">评分：6/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">Devthropology：GitHub 仓库智能洞察平台</a></h2>
+      <h2><a href="https://devthropology.com/demo" target="_blank" rel="noopener">Devthropology：GitHub 仓库智能洞察平台</a></h2>
       <p class="meta">#代码分析 #GitHub #开发者工具 #数据可视化 #AI驱动 · 来源：HN Algolia</p>
-      <p class="summary"></p>
+      <p class="summary">Devthropology 通过分析贡献者活动、时间线、代码变化等维度，为 GitHub 仓库提供深度洞察。展示贡献者留存、活跃度、合并趋势等指标。HN 31 票 9 评论。 该新闻对相关领域从业者具有参考价值，建议深入了解。</p>
       <p class="recommendation"><strong>推荐理由</strong>：Devthropology 提供了 AI 驱动的代码仓库分析能力，对需要评估和管理代码库健康度的 Agent 工作流有一定参考价值。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://devthropology.com/demo" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 8</span>
         <span class="score">评分：6/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">Ask HN：我不喜欢编程 Agent，是技能问题吗？</a></h2>
+      <h2><a href="https://news.ycombinator.com/item?id=48844345" target="_blank" rel="noopener">Ask HN：我不喜欢编程 Agent，是技能问题吗？</a></h2>
       <p class="meta">#AI编程 #开发者经验 #社区讨论 #工具反思 #实践指南 · 来源：HN Algolia</p>
-      <p class="summary"></p>
+      <p class="summary">开发者吐槽编程 Agent 的四大问题：1) 深度工作被频繁打断；2) 不再完全理解自己的代码；3) 严重依赖 AI 可用性；4) 完成度 80% 但最后 20% 极难修复。社区讨论指出更好的使用方式：明确架构边界、阅读每个 commit、设计文档前置。8 票 7 评论。 该新闻对相关领域从业者具有参考价值，建议深入了解。</p>
       <p class="recommendation"><strong>推荐理由</strong>：这是关于编程 Agent 现实痛点的重要社区讨论，揭示了当前工具链的深层问题。对所有使用 AI 编程工具的开发者有共鸣价值，建议配合使用指南阅读。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://news.ycombinator.com/item?id=48844345" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 9</span>
         <span class="score">评分：6/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">Altman：GPT-5.6 在 Agentic Coding 上 token 效率提升 54%</a></h2>
+      <h2><a href="https://www.cnbc.com/2026/07/09/open-ai-sam-altman-chatgpt-5-6-sol.html" target="_blank" rel="noopener">Altman：GPT-5.6 在 Agentic Coding 上 token 效率提升 54%</a></h2>
       <p class="meta">#OpenAI #GPT-5.6 #Agentic Coding #Token效率 #行业动态 · 来源：HN Algolia</p>
-      <p class="summary"></p>
+      <p class="summary">Sam Altman 接受 CNBC 采访称 GPT-5.6 在 agentic coding 任务上 token 效率提升 54%，且在市场上'持平或优于'竞争对手。强调企业应关注 AI 投入产出比。 该新闻对相关领域从业者具有参考价值，建议深入了解。</p>
       <p class="recommendation"><strong>推荐理由</strong>：GPT-5.6 在 Agentic Coding 效率上的提升是 AI Agent 发展的重要里程碑，对评估生产级 Agent 方案的成本效益有参考价值。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://www.cnbc.com/2026/07/09/open-ai-sam-altman-chatgpt-5-6-sol.html" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
     <div class="news-card">
       <div class="card-header">
         <span class="rank">Top 10</span>
         <span class="score">评分：6/10</span>
       </div>
-      <h2><a href="#" target="_blank" rel="noopener">97% 网站对 AI Agent 不可见：AI 网站就绪度报告 2026</a></h2>
+      <h2><a href="https://sitespeak.ai/research/ai-readiness-report-2026" target="_blank" rel="noopener">97% 网站对 AI Agent 不可见：AI 网站就绪度报告 2026</a></h2>
       <p class="meta">#Agentic Web #行业报告 #API可用性 #Web标准 #数据分析 · 来源：HN Algolia</p>
-      <p class="summary"></p>
+      <p class="summary">SiteSpeakAI 扫描近 10000 个网站：97% 的网站暴露零个 AI Agent 可用工具；AI 回答'价格'类商业问题的平均分仅 43/100；技术基础（HTTPS 等）平均 98/100，但 Agent 工具平均仅 5/100。 该新闻对相关领域从业者具有参考价值，建议深入了解。</p>
       <p class="recommendation"><strong>推荐理由</strong>：这是 Agentic Web 现状的重要数据研究，揭示了 Web 从'人类可读'向'Agent 可操作'转型的巨大差距。对关注 Web Agent 发展的开发者有前瞻性参考价值。</p>
-      <p class="source"><a href="#" target="_blank" rel="noopener">阅读原文 →</a></p>
+      <p class="source"><a href="https://sitespeak.ai/research/ai-readiness-report-2026" target="_blank" rel="noopener">阅读原文 →</a></p>
     </div>
   <div class="footer">
     <p>自动采集 · LLM 精选 · <a href="https://github.com/haihepeng/ai-news-daily" target="_blank">GitHub</a></p>
