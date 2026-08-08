@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🧠 AI Agent - 2026年8月8日</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
+.header { text-align: center; padding: 20px 0; }
+.header h1 { font-size: 1.6em; margin-bottom: 8px; }
+.header .topic-badge { display: inline-block; background: #2563eb; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 0.8em; margin-top: 4px; }
+.header .date { color: #666; font-size: 0.9em; margin-top: 4px; }
+.nav { text-align: center; padding: 8px 0 16px; }
+.nav a { color: #2563eb; text-decoration: none; font-size: 0.85em; padding: 0 8px; }
+.nav a:hover { text-decoration: underline; }
+.news-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.news-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.rank { background: #2563eb; color: #fff; padding: 2px 10px; border-radius: 12px; font-size: 0.85em; }
+.score { color: #666; font-size: 0.85em; }
+.news-card h2 { font-size: 1.15em; margin-bottom: 6px; }
+.news-card h2 a { color: #1a1a2e; text-decoration: none; }
+.news-card h2 a:hover { color: #2563eb; }
+.meta { color: #888; font-size: 0.85em; margin-bottom: 10px; }
+.summary { color: #444; margin-bottom: 8px; }
+.recommendation { background: #f0f7ff; padding: 8px 12px; border-radius: 8px; font-size: 0.9em; color: #2563eb; margin-bottom: 8px; }
+.source { text-align: right; }
+.source a { color: #2563eb; text-decoration: none; font-size: 0.9em; }
+.source a:hover { text-decoration: underline; }
+.footer { text-align: center; padding: 30px 0; color: #999; font-size: 0.85em; }
+.footer a { color: #2563eb; text-decoration: none; }
+@media (max-width: 600px) { .container { padding: 12px; } .news-card { padding: 14px; } .header h1 { font-size: 1.4em; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="topic-badge">🧠 AI Agent</div>
+    <h1>AI Daily News</h1>
+    <p class="date">2026年8月8日</p>
+  </div>
+  <div class="nav">
+    <a href="../../?t=20260808">← 返回首页</a>
+  </div>
+
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 1</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://thenextweb.com/news/openai-agent-plugins-open-standard-skills-mcp" target="_blank" rel="noopener">OpenAI 与四大竞争对手就 AI 智能体标准达成一致：Agent Plugins 1.0</a></h2>
+      <p class="meta">#Agent Plugins #MCP #智能体标准 #OpenAI · 来源：</p>
+      <p class="summary">OpenAI、亚马逊、微软、Cursor 与 Vercel 联合发布 Agent Plugins 1.0 开放标准，让单个智能体扩展可在竞争产品间通用——“一次构建，处处运行”。插件本质是一个包含 plugin.json 的文件夹，打包 MCP 服务器（连接实时工具与数据）和 Agent Skills（可复用指令集）两部分。ChatGPT、Codex、Cursor、GitHub Copilot、Kiro 与 VS Code 首发支持。标准由 Vercel 发起，指导委员会五家成员公司共同制定，开放授权。但市场、安装、权限、沙箱与信任问题仍由各客户端自行解决，安全性争议依旧存在。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：这是 AI 智能体生态从模型竞赛转向“管道标准化”的标志性事件，直接影响所有智能体开发者。</p>
+      <p class="source"><a href="https://thenextweb.com/news/openai-agent-plugins-open-standard-skills-mcp" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 2</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://manufact.com/blog/mcp-use-v2" target="_blank" rel="noopener">mcp-use v2 发布：拥抱无状态 MCP 新协议时代</a></h2>
+      <p class="meta">#MCP #协议演进 #无状态 #智能体工具 · 来源：</p>
+      <p class="summary">MCP 官方发布 2026-07-28 版本协议，这是 MCP 推出以来最大的一次协议变更：移除了 initialize 握手与 Mcp-Session-Id 会话，请求自带处理所需信息，任何请求可到达任何服务器实例，从根本上解决了远程服务器的粘性路由与会话状态问题。新增正式扩展模型、MCP Apps 与 Tasks、缓存提示、跟踪上下文、更强 OAuth 要求与弃用政策。mcp-use v2 基于官方 SDK v2 彻底重建 TypeScript 栈，拆分 server/client/agent/inspector 包边界，支持多轮往返请求（input_required + requestState）。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：MCP 协议最大规模更新与 mcp-use v2 的重建，是智能体互操作基础设施的决定性时刻。</p>
+      <p class="source"><a href="https://manufact.com/blog/mcp-use-v2" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 3</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://github.com/satyasairay/remembrane" target="_blank" rel="noopener">Remembrane：单 SQLite 文件实现本地优先的智能体记忆</a></h2>
+      <p class="meta">#智能体记忆 #SQLite #本地优先 #MCP · 来源：</p>
+      <p class="summary">开源项目 Remembrane 为 AI 智能体提供本地优先的持久记忆：一个 SQLite 文件、零必需依赖。核心特性包括精确混合召回（向量+BM25，绝不近似）、可解释排序（相似度+时效衰减+重要性+效用加权）、记忆时间旅行（journal 支持任意时间点重建）、冲突感知召回（诚实承认不确定而非自信地错误）以及预算封顶的上下文打包。默认嵌入器纯标准库实现，可选 SentenceTransformer/OpenAI 嵌入，提供 LangChain/CrewAI 适配器与内置 MCP 服务器，可在 CI 中确定性测试。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：智能体跨会话记忆是当前智能体工程的核心痛点，该项目以极简架构提供了完整、可调试、可测试的解决方案。</p>
+      <p class="source"><a href="https://github.com/satyasairay/remembrane" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 4</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank" rel="noopener">Prime Agent：可自我改进的 RLM 开源编码与研究智能体</a></h2>
+      <p class="meta">#开源智能体 #RLM #自我改进 #长期任务 · 来源：</p>
+      <p class="summary">Prime Intellect 发布开源智能体 Prime Agent，基于递归语言模型（RLM）设计，将上下文视为变量、子智能体视为函数调用，配合持续化封装（Continual Harness）支持长期运行任务。核心特性包括：持久 IPython 控制环境、内置子智能体并行/后台工作、/refine 自我改进机制、可执行技能包、后台守护进程续跑、智能体间直接通信与心跳调度。该项目在 GitHub 已获 4.7k 星标，采用 MIT 协议开源。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：展示智能体自我改进、智能体间直接协作与长期自主运行的前沿形态，是智能体架构研究的重要开源参考。</p>
+      <p class="source"><a href="https://github.com/PrimeIntellect-ai/prime-agent" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 5</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://paelladoc.com/blog/agent-skills-vs-mcp-servers/" target="_blank" rel="noopener">智能体技能 vs MCP 服务器 vs 规则文件：各自的真实成本</a></h2>
+      <p class="meta">#Agent Skills #MCP #上下文工程 #架构决策 · 来源：</p>
+      <p class="summary">PaellaDoc 作者深入分析了智能体三种能力注入渠道的成本差异：规则文件（AGENTS.md/CLAUDE.md）每次调用都全量加载；MCP 服务器整个会话连接、每个工具描述都随请求携带，未使用时成本最高；技能（Skill）仅按需匹配加载，空闲状态成本几乎为零。文章用表格对比三者加载时机、无关轮次成本与失败模式，并给出实践建议：每轮都正确的操作事实放规则文件、偶尔用到的流程放技能、需要实时状态/凭据/真实系统的用 MCP，产品决策则不应放任何一处。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：为选择技能/MCP/规则文件的架构决策提供了稀缺的成本量化视角，直击上下文窗口预算管理痛点。</p>
+      <p class="source"><a href="https://paelladoc.com/blog/agent-skills-vs-mcp-servers/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 6</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://github.com/NanoNets/Graft" target="_blank" rel="noopener">Graft：给编码智能体语义地图而非 grep</a></h2>
+      <p class="meta">#编码智能体 #语义检索 #开源项目 #代码理解 · 来源：</p>
+      <p class="summary">NanoNets 发布开源项目 Graft，为编码智能体提供语义地图（semantic map）能力，替代传统的 grep 检索方式。通过语义化的代码库理解，帮助智能体更快定位相关代码、理解项目结构，减少盲目搜索带来的上下文消耗与错误尝试，提升编码智能体在大型代码库中的工作效率。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：语义化代码检索是编码智能体处理大型代码库的关键能力，Graft 代表了这一方向的开源实践。</p>
+      <p class="source"><a href="https://github.com/NanoNets/Graft" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 7</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://github.com/PatilShreyas/debroid" target="_blank" rel="noopener">Debroid：为 AI 编码智能体打造的无头 Android 调试器</a></h2>
+      <p class="meta">#Android #调试器 #编码智能体 #开源项目 · 来源：</p>
+      <p class="summary">开源项目 Debroid 提供自主、无头（headless）的 Android 调试器，专门为 AI 编码智能体设计。它允许智能体在没有人工介入的情况下对 Android 应用进行调试操作，是移动开发场景下 AI 智能体自动化的重要基础设施，弥补了编码智能体在移动端调试能力的空白。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：移动端调试是编码智能体覆盖最薄弱的场景之一，Debroid 填补了这一空白。</p>
+      <p class="source"><a href="https://github.com/PatilShreyas/debroid" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 8</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://platformengineering.com/features/evolution-not-reset-prepare-platform-engineering-2-0-for-autonomous-agents/" target="_blank" rel="noopener">平台工程 2.0：为自主智能体时代做好准备</a></h2>
+      <p class="meta">#平台工程 #自主智能体 #基础设施 #演进 · 来源：</p>
+      <p class="summary">平台工程社区文章提出“演进而非重置”的主张：随着自主智能体大量进入开发与运维流程，平台工程需要从 1.0 迈向 2.0——构建能同时服务人类工程师与自主智能体的平台能力。文章探讨了平台团队如何为智能体的接入做好准备，包括标准化接口、可观测性、权限治理与资源配额等议题，认为 AI 只是暴露了旧平台的不足，而非要求推倒重来。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：自主智能体正在重塑平台工程范式，这篇文章为平台团队提供了面向智能体的演进路线图。</p>
+      <p class="source"><a href="https://platformengineering.com/features/evolution-not-reset-prepare-platform-engineering-2-0-for-autonomous-agents/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 9</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://memoars.com/" target="_blank" rel="noopener">Memoars：让 AI 助手共享的加密记忆层</a></h2>
+      <p class="meta">#智能体记忆 #加密 #隐私 #AI助手 · 来源：</p>
+      <p class="summary">Memoars 是一个加密记忆层产品，让用户的多个 AI 助手可以共享持久记忆。该服务将用户跨助手、跨会话的记忆与上下文进行加密存储与共享，解决 AI 助手“每次会话都从零开始”与“记忆碎片化”的问题，同时通过加密保护用户数据的隐私。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：跨智能体共享加密记忆是智能体记忆产品化的代表方向，对理解 AI 助手记忆服务的商业化形态有参考价值。</p>
+      <p class="source"><a href="https://memoars.com/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 10</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://i.brandanthonymcdonald.com/mcp-for-beginners" target="_blank" rel="noopener">提示链、工具调用与 MCP：AI 智能体如何做事</a></h2>
+      <p class="meta">#提示链 #工具调用 #MCP #智能体入门 · 来源：</p>
+      <p class="summary">一篇面向初学者的智能体原理讲解，系统介绍了 AI 智能体的三大核心机制：提示链（Prompt Chains，将复杂任务分解为多步提示序列）、工具调用（Tool Calling，模型选择并调用外部函数）与 MCP（Model Context Protocol，标准化的工具接入协议）。文章通过这三者的组合解释了智能体如何从“聊天”进化为“做事”，是理解智能体工作方式的基础入门读物。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：以清晰的方式串联智能体的核心机制，适合快速建立对 AI 智能体技术栈的系统认知。</p>
+      <p class="source"><a href="https://i.brandanthonymcdonald.com/mcp-for-beginners" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+  <div class="footer">
+    <p>自动采集 · LLM 精选 · <a href="https://github.com/haihepeng/ai-news-daily" target="_blank">GitHub</a></p>
+  </div>
+</div>
+</body>
+</html>
