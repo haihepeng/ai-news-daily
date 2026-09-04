@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💻 AI Coding - 2026年9月4日</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
+.header { text-align: center; padding: 20px 0; }
+.header h1 { font-size: 1.6em; margin-bottom: 8px; }
+.header .topic-badge { display: inline-block; background: #2563eb; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 0.8em; margin-top: 4px; }
+.header .date { color: #666; font-size: 0.9em; margin-top: 4px; }
+.nav { text-align: center; padding: 8px 0 16px; }
+.nav a { color: #2563eb; text-decoration: none; font-size: 0.85em; padding: 0 8px; }
+.nav a:hover { text-decoration: underline; }
+.news-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.news-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.rank { background: #2563eb; color: #fff; padding: 2px 10px; border-radius: 12px; font-size: 0.85em; }
+.score { color: #666; font-size: 0.85em; }
+.news-card h2 { font-size: 1.15em; margin-bottom: 6px; }
+.news-card h2 a { color: #1a1a2e; text-decoration: none; }
+.news-card h2 a:hover { color: #2563eb; }
+.meta { color: #888; font-size: 0.85em; margin-bottom: 10px; }
+.summary { color: #444; margin-bottom: 8px; }
+.recommendation { background: #f0f7ff; padding: 8px 12px; border-radius: 8px; font-size: 0.9em; color: #2563eb; margin-bottom: 8px; }
+.source { text-align: right; }
+.source a { color: #2563eb; text-decoration: none; font-size: 0.9em; }
+.source a:hover { text-decoration: underline; }
+.footer { text-align: center; padding: 30px 0; color: #999; font-size: 0.85em; }
+.footer a { color: #2563eb; text-decoration: none; }
+@media (max-width: 600px) { .container { padding: 12px; } .news-card { padding: 14px; } .header h1 { font-size: 1.4em; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="topic-badge">💻 AI Coding</div>
+    <h1>AI Daily News</h1>
+    <p class="date">2026年9月4日</p>
+  </div>
+  <div class="nav">
+    <a href="../../?t=20260904">← 返回首页</a>
+  </div>
+
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 1</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://www.manifold.security/blog/ai-coding-agents-git-hijack" target="_blank" rel="noopener">GitSpawn 漏洞：恶意仓库可在 Claude Code、Codex、Cursor、Grok 中执行任意代码</a></h2>
+      <p class="meta">#安全漏洞 #AI 编程代理 #GitSpawn #供应链攻击 · 来源：</p>
+      <p class="summary">安全研究机构 Manifold 披露了一组影响多款主流 AI 编程代理的通用漏洞（统称 GitSpawn）：Claude Code、Codex、Cursor、Grok、Goose、Qwen Code 等 CLI 代理启动时会静默执行 git 命令（如 git status）收集仓库上下文，但未剥离仓库自带的 .git/config 配置。攻击者可在 .git/config 中设置 core.fsmonitor 等可执行配置项，使任何刷新索引的 git 命令（git status、git diff）以开发者权限在沙箱外运行任意命令，无需任何批准弹窗。攻击面是任何以'目录'而非 clone 方式分发的仓库（zip 共享、U 盘、同步文件夹）。八项发现中四项发布时仍未修复，涉及 Claude Code ultrareview 路径、Hermes（CVE-2026-71963）、Qwen Code 与 Grok Build；Claude Code 主漏洞、Goose、Codex、Cursor 已修复。受影响项目合计 GitHub 星标近 50 万。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：横跨几乎所有主流 AI 编码代理的供应链级执行漏洞，开发者打开一个可疑仓库即可被完全入侵，安全影响直接且严重。</p>
+      <p class="source"><a href="https://www.manifold.security/blog/ai-coding-agents-git-hijack" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 2</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://www.rosenfeld.page/articles/programming/2026_09_02_ai_agents_and_the_refactoring_that_never_happens/" target="_blank" rel="noopener">AI 代理与'永远不会发生的重构'：代码失控的隐忧</a></h2>
+      <p class="meta">#代码重构 #AI 代理 #代码质量 #工程管理 · 来源：</p>
+      <p class="summary">资深工程师 Rodrigo Rosenfeld Rosas 观察到一种令人担忧的趋势：团队（包括曾经验丰富的老手）正在悄悄放弃重构系统中最混乱的部分。历史上'迷路→重构'的直觉是保持长寿命系统可维护的最重要力量——当人类在代码中迷失时，会触发'这东西已失控，需要重写'的检查点。但 AI 代理不受人类上下文限制，永远不会迷路，因此这个信号再也不会触发：代理会自信地在无人完全理解的混乱代码上继续叠加分支，代码漂移到团队无人能推理的程度，代码评审退化为橡皮图章，团队'信任代理'恰恰是因为自己不再理解代码——信任方向完全颠倒。作者指出保持代码整洁对代理同样更便宜：模块化让每次修改消耗更少 token、减少幻觉；并呼吁把'我还理解这个系统吗'的检查点显式地放回流程与 harness 中。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：指出 AI 编程代理时代代码质量治理被系统性忽略的盲点——'代理不会迷路'反而取消了人类重构的信号机制，对工程管理有警示价值。</p>
+      <p class="source"><a href="https://www.rosenfeld.page/articles/programming/2026_09_02_ai_agents_and_the_refactoring_that_never_happens/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 3</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/" target="_blank" rel="noopener">GitHub 如何让 AI 编码更省钱：'本地指标陷阱'与选择性输出压缩</a></h2>
+      <p class="meta">#GitHub Copilot #成本优化 #代理 harness #token 效率 · 来源：</p>
+      <p class="summary">GitHub Copilot 团队公开其降低 AI 编码成本而不牺牲质量的四项工程实践。核心洞察是'本地指标陷阱'：单纯压缩单次工具输出可能让代理因缺少信息而重新读取输出或重跑命令，整体反而更慢更贵（团队用 RTK 压缩器实测验证了这一现象）。四项已上线改动包括：保留源代码类与任意命令输出原样（git diff、cat 不再压缩）、对搜索结果显示去重分组但不丢内容、仅选择性压缩安装/构建/测试等重复噪音（并保留恢复路径）、去除 view 工具每行行号前缀等无用格式（使模型推理成本下降约 5%，线上人均日推理成本降约 3%）。他们还发现用元提示循环压缩指令时曾把'谨慎的并行建议'改写成'硬性串行策略'导致独立代理排队运行，因此强调：提示词行为需要回归测试，效率必须在完整任务维度评估，而非单次调用。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：一线大厂公开分享 AI 编码成本优化的实测方法论（本地指标陷阱、选择性压缩、提示词回归测试），对构建代理 harness 的团队极具参考价值。</p>
+      <p class="source"><a href="https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 4</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://stackoverflow.blog/2026/09/03/the-economics-of-agent-scale/" target="_blank" rel="noopener">Agent 规模经济学：Google 专家谈 token、ROI 与'代理即客户'的平台建设</a></h2>
+      <p class="meta">#AI 代理 #成本治理 #token 经济学 #平台工程 · 来源：</p>
+      <p class="summary">Stack Overflow 播客 Leaders of Code 邀请 Google Agentic Data Cloud 负责人 Andi Gutmans 探讨运行数十到数百个代理时的成本与基础设施问题。Gutmans 认为模型本身不再是瓶颈——今天很多模型对多数待自动化任务已经'够用'，真正的难题是确定'能以最低成本达成可靠结果的最少上下文'，'token 最大化'是错误的优化目标。他强调规模化的成本治理：一名员工可能负责几十个全天候运行的代理。Google 的做法是与 DeepMind 一起对'模型+数据'做 hill climbing，警惕声称已解决上下文问题的厂商，因为'你优化的是代理，不是人类'，基于人工策展本体的旧方法只是理论。平台工程团队需要把'代理'当作与开发者、数据科学家并列的一等 persona 来建设可观测性与工具。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：头部云厂商负责人对代理规模化的成本、上下文与平台治理的系统性观点，是理解 agent 工程经济学的重要输入。</p>
+      <p class="source"><a href="https://stackoverflow.blog/2026/09/03/the-economics-of-agent-scale/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 5</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/" target="_blank" rel="noopener">解码 AI 新黑话：Loop engineering、Ralph loops、squads、harness、hill climbing</a></h2>
+      <p class="meta">#AI 术语 #loop engineering #multi-agent #harness · 来源：</p>
+      <p class="summary">GitHub 播客主持人 Cassidy Williams 与 Marlene Mhangami 梳理了开发者圈正流行的 AI 术语：loop engineering（循环工程）指围绕代理设计可重复系统而非逐个手动提示，比如定时抓取 issue、交给代理、验证输出、上报卡点，相当于'AI 原生的 cron'；Ralph loops 是其暴力版——给代理一个详细任务让它反复 plan-act-check 直到完成，可能昂贵低效；squads（小队）指一组不同角色的代理协作（规划、审查、实现、测试），fleets（舰队）指并行执行任务的代理；harness（挽具）是模型之外让 AI 可用的整套系统——工具、权限、记忆、编排，GitHub Copilot 就是典型；hill climbing 指用评测持续改进代理与 harness。文章还区分了封闭模型、开放权重模型与开源模型，并提醒：术语不重要，重要的是背后的实践。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：系统梳理 AI 编程领域高频新术语的官方入门读物，帮助开发者快速对齐社区语言与概念边界。</p>
+      <p class="source"><a href="https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 6</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://www.valet.dev/blog/a-document-that-can-grow" target="_blank" rel="noopener">AI artifacts 走向成熟：'会生长的文档'——按任务定制的交互式工作产物</a></h2>
+      <p class="meta">#AI artifacts #AI 应用 #文档 #智能体 · 来源：</p>
+      <p class="summary">Valet 团队提出并实践了 AI artifacts（工件）概念：一种融合内容、界面与行为、围绕单一任务定制的交互式产物，介于文档与应用之间。他们的用例是为线下活动制作姓名牌：最初手动从 Luma 复制嘉宾名单排版 Avery 标签，交给代理几分钟后得到一个'每行一个名字即可实时排版打印'的姓名牌制作器，可去重、调字号、改错，还能接入 Luma 自动加载已批准嘉宾。文章回顾 1990 年代富文档承诺未能兑现是因为构建需要代码、设计、托管与时间；而如今'代理用几分钟就能构建一个像文档一样具体、像应用一样强大的工件'，改变了什么值得被制造：重复性杂务可以拥有自己的界面，报告可以内嵌探索工具，计划可以直连执行系统。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：Valet 给出 agent 生成'文档-应用混合体'（artifacts）的清晰定义与实战示例，是理解 AI 原生工作产物演进方向的一线观察。</p>
+      <p class="source"><a href="https://www.valet.dev/blog/a-document-that-can-grow" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 7</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://blog.kulman.sk/pi-is-now-my-ai-harness/" target="_blank" rel="noopener">为什么 Pi 成为我的 AI 编码 harness：模型可换，工作流不换</a></h2>
+      <p class="meta">#Pi #AI 编码工具 #harness #开源 · 来源：</p>
+      <p class="summary">开发者 Igor Kulman 分享为何选择开源极简编码代理 Pi（Mario Zechner 开发）作为长期 AI 编码 harness。Pi 的核心哲学是只给模型四个基础工具（read/write/edit/bash），其余能力通过扩展与 skills 按需添加；它不是任何单一模型供应商的绑定工具，可接 Claude、OpenAI、GitHub Copilot、OpenCode Zen 甚至本地模型。作者结合自己的实践：用 pi-anthropic-auth 扩展以订阅价使用 Claude、自建 pi-xcode-mcp 扩展让代理通过 Xcode 的 MCP 服务器构建项目、跑测试、渲染 SwiftUI 预览并与 Figma 设计图逐像素比对（'构建成功只证明能编译，不证明 UI 匹配设计'），以及把评审/提 PR 等工作流固化为纯 Markdown 的 skills 放进 Git 管理。核心体会：AI 模型变化太快，而 harness 应当成为稳定层——'挽具不动，模型随意换'。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：一线开发者对'模型无关 harness + 可版本化 skills'工作流的实战复盘，对正在选型 AI 编码工具的工程师有直接参考意义。</p>
+      <p class="source"><a href="https://blog.kulman.sk/pi-is-now-my-ai-harness/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 8</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/" target="_blank" rel="noopener">GitHub Copilot 应用入门：并行运行多个代理会话，用 Git worktree 隔离互不干扰</a></h2>
+      <p class="meta">#GitHub Copilot #并行代理 #worktree #教程 · 来源：</p>
+      <p class="summary">GitHub 官方博客演示 Copilot 应用中的并行代理会话用法：每个代理会话是一个从任务开始到结束的完整作业，可在会话视图中管理多个进行中的任务卡片；关键在于每个会话默认跑在独立的 Git worktree 上，互不干扰，因此可以同时并行——就像洗衣房多台洗衣机各洗各的。作者以 tailspin-toys 项目为例：同时让一个代理实现 funded sort 功能、一个做无障碍评审、一个跑测试，然后专心做 review 与决策而不是盯着代理干活。每个会话保留独立上下文，随时切换都能无缝续接，无需重新解释需求。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：官方演示多代理并行会话与 Git worktree 隔离机制，是 Copilot 应用高阶用法的直观入门教程。</p>
+      <p class="source"><a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 9</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://github.com/RobertIlisei/MARVIN" target="_blank" rel="noopener">MARVIN：会从自己会话中学习的开源 macOS AI 结对编程 IDE</a></h2>
+      <p class="meta">#MARVIN #AI IDE #开源 #macOS · 来源：</p>
+      <p class="summary">开源项目 MARVIN（Moderately Advanced Robotic Virtual Intelligence Network）发布 v0.1.104：一款 macOS 原生 SwiftUI AI 结对编程 IDE，由桌面应用与 sidecar（基于 Claude Agent SDK 的 Next.js 服务）组成，通过 Homebrew 一键安装（内置 Node 22 运行时）。其设计主张'一个助手，强制纪律'：先构建项目知识图谱，回答仓库问题时先查图再读文件，白皮书称首次消息上下文从 566K token 压缩至约 13.4K；所有回答带 file:line 精确引用。驱动架构、基础设施、代码、测试、文档与安全，执行前显式确认并自动提交。支持 Anthropic API 或 OpenRouter 密钥，发布包用 minisign 签名。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：新兴的开源 AI IDE 项目，以'知识图谱 + 最小上下文 + 文件级引用'对抗真实项目中的 AI 能力衰减，值得开发者关注。</p>
+      <p class="source"><a href="https://github.com/RobertIlisei/MARVIN" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 10</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://stackoverflow.blog/2026/09/03/security-control-and-accessibility-si-2026-6/" target="_blank" rel="noopener">Stack Overflow 发布 Stack Internal 2026.6：面向企业 AI 的知识层安全与治理升级</a></h2>
+      <p class="meta">#Stack Overflow #企业 AI #安全治理 #知识管理 · 来源：</p>
+      <p class="summary">Stack Overflow 企业产品 Stack Internal 发布 2026.6 版本，围绕'让工程师与 AI 代理基于经验证的决策级知识行动'升级四方面能力：管理安全方面新增 Header 强制的 API Key（X-API-Key 头避免密钥泄漏进服务器日志）、会话空闲超时控制、按应用粒度每日限流（最高每日 1 万次请求）与密钥轮换；内容新鲜度方面支持公告文章定时过期自动软删除、社区广播转正（GA）、自定义奖项上限提升到 100；开发者集成方面新增标签偏好与同义词 API、用户端点返回投票/徽章等富上下文，Backstage 官方插件 v1.7.0+ 适配新版前端系统；无障碍方面改进屏幕阅读器状态播报、键盘焦点与高对比度语义化标记。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：企业级 AI 知识层产品在密钥安全、内容过期与 API 治理上的更新，是观察企业 AI 平台安全实践的样本。</p>
+      <p class="source"><a href="https://stackoverflow.blog/2026/09/03/security-control-and-accessibility-si-2026-6/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+  <div class="footer">
+    <p>自动采集 · LLM 精选 · <a href="https://github.com/haihepeng/ai-news-daily" target="_blank">GitHub</a></p>
+  </div>
+</div>
+</body>
+</html>
