@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💻 AI Coding - 2026年9月13日</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
+.header { text-align: center; padding: 20px 0; }
+.header h1 { font-size: 1.6em; margin-bottom: 8px; }
+.header .topic-badge { display: inline-block; background: #2563eb; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 0.8em; margin-top: 4px; }
+.header .date { color: #666; font-size: 0.9em; margin-top: 4px; }
+.nav { text-align: center; padding: 8px 0 16px; }
+.nav a { color: #2563eb; text-decoration: none; font-size: 0.85em; padding: 0 8px; }
+.nav a:hover { text-decoration: underline; }
+.news-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.news-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.rank { background: #2563eb; color: #fff; padding: 2px 10px; border-radius: 12px; font-size: 0.85em; }
+.score { color: #666; font-size: 0.85em; }
+.news-card h2 { font-size: 1.15em; margin-bottom: 6px; }
+.news-card h2 a { color: #1a1a2e; text-decoration: none; }
+.news-card h2 a:hover { color: #2563eb; }
+.meta { color: #888; font-size: 0.85em; margin-bottom: 10px; }
+.summary { color: #444; margin-bottom: 8px; }
+.recommendation { background: #f0f7ff; padding: 8px 12px; border-radius: 8px; font-size: 0.9em; color: #2563eb; margin-bottom: 8px; }
+.source { text-align: right; }
+.source a { color: #2563eb; text-decoration: none; font-size: 0.9em; }
+.source a:hover { text-decoration: underline; }
+.footer { text-align: center; padding: 30px 0; color: #999; font-size: 0.85em; }
+.footer a { color: #2563eb; text-decoration: none; }
+@media (max-width: 600px) { .container { padding: 12px; } .news-card { padding: 14px; } .header h1 { font-size: 1.4em; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="topic-badge">💻 AI Coding</div>
+    <h1>AI Daily News</h1>
+    <p class="date">2026年9月13日</p>
+  </div>
+  <div class="nav">
+    <a href="../../?t=20260913">← 返回首页</a>
+  </div>
+
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 1</span>
+        <span class="score">评分：9/10</span>
+      </div>
+      <h2><a href="https://www.checklyhq.com/blog/agentic-rewrite-nodejs-to-go/" target="_blank" rel="noopener">Checkly 让 AI 智能体把日均 9200 万消息的服务从 Node.js 重写为 Go，零事故</a></h2>
+      <p class="meta">#AI编程 #代码重构 #Go #Claude Code · 来源：</p>
+      <p class="summary">Checkly 披露其 Daemon 服务日均处理约 9200 万条消息，团队让 Claude Code 把这项关键高吞吐服务从 Node.js 重写为 Go，而不是停留在原型验证。结果是上线零事故，运行 Pod 数量减少 70%，数据库负载也更轻。团队认为 Go 更强的类型系统比 JavaScript 更适合智能体工作，能提供额外的回归保护，让他们更快、更有信心地交付。真正起作用的关键，是在智能体写下第一行代码之前就先搭好了测试脚手架；文章详细拆解了这套测试台的搭建方式，并提炼出可供改造自身遗留服务复用的原则。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：一次可审计的真实生产环境 agentic 重写案例，配套的“先建测试台再放 agent”方法可直接迁移到自家遗留系统改造。</p>
+      <p class="source"><a href="https://www.checklyhq.com/blog/agentic-rewrite-nodejs-to-go/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 2</span>
+        <span class="score">评分：9/10</span>
+      </div>
+      <h2><a href="https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/" target="_blank" rel="noopener">RTK 宣称大幅节省 token，实测成本基准却给出相反结论</a></h2>
+      <p class="meta">#AI编程 #成本优化 #基准测试 #开发者工具 · 来源：</p>
+      <p class="summary">Quesma 团队花费数天、超过 1500 美元 token 成本，对 RTK（Rust Token Killer）做了独立成本基准。RTK 在智能体读取前过滤并压缩终端输出，GitHub 星标已超 7.9 万，一条称其可把 Claude Code token 削减 60% 的推文获得 31.3 万次浏览。但 JetBrains 的 SkillsBench 测试并未发现任何节省，RTK 自己的 README 也声明“削减最多 90% 的 bash 输出”与“账单减 90%”并非同一回事。Quesma 的结论是：终端输出变少可能有效、可能毫无作用，也可能适得其反——因为智能体需要更多轮次，或输出质量下降。文章给出了完整的测量方法与数据。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：教你用可复现的成本基准戳破 token 优化工具的营销话术，正在为团队采购编码工具链的人应先读这篇再付费。</p>
+      <p class="source"><a href="https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 3</span>
+        <span class="score">评分：8/10</span>
+      </div>
+      <h2><a href="https://www.firecrawl.dev/blog/ai-software-factory" target="_blank" rel="noopener">如何搭建 AI 软件工厂：让智能体自动开 PR、评审并合并</a></h2>
+      <p class="meta">#AI编程 #CI/CD #工程实践 #AI Agent · 来源：</p>
+      <p class="summary">Firecrawl 发布指南，认为所谓 AI 软件工厂本质上是五个阶段加每阶段一道门禁，而“智能体本身才是便宜的那部分”。五阶段分别解决：入口判断哪些工作值得启动，Sentry 的 Seer 会先为每个进入的 issue 打可执行性评分；隔离让智能体互不冲突地运行，Stripe 可在约 10 秒内启动预热好的 devbox；工具决定智能体能够触达什么，Stripe 的 Toolshed 通过 MCP 暴露约 500 个内部工具；再加上验证与落地合并环节。文章结合 Sentry、Stripe 等已公开的工程实践，说明门禁与隔离设计比模型选型更决定这套流水线的成败。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：给出可直接照搬的五阶段流水线骨架与真实公司案例，适合准备把 AI 编码从个人助手升级为团队流水线的工程负责人。</p>
+      <p class="source"><a href="https://www.firecrawl.dev/blog/ai-software-factory" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 4</span>
+        <span class="score">评分：8/10</span>
+      </div>
+      <h2><a href="https://www.nytimes.com/2026/09/12/opinion/ai-software-coding-apps.html" target="_blank" rel="noopener">纽约时报观点：AI 生成代码的成本骤降，杀手级应用却没有出现</a></h2>
+      <p class="meta">#AI编程 #产品策略 #行业观察 #软件工程 · 来源：</p>
+      <p class="summary">《纽约时报》9 月 12 日客座评论指出，据一项估算去年苹果 App Store 上架应用数量增长约 30%，但下载量只增长 3%。AI 让制造软件的成本骤降，“由代码构成的一切”突然可以海量供给，可用户并没有等来值得惊叹的新应用或新游戏。作者认为这不算 AI 杀死了杀手级应用，而是方向跑偏：人们不愿为迁移而更换既有工具，AI 真正的机会在于消除生活中大量细碎摩擦，做出更克制、更专用的功能。文章也把部分责任归给 AI 大厂，批评其快速迭代却几乎不提供手册与入门教程，项目失败时又把问题推给使用者不会写提示词。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：提醒开发者别把“能生成代码”当成产品价值，做 AI 编码工具与独立开发的人应重新校准需求与上手成本。</p>
+      <p class="source"><a href="https://www.nytimes.com/2026/09/12/opinion/ai-software-coding-apps.html" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 5</span>
+        <span class="score">评分：7/10</span>
+      </div>
+      <h2><a href="https://cs.brown.edu/people/sk/Publications/Papers/Published/fkl-teach-nov-agentic-ai-era/" target="_blank" rel="noopener">布朗大学学者：Agentic AI 时代，编程入门课必须变成软件工程课</a></h2>
+      <p class="meta">#计算机教育 #AI编程 #软件工程 #研究 · 来源：</p>
+      <p class="summary">布朗大学 Kathi Fisler、Shriram Krishnamurthi 与 Michael Littman 在《Communications of the ACM》2026 年观点文章中提出，AI 编程智能体已经深刻冲击计算机教育，与其把它当作威胁，不如借此重构早期课程。他们提出“flaky compiler（不稳定编译器）”隐喻，用来刻画 AI 编程赋予了使用者什么、又对使用者提出了什么要求。核心主张是入门课程可以而且必须变成早期的软件工程课程，目标是教会学生对自己用 AI 产出的工作负责。这进而要求学界研究如何重新设计“程序规格说明”的教学方式。论文已录用，预计 2026 年 11 月刊出。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：把“AI 写的代码谁负责”落回课程设计层面，对高校教师和企业新人培养体系都有直接的方法论参考价值。</p>
+      <p class="source"><a href="https://cs.brown.edu/people/sk/Publications/Papers/Published/fkl-teach-nov-agentic-ai-era/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 6</span>
+        <span class="score">评分：7/10</span>
+      </div>
+      <h2><a href="https://xulux.ai/blog/scraping-agents-benchmark" target="_blank" rel="noopener">独立基准：Claude Code 与 Codex 在三种工具接入方式下的表现差异</a></h2>
+      <p class="meta">#AI编程 #基准测试 #MCP #开发者工具 · 来源：</p>
+      <p class="summary">xulux 发布一份 2026 年 9 月的独立基准，用同一批任务测试 Claude Code 与 Codex 通过三种方式接入 Apify、Bright Data、Firecrawl 三个抓取平台：MCP、技能（skill）与原始 API。综合评分显示 Apify 最稳定（92.1%），Firecrawl 在流程跑通时最快（76.1%），Bright Data 上限最高但最依赖具体任务（63.2%）。最有趣的是行为差异：Claude 需要一个显式可见的工具才会调用，而 Codex 会主动寻找其他入口完成任务。报告如实标注了三处单元格因设置错误属于估算值，将在重跑后替换。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：同类任务下的横向对比比厂商自评更有参考价值，正在为编码智能体挑选抓取与工具接入方案的团队可直接对照结论。</p>
+      <p class="source"><a href="https://xulux.ai/blog/scraping-agents-benchmark" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 7</span>
+        <span class="score">评分：6/10</span>
+      </div>
+      <h2><a href="https://github.com/no-human-ai/no_human" target="_blank" rel="noopener">no_human：从工单直达已评审 PR 的开源 AI 编码工厂</a></h2>
+      <p class="meta">#开源 #AI编程 #Claude Code #本地部署 · 来源：</p>
+      <p class="summary">开源项目 no_human 定位为“从工单到已评审的 pull request”，在本地机器上运行，免费且开源。仓库包含 Claude 插件目录、桌面端、e2e 测试、评估（eval）与数据库迁移等模块，说明它不只是一个提示词集合，而是带有完整工程结构的流程系统。项目附带第三方组件声明文件，处理二进制打包时需遵守相应的许可证义务，并有行为准则、安全策略与贡献指南。适合希望自建可控的 AI 编码流水线、又不愿把代码送到第三方 SaaS 的团队作为起点参考。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：本地优先、开源可审计的 AI 编码流水线实现，适合对代码外发有合规约束的团队做二次开发或架构借鉴。</p>
+      <p class="source"><a href="https://github.com/no-human-ai/no_human" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 8</span>
+        <span class="score">评分：6/10</span>
+      </div>
+      <h2><a href="https://c4.quietgridlabs.com/" target="_blank" rel="noopener">Viaduct：给 AI 编码智能体读取的 C4 架构模型与 MCP 服务</a></h2>
+      <p class="meta">#架构设计 #MCP #AI编程 #开发者工具 · 来源：</p>
+      <p class="summary">Quiet Grid Labs 推出 Viaduct，一款支持 C4 建模、自带 MCP 服务并可自托管的工具。团队可以在其中绘制系统上下文、容器、组件与代码四个层级，把文档、时序图和 API 契约挂到对应元素上，再通过 MCP 把整个模型提供给 Cursor 或 Claude Code 读取。四个层级是同一模型的不同视图，重命名或新增依赖会在所有相关视图同步体现。选择技术栈后元素自动着色并显示图标，数据存储画成圆柱、人物画成角色。导入 OpenAPI 规范可把端点及其参数、请求体与响应落到容器上，模型可导出为 JSON。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：为智能体提供权威架构上下文的可行做法，能显著降低 agent 改动代码时“不懂系统结构”导致的返工与误改。</p>
+      <p class="source"><a href="https://c4.quietgridlabs.com/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 9</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://codeset.ai/" target="_blank" rel="noopener">codeset：把编程学习变成“边做项目边一对一辅导”</a></h2>
+      <p class="meta">#编程教育 #AI辅助学习 #开发者工具 · 来源：</p>
+      <p class="summary">codeset 是一个主张在真实项目里学编程的学习平台，提供 27 门课程、1044 节课，每门课都有完整教学大纲，且可以在注册前全部浏览。用户只需回答一个问题——最终想做出来的是什么，比如一个 shell、一个游戏、一个抓取脚本——导师就会把整份大纲放进这个项目里，一次教一个概念，并直接读取用户写的文件来辅导。平台主打零安装、起步免费额度，最早十分钟的流程被压缩为三步：找科目、说想做什么、进入第一课。文章也承认产品尚处早期，建议先读完大纲再决定是否投入。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：在 AI 代写代码的时代重提“理解优先”的学习路径，适合需要系统化训练新人的团队评估是否引入。</p>
+      <p class="source"><a href="https://codeset.ai/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+    <div class="news-card">
+      <div class="card-header">
+        <span class="rank">Top 10</span>
+        <span class="score">评分：5/10</span>
+      </div>
+      <h2><a href="https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/" target="_blank" rel="noopener">把营销运营写成代码：用 GitHub 自动化活动全流程</a></h2>
+      <p class="meta">#工作流自动化 #GitHub Copilot #效率工具 · 来源：</p>
+      <p class="summary">GitHub 日本与韩国的营销负责人撰文，分享如何把自己办活动的流程写成代码，交给 GitHub 与 Copilot 自动化，从策划一直覆盖到会后跟进。作者认为只要你能把工作方法写下来，就能把它自动化。文章围绕企业开发者网络研讨会、东京社区聚会、首尔闭门高管会等真实场景，拆解了哪些环节值得自动化、哪些必须留给人，属于 GitHub 博客 AI & ML / GitHub Copilot 专栏，约 11 分钟阅读，给出的是非工程师也能上手的流程化思路与具体做法。</p>
+      <p class="recommendation"><strong>推荐理由</strong>：示范了“流程即代码”在非研发职能中的落地方式，适合需要把重复运营工作交给 agent 的团队参考边界划分。</p>
+      <p class="source"><a href="https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/" target="_blank" rel="noopener">阅读原文 →</a></p>
+    </div>
+  <div class="footer">
+    <p>自动采集 · LLM 精选 · <a href="https://github.com/haihepeng/ai-news-daily" target="_blank">GitHub</a></p>
+  </div>
+</div>
+</body>
+</html>
